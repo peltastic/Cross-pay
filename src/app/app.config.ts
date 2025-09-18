@@ -14,6 +14,7 @@ import { WalletEffects } from './store/wallet/wallet.effects';
 import { TransactionEffects } from './store/transaction/transaction.effects';
 import { ExchangeRateEffects } from './store/exchange-rate/exchange-rate.effects';
 import { metaReducers } from './store/meta-reducers/local-storage.meta-reducer';
+import { provideServiceWorker } from '@angular/service-worker';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -34,6 +35,12 @@ export const appConfig: ApplicationConfig = {
       delay: 500,
       passThruUnknownUrl: true,
       apiBase: 'api/'
-    }).providers!
+    }).providers!, provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          }), provideServiceWorker('ngsw-worker.js', {
+            enabled: !isDevMode(),
+            registrationStrategy: 'registerWhenStable:30000'
+          })
 ]
 };
