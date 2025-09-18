@@ -1,0 +1,56 @@
+<div class="sm:max-w-md mt-20 sm:mt-0">
+  @if (isLoading$ | async) {
+  <app-wallet-skeleton></app-wallet-skeleton>
+  } @if ((error$ | async) && !(isLoading$ | async)) {
+  <div class="flex justify-center items-center min-h-80">
+    <div class="text-center text-gray-text-1">
+      <h3 class="text-xl font-semibold mb-2 text-gray-text-1">Error loading wallet</h3>
+      <p class="text-lg opacity-80 mb-4">{{ error$ | async }}</p>
+      <app-button (click)="retryGetWallet()"> Retry </app-button>
+    </div>
+  </div>
+  } @if ((wallet$ | async) && !(isLoading$ | async) && !(error$ | async)) {
+
+  <div class="relative bg-white dark:bg-background-dark rounded-3xl p-6 sm:p-8 text-gray-text-1 dark:text-white">
+    <div class="relative z-10 flex sm:justify-between items-center gap-4 sm:gap-0 mb-6 sm:mb-8">
+      <h2 class="text-sm md:text-xl font-medium text-gray">
+        {{ selectedCurrency | lowercase }} account balance
+      </h2>
+      <div class="relative z-20 ml-auto">
+        <app-select
+          [options]="currencyOptions"
+          [size]="'sm'"
+          [ngModel]="selectedCurrency"
+          (selectionChange)="onCurrencyChange($event)"
+          class="min-w-20"
+        />
+      </div>
+    </div>
+
+    <div class="relative z-10 mb-6 sm:mb-8 w-fit">
+      <div class="text-3xl font-bold leading-none mb-2">
+        {{ getBalance(wallet$ | async) | number : '1.2-2' }}
+      </div>
+    </div>
+
+    <div class="z-10 border-t border-gray-background-1 pt-4 sm:pt-6 mt-10">
+      <div class="flex flex-col gap-2">
+        <span class="text-sm opacity-80 font-medium">Wallet Address:</span>
+        <span
+          class="font-mono text-sm bg-gray-background-1 text-gray-text-1 px-3 py-2 rounded-lg backdrop-blur-sm break-all"
+        >
+          {{ (wallet$ | async)?.walletAddress }}
+        </span>
+      </div>
+    </div>
+  </div>
+  } @if (!(wallet$ | async) && !(isLoading$ | async) && !(error$ | async)) {
+
+  <div class="flex justify-center items-center min-h-80">
+    <div class="text-center text-gray-text-1">
+      <h3 class="text-2xl font-semibold mb-2 text-gray-text-1">No wallet found</h3>
+      <p class="text-lg opacity-80">Please create a wallet to view your balances.</p>
+    </div>
+  </div>
+  }
+</div>

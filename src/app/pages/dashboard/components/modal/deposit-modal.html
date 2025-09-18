@@ -1,0 +1,58 @@
+<app-base-modal [isOpen]="isOpen" title="Deposit Funds" size="md" (close)="closeModal()">
+  <form [formGroup]="depositForm" (ngSubmit)="onSubmit()" class="space-y-6">
+    <div class="w-full flex justify-center">
+      <app-select
+        [options]="currencyOptions"
+        [size]="'md'"
+        formControlName="currency"
+        class="w-fit"
+      />
+      @if (getFieldError('currency')) {
+      <p class="mt-1 text-sm text-error-message-text">{{ getFieldError('currency') }}</p>
+      }
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-text-2 mb-2 dark:text-white"> Amount </label>
+      <app-input
+        type="number"
+        formControlName="amount"
+        placeholder="Enter amount"
+        step="0.01"
+        min="0.01"
+      />
+      @if (getFieldError('amount')) {
+      <p class="mt-1 text-xs text-error-message-text">{{ getFieldError('amount') }}</p>
+      }
+    </div>
+
+    @if (error$ | async) {
+    <app-error-message>
+      <span class="text-sm">{{ error$ | async }}</span>
+    </app-error-message>
+
+    }
+
+    <div class="flex items-center justify-end space-x-3 pt-4">
+      <app-button
+        variant="secondary"
+        type="button"
+        (click)="closeModal()"
+        [disabled]="!!(isLoading$ | async)"
+        class=""
+      >
+        Cancel
+      </app-button>
+
+      <app-button
+        type="submit"
+        [disabled]="depositForm.invalid || !!(isLoading$ | async)"
+        class="px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-white"
+      >
+        @if (isLoading$ | async) {
+        <div class="flex items-center justify-center">Processing Deposit...</div>
+        } @else { Deposit Funds }
+      </app-button>
+    </div>
+  </form>
+</app-base-modal>

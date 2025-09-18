@@ -1,0 +1,84 @@
+<div class="w-full">
+  <div class="overflow-hidden bg-white dark:bg-background-dark shadow-sm rounded-lg ">
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200 dark:divide-dark-hover-background">
+        <thead class=" dark:bg-background-dark">
+          <tr>
+            @for (column of columns; track column.key) {
+              <th 
+                class="px-6 py-3 text-left text-xs font-medium text-gray-text-1 dark:text-white uppercase tracking-wider"
+                [style.width]="column.width"
+              >
+                {{ column.header }}
+              </th>
+            }
+          </tr>
+        </thead>
+        <tbody class="bg-white dark:bg-background-dark divide-y divide-gray-200 dark:divide-dark-hover-background">
+          @if (loading) {
+            @for (i of [1,2,3,4,5]; track i) {
+              <tr class="animate-pulse">
+                @for (column of columns; track column.key) {
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    <div class="h-4 bg-gray-200 rounded w-3/4"></div>
+                  </td>
+                }
+              </tr>
+            }
+          } @else {
+            @if (error && !loading) {
+              <tr class="text-center">
+                <td [attr.colspan]="columns.length" class="px-6 py-4 whitespace-nowrap text-sm text-error-message-text">
+                  Error: {{ error }}
+                </td>
+              </tr>
+            }
+            
+            @if (!loading && !error && safeData.length === 0) {
+              <tr class="text-center">
+                <td [attr.colspan]="columns.length" class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-white">
+                  No data available
+                </td>
+              </tr>
+            }
+            
+            @for (item of safeData; track item) {
+              <tr class="hover:bg-gray-50 dark:hover:bg-dark-hover-background transition-colors duration-150">
+                @for (column of columns; track column.key) {
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-text-1 dark:text-white">
+                    @if (column.key === 'transactionType') {
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                        {{ formatValue(getValue(item, column.key), column, item) }}
+                      </span>
+                    }
+                    @if (column.key === 'currency') {
+                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                        {{ getValue(item, column.key) }}
+                      </span>
+                    }
+                    @if (column.key === 'amount') {
+                      <span 
+                        class="font-medium"
+                        [ngClass]="{
+                          'text-success-text': getValue(item, 'direction') === 'credit',
+                          'text-error-message-text': getValue(item, 'direction') === 'debit'
+                        }"
+                      >
+                        {{ formatValue(getValue(item, column.key), column, item) }}
+                      </span>
+                    }
+                    @if (!['transactionType', 'currency', 'amount'].includes(column.key)) {
+                      <span>
+                        {{ formatValue(getValue(item, column.key), column, item) }}
+                      </span>
+                    }
+                  </td>
+                }
+              </tr>
+            }
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

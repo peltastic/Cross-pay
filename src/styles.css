@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-background: #19315b05;
+  --color-background-dark: #2e2e2e;
+  --color-button-background: #5d5dfc;
+  --color-error-message-background: #ff00000c;
+  --color-primary-border: #dbe2db;
+  --color-error-message-text: #bd3e3e;
+  --color-sidebar-element-background: #5d5dfc37;
+  --color-sidebar-element-text: #6565e4;
+  --color-dashboard-background: #ffffff;
+  --color-dashboard-secondary-background: #f5f5f5;
+  --color-dashboard-secondary-background-dark: #1e1e1e;
+  --color-gray-background-1: #f5f5f5;
+  --color-gray-background-2: #f9fafb;
+  --color-gray-text-1: #343333;
+  --color-gray-text-2: #4a5565;
+  --color-backdrop: #0000009c;
+  --font-caprasimo: 'Caprasimo', cursive;
+  --color-success-background: #f0fdf4;
+  --color-success-text: #166534;
+  --color-dark-hover-background: #313131;
+}
+
+@theme inline {
+  --breakpoint-2xs: 400px;
+  --breakpoint-xs: 520px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --color-button-background: var(--color-button-background);
+  --color-error-message-background: var(--color-error-message-background);
+  --color-error-message-text: var(--color-error-message-text);
+  --color-sidebar-element-background: var(--color-sidebar-element-background);
+  --color-sidebar-element-text: var(--color-sidebar-element-text);
+  --color-dashboard-background: var(--color-dashboard-background);
+  --color-dashboard-secondary-background: var(--color-dashboard-secondary-background);
+  --color-gray-background-1: var(--color-gray-background-1);
+  --color-gray-text-1: var(--color-gray-text-1);
+  --color-backdrop: var(--color-backdrop);
+  --font-caprasimo: var(--font-caprasimo);
+  --color-gray-background-2: var(--color-gray-background-2);
+  --color-gray-text-2: var(--color-gray-text-2);
+  --color-success-background: var(--color-success-background);
+  --color-success-text: var(--color-success-text);
+  --color-primary-border: var(--color-primary-border);
+  --color-background-dark: var(--color-background-dark);
+  --color-dashboard-secondary-background-dark: var(--color-dashboard-secondary-background-dark);
+  --color-dark-hover-background: var(--color-dark-hover-background);
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.dark body {
+  background-color: var(--color-background-dark);
+}

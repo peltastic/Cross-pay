@@ -1,0 +1,113 @@
+<app-base-modal [isOpen]="isOpen" title="Transfer Funds" size="lg" (close)="closeModal()">
+  <form [formGroup]="transferForm" (ngSubmit)="onSubmit()" class="space-y-6">
+    <div class="flex items-start gap-4 justify-between">
+      <div class="">
+        <label class="block text-sm font-medium text-gray-text-2 mb-2 dark:text-white">From Currency</label>
+        <app-select
+          [options]="currencyOptions"
+          [size]="'md'"
+          formControlName="fromCurrency"
+          class="w-full"
+        />
+        @if (getFieldError('fromCurrency')) {
+        <p class="mt-1 text-sm text-error-message-text">{{ getFieldError('fromCurrency') }}</p>
+        }
+        <p class="mt-1 text-xs text-gray-text-2 dark:text-white">
+          Available: {{ getAvailableBalance() }} {{ transferForm.get('fromCurrency')?.value }}
+        </p>
+      </div>
+
+      <div class="flex justify-center items-center pb-6">
+        <ng-icon name="heroArrowsRightLeft" class="text-2xl dark:text-white!" />
+      </div>
+
+      <div class="">
+        <label class="block text-sm font-medium text-gray-text-2 mb-2 dark:text-white">To Currency</label>
+        <app-select
+          [options]="currencyOptions"
+          [size]="'md'"
+          formControlName="toCurrency"
+          class="w-full"
+        />
+        @if (getFieldError('toCurrency')) {
+        <p class="mt-1 text-sm text-error-message-text">{{ getFieldError('toCurrency') }}</p>
+        }
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-text-2 mb-2 dark:text-white">Amount to Transfer</label>
+      <app-input
+        type="number"
+        formControlName="amount"
+        placeholder="Enter amount"
+        step="0.01"
+        min="0.01"
+      />
+      @if (getFieldError('amount')) {
+      <p class="mt-1 text-xs text-red-600">{{ getFieldError('amount') }}</p>
+      }
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2 dark:text-white">Recipient Wallet Address</label>
+      <app-input type="text" formControlName="walletAddress" placeholder="Enter wallet address" />
+      @if (getFieldError('walletAddress')) {
+      <p class="mt-1 text-xs text-error-message-text">{{ getFieldError('walletAddress') }}</p>
+      }
+    </div>
+
+    @if ((conversionResult$ | async) && transferForm.get('fromCurrency')?.value !== transferForm.get('toCurrency')?.value) {
+    <div class="bg-gray-background-2 rounded-lg p-4">
+      <div class="flex items-center justify-between">
+        <span class="text-sm text-gray-text-2">
+          You are sending {{ (conversionResult$ | async)?.result | number : '1.2-2' }}
+          {{ transferForm.get('toCurrency')?.value }}
+        </span>
+        <span class="text-xs text-gray-text-2">
+          Rate: 1 {{ transferForm.get('fromCurrency')?.value }} =
+          {{ (conversionResult$ | async)?.info?.rate | number : '1.4-4' }}
+          {{ transferForm.get('toCurrency')?.value }}
+        </span>
+      </div>
+    </div>
+    } @if (isConverting$ | async) {
+    <div class="bg-gray-background-2 rounded-lg p-4">
+      <span class="text-sm text-gray-text-2">Getting conversion rate...</span>
+    </div>
+    } @if (conversionError$ | async) {
+    <app-error-message>
+      <span class="">{{ conversionError$ | async }}</span>
+    </app-error-message>
+    } @if (transferError$ | async) {
+    <app-error-message>
+      <span>{{ transferError$ | async }}</span>
+    </app-error-message>
+    } @if (transferSuccess) {
+    <div class="bg-success-background rounded-lg p-4">
+      <span class="text-sm text-success-text">{{ successMessage }}</span>
+    </div>
+    }
+
+    <div class="flex items-center justify-end space-x-3 pt-4">
+      <app-button
+        type="button"
+        variant="secondary"
+        (click)="closeModal()"
+        [disabled]="(isTransferring$ | async) || false"
+      >
+        Cancel
+      </app-button>
+
+      <app-button
+        type="submit"
+        [disabled]="transferForm.invalid || ((isTransferring$ | async) || false) || transferSuccess"
+        class="px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-white"
+      >
+        @if (isTransferring$ | async) {
+        <div class="flex items-center justify-center">Processing Transfer...</div>
+        } @else { Transfer Funds }
+      </app-button>
+    </div>
+  </form>
+</app-base-modal>

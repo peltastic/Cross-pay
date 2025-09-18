@@ -1,0 +1,26 @@
+<nav class="px-6 py-10 bg-dashboard-secondary-background dark:bg-dashboard-secondary-background-dark lg:rounded-xl  w-full lg:w-[18rem] h-[calc(100vh-2rem)]">
+  <div class="mb-4">
+    <p class="text-gray-text-1 text-xl mb-1 dark:text-white">
+
+      Welcome
+    </p>
+    <p class="text-sm text-gray-text-1 dark:text-white">{{ user || 'No email' }}</p>
+  </div>
+
+  <ul class="mt-10">
+    @for (item of items; track item.id) {
+    <li class="mb-2">
+      <a
+        [routerLink]="item.path"
+        [class]="
+          isActive(item.path)
+            ? 'block px-4 py-2 rounded-md bg-sidebar-element-background text-sidebar-element-text'
+            : 'block px-4 py-2 dark:text-white rounded-md hover:bg-gray-100 dark:hover:bg-dark-hover-background'
+        "
+      >
+        {{ item.label }}
+      </a>
+    </li>
+    }
+  </ul>
+</nav>

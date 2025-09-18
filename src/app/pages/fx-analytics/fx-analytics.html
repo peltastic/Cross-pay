@@ -1,0 +1,103 @@
+<app-dashboard-layout>
+  <div class="p-6">
+    <div class="mb-6">
+      <div class="mb-6 bg-white dark:bg-background-dark w-fit rounded-2xl p-6">
+        <h1 class="text-2xl font-bold text-gray-text-1 dark:text-white">FX Analytics</h1>
+      </div>
+
+      <div class="mb-4">
+        <div class="w-64">
+          <app-select
+            [options]="currencyOptions"
+            [placeholder]="'Select base currency'"
+            [(ngModel)]="selectedBaseCurrency"
+            (selectionChange)="onBaseCurrencyChange($event)"
+          ></app-select>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full md:w-1/2 mb-8">
+      <div class="mb-6 bg-white dark:bg-background-dark w-fit rounded-2xl p-4">
+        <h2 class=" font-bold text-gray-text-1 dark:text-white">Latest Exchange Rates</h2>
+      </div>
+      <app-data-table
+        [columns]="columns"
+        [data]="(exchangeRates$ | async) || []"
+        [loading]="(loading$ | async) || false"
+        [error]="error$ | async"
+      ></app-data-table>
+    </div>
+
+    <div class="w-full">
+     <div class="mb-6 bg-white dark:bg-background-dark w-fit rounded-2xl p-4">
+        <h2 class=" font-bold text-gray-text-1 dark:text-white">Historical Exchange Rates</h2>
+      </div>
+
+      <div class="grid xs:grid-cols-2 gap-4 mb-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-text-1 dark:text-white mb-2">From</label>
+          <div class="w-full">
+            <app-select
+              [options]="baseCurrencyOptions"
+              [placeholder]="'Select base currency'"
+              [(ngModel)]="selectedChartBaseCurrency"
+              (selectionChange)="onChartBaseCurrencyChange($event)"
+            ></app-select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-text-1 dark:text-white mb-2">To</label>
+          <div class="w-full">
+            <app-select
+              [options]="targetCurrencyOptions"
+              [placeholder]="'Select target currency'"
+              [(ngModel)]="selectedTargetCurrency"
+              (selectionChange)="onTargetCurrencyChange($event)"
+            ></app-select>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-2 mb-6">
+        @for (period of timePeriods; track period.value) {
+        <button
+          type="button"
+          [class]="
+            'px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ' +
+            (selectedPeriod === period.value
+              ? 'bg-button-background text-white'
+              : ' bg-white dark:bg-background-dark  dark:text-white hover:dark:bg-dark-hover-background cursor-pointer text-black hover:bg-gray-200')
+          "
+          (click)="onPeriodClick(period.value)"
+        >
+          {{ period.label }}
+        </button>
+        }
+      </div>
+
+      <div class="bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm  ">
+        <app-line-chart
+          [datasets]="(chartData$ | async) || []"
+          [title]="
+            'Exchange Rate: ' +
+            selectedChartBaseCurrency +
+            '/' +
+            selectedTargetCurrency +
+            ' (' +
+            selectedPeriod +
+            ')'
+          "
+          [xAxisLabel]="'Date'"
+          [yAxisLabel]="selectedChartBaseCurrency + '/' + selectedTargetCurrency + ' Rate'"
+          [loading]="(chartLoading$ | async) || false"
+          [error]="chartError$ | async"
+          [height]="'500px'"
+          [showGrid]="true"
+          [showLegend]="true"
+        ></app-line-chart>
+      </div>
+    </div>
+  </div>
+</app-dashboard-layout>

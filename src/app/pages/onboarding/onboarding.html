@@ -1,0 +1,30 @@
+<app-onboarding-layout>
+  <div class="fixed top-4 right-4 z-50">
+    <app-dark-mode-toggle></app-dark-mode-toggle>
+  </div>
+
+  <section
+    class="w-[90%] xs:w-[70%] lg:w-[50%] fixed -translate-x-1/2 top-1/2 -translate-y-1/2 left-1/2 mx-auto text-left xs:text-center"
+  >
+    <h1 class="text-4xl font-medium mb-2 text-black dark:text-white">
+      Welcome to <span class="font-caprasimo">CROSS PAY</span>
+    </h1>
+    <p class="text-gray-600 dark:text-gray-300">
+      Get started by inputing your email and we hanlde the wallet creation for you!
+    </p>
+    <app-onboarding-form></app-onboarding-form>
+  </section>
+
+  <div class="fixed top-4 w-[20rem] right-0 lg:block hidden">
+    <app-lazy-lottie-animation [width]="'100'" path="/chart.json"></app-lazy-lottie-animation>
+  </div>
+  <div class="fixed bottom-6 right-20 w-[10rem] lg:block hidden">
+    <app-lazy-lottie-animation [width]="'100'" path="/money-bag.json"></app-lazy-lottie-animation>
+  </div>
+  <div class="w-[20rem] lg:block hidden">
+    <app-lazy-lottie-animation [width]="'100'" path="/money-tranfer.json"></app-lazy-lottie-animation>
+  </div>
+  <div class="bottom-[5rem] fixed left-[10rem] w-20 lg:block hidden">
+    <app-lazy-lottie-animation [width]="'100'" path="/network-icon.json"></app-lazy-lottie-animation>
+  </div>
+</app-onboarding-layout>

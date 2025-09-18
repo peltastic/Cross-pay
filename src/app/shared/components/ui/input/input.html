@@ -1,0 +1,11 @@
+<input 
+  [type]="type" 
+  [value]="value" 
+  [placeholder]="placeholder"
+  [disabled]="disabled" 
+  [step]="step"
+  [min]="min"
+  (input)="onInput($event)" 
+  (blur)="onBlur()" 
+  [class]="'w-full p-3 rounded-lg dark:text-white border border-primary-border outline-black transition-all duration-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-100 ' + class"
+/>

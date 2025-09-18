@@ -1,0 +1,19 @@
+<section class="mt-10">
+  <div class="mb-6 w-fit bg-white dark:bg-background-dark dark:text-white rounded-3xl p-4">
+    <h1 class="">Quick Actions</h1>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+    @for (action of quickActions; track action.id) {
+    <app-quick-actions-cards [onClick]="action.action">
+      <div class="flex items-center text-center p-4 hover transition-colors duration-200">
+        <ng-icon [name]="action.icon" class="text-3xl" />
+        <h3 class="font-semibold text-gray-text-1 dark:text-white ml-4">{{ action.title }}</h3>
+      </div>
+    </app-quick-actions-cards>
+    }
+  </div>
+
+  <!-- Container for dynamically loaded modals -->
+  <div #modalContainer></div>
+</section>

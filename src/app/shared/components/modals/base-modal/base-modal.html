@@ -1,0 +1,49 @@
+@if (isOpen) {
+<div
+  class="fixed inset-0 z-50 flex items-center justify-center p-4"
+  (click)="onBackdropClick()"
+  (keydown)="onKeyDown($event)"
+  tabindex="-1"
+>
+  <div
+    class="absolute inset-0 bg-backdrop backdrop-blur-sm bg-opacity-50 transition-opacity duration-300 ease-in-out"
+    [class.opacity-0]="!isOpen"
+    [class.opacity-100]="isOpen"
+  ></div>
+
+  <div
+    #modalContent
+    class="relative bg-white dark:bg-background-dark rounded-2xl shadow-2xl transform transition-all duration-300 ease-in-out w-full"
+    [class]="sizeClasses"
+    [class.scale-95]="!isOpen"
+    [class.scale-100]="isOpen"
+    [class.opacity-0]="!isOpen"
+    [class.opacity-100]="isOpen"
+    (click)="$event.stopPropagation()"
+  >
+    @if (title) {
+    <div class="flex items-center justify-between p-6 border-b border-gray-200">
+      <h3 class="text-xl font-semibold text-gray-text-1 dark:text-white">{{ title }}</h3>
+      <button
+        (click)="closeModal()"
+        class="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+        type="button"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    }
+
+    <div class="p-6">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+}

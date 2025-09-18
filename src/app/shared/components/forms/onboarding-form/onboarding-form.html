@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="mt-10 max-w-md mx-auto">
+  <div class="mb-4 text-left">
+    <label for="email" class="block mb-2 dark:text-white">Email</label>
+    <app-input
+      type="email"
+      formControlName="email"
+      [disabled]="(loading$ | async) || false"
+    ></app-input>
+    @if (emailError) {
+    <div class="text-error-message-text text-sm mt-1">{{ emailError }}</div>
+    }
+  </div>
+  @if (error$ | async; as error) {
+  <div
+    class="text-error-message-text py-2 my-4 rounded-md bg-error-message-background text-sm mt-1"
+  >
+    {{ error }}
+  </div>
+  }
+  <app-button [disabled]="(loading$ | async) || false">
+    {{ (loading$ | async) ? 'Creating wallet...' : 'Create wallet' }}
+  </app-button>
+</form>
