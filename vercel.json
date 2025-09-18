@@ -1,6 +1,6 @@
 {
   "framework": "angular",
-  "buildCommand": "npm run build:prod",
+  "buildCommand": "npm run build:vercel",
   "outputDirectory": "dist/cross-pay",
   "rewrites": [
     {
