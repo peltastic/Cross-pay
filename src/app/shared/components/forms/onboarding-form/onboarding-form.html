@@ -17,7 +17,7 @@
     {{ error }}
   </div>
   }
-  <app-button [disabled]="(loading$ | async) || false">
+  <app-button [disabled]="(loading$ | async) || false" type="submit">
     {{ (loading$ | async) ? 'Creating wallet...' : 'Create wallet' }}
   </app-button>
 </form>
