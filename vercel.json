@@ -1,7 +1,7 @@
 {
   "framework": "angular",
   "buildCommand": "npm run build:vercel",
-  "outputDirectory": "dist/cross-pay",
+  "outputDirectory": "dist/cross-pay/browser",
   "rewrites": [
     {
       "source": "/(.*)",
