@@ -40,7 +40,11 @@ export const selectTransactionLoadMoreError = createSelector(
 
 export const selectTransactionHasMore = createSelector(
   selectTransactionState,
-  (state) => state.hasMore
+  (state) => {
+    const startIndex = state.currentPage * state.pageSize;
+    const endIndex = startIndex + state.pageSize;
+    return endIndex < state.transactions.length;
+  }
 );
 
 export const selectTransactionTotalCount = createSelector(
@@ -60,17 +64,24 @@ export const selectTransactionPageSize = createSelector(
 
 export const selectPaginatedTransactions = createSelector(
   selectTransactionState,
-  (state) => ({
-    transactions: state.transactions,
-    pagination: {
-      totalCount: state.totalCount,
-      currentPage: state.currentPage,
-      pageSize: state.pageSize,
-      hasMore: state.hasMore,
-    },
-    loading: state.isFetching,
-    loadingMore: state.isLoadingMore,
-    error: state.fetchError,
-    loadMoreError: state.loadMoreError,
-  })
+  (state) => {
+    const startIndex = state.currentPage * state.pageSize;
+    const endIndex = startIndex + state.pageSize;
+    const paginatedTransactions = state.transactions.slice(startIndex, endIndex);
+    const hasMore = endIndex < state.transactions.length;
+    
+    return {
+      transactions: paginatedTransactions,
+      pagination: {
+        totalCount: state.transactions.length,
+        currentPage: state.currentPage,
+        pageSize: state.pageSize,
+        hasMore: hasMore,
+      },
+      loading: state.isFetching,
+      loadingMore: state.isLoadingMore,
+      error: state.fetchError,
+      loadMoreError: state.loadMoreError,
+    };
+  }
 );

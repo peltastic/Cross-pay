@@ -5,7 +5,7 @@ import { Observable, Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { DashboardLayout } from '../../layout/dashboard-layout/dashboard-layout';
 import { DataTableComponent, DataTableColumn } from '../../shared/components/ui/data-table/data-table';
-import { ButtonComponent } from '../../shared/components/ui/button/button';
+import { PaginationComponent, PaginationData } from '../../shared/components/ui/pagination';
 import { TransactionModel } from '../../core/models/transactions.model';
 import { 
   selectPaginatedTransactions,
@@ -17,7 +17,9 @@ import { getUserEmail } from '../../store/user/user.selector';
 import { 
   getTransactions, 
   loadMoreTransactions, 
-  setTransactionPageSize 
+  setTransactionPageSize,
+  nextPage,
+  setPageAction
 } from '../../store/transaction/transaction.actions';
 import { getWallet } from '../../store/wallet/wallet.actions';
 import { setEmail } from '../../store/user/user.actions';
@@ -40,7 +42,7 @@ interface PaginatedTransactionData {
 @Component({
   selector: 'app-transactions',
   standalone: true,
-  imports: [CommonModule, DashboardLayout, DataTableComponent, ButtonComponent],
+  imports: [CommonModule, DashboardLayout, DataTableComponent, PaginationComponent],
   templateUrl: './transactions.html',
 })
 export class Transactions implements OnInit, OnDestroy {
@@ -96,22 +98,12 @@ export class Transactions implements OnInit, OnDestroy {
     this.store.dispatch(getTransactions({ 
       walletAddress,
       page: 0,
-      pageSize: 20 
+      pageSize: 10 
     }));
   }
 
   onLoadMore() {
-    if (this.currentWalletAddress) {
-      this.paginatedData$.pipe(takeUntil(this.destroy$)).subscribe(data => {
-        if (data.pagination.hasMore) {
-          this.store.dispatch(loadMoreTransactions({
-            walletAddress: this.currentWalletAddress!,
-            page: data.pagination.currentPage + 1,
-            pageSize: data.pagination.pageSize
-          }));
-        }
-      });
-    }
+    this.store.dispatch(nextPage());
   }
 
   onPageSizeChange(pageSize: number) {
@@ -119,5 +111,9 @@ export class Transactions implements OnInit, OnDestroy {
     if (this.currentWalletAddress) {
       this.loadInitialTransactions(this.currentWalletAddress);
     }
+  }
+
+  onPageChange(page: number) {
+    this.store.dispatch(setPageAction({ page }));
   }
 }

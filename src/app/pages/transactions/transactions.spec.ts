@@ -157,11 +157,7 @@ describe('Transactions', () => {
 
     setTimeout(() => {
       expect(store.dispatch).toHaveBeenCalledWith(
-        TransactionActions.loadMoreTransactions({
-          walletAddress: 'wallet-address-1',
-          page: 1,
-          pageSize: 20,
-        })
+        TransactionActions.nextPage()
       );
       done();
     }, 0);
@@ -180,7 +176,7 @@ describe('Transactions', () => {
       TransactionActions.getTransactions({
         walletAddress: 'wallet-address-1',
         page: 0,
-        pageSize: 20,
+        pageSize: 10,
       })
     );
   });

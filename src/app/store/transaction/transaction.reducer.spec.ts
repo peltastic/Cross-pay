@@ -30,10 +30,10 @@ describe('Transaction Reducer', () => {
 
   const mockPaginatedResponse: TransactionActions.PaginatedTransactionResponse = {
     transactions: mockTransactions,
-    totalCount: 50,
+    totalCount: 2,
     page: 0,
-    pageSize: 20,
-    hasMore: true,
+    pageSize: 10,
+    hasMore: false,
   };
 
   describe('unknown action', () => {
@@ -66,10 +66,10 @@ describe('Transaction Reducer', () => {
 
       expect(result.isFetching).toBe(false);
       expect(result.transactions).toEqual(mockTransactions);
-      expect(result.totalCount).toBe(50);
+      expect(result.totalCount).toBe(2);
       expect(result.currentPage).toBe(0);
-      expect(result.pageSize).toBe(20);
-      expect(result.hasMore).toBe(true);
+      expect(result.pageSize).toBe(10);
+      expect(result.hasMore).toBe(false);
       expect(result.fetchError).toBe(null);
     });
   });

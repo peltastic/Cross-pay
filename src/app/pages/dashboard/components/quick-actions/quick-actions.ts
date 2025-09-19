@@ -50,10 +50,26 @@ export class QuickActions {
   constructor(private modalService: ModalService) {}
 
   async handleDeposit() {
-    await this.modalService.openDepositModal(this.modalContainer);
+    try {
+      if (!this.modalService) {
+        console.error('Modal service is not available');
+        return;
+      }
+      await this.modalService.openDepositModal(this.modalContainer);
+    } catch (error) {
+      console.error('Error opening deposit modal:', error);
+    }
   }
 
   async handleTransfer() {
-    await this.modalService.openTransferModal(this.modalContainer);
+    try {
+      if (!this.modalService) {
+        console.error('Modal service is not available');
+        return;
+      }
+      await this.modalService.openTransferModal(this.modalContainer);
+    } catch (error) {
+      console.error('Error opening transfer modal:', error);
+    }
   }
 }

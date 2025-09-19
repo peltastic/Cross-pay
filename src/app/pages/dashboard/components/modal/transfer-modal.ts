@@ -167,7 +167,7 @@ export class TransferModalComponent implements OnInit, OnDestroy {
     combineLatest([this.wallet$, this.userEmail$, this.conversionResult$])
       .pipe(take(1))
       .subscribe(([wallet, email, conversionResult]) => {
-        if (!wallet) {
+        if (!wallet || !email) {
           return;
         }
 
@@ -176,16 +176,12 @@ export class TransferModalComponent implements OnInit, OnDestroy {
           return;
         }
 
-        if (!email) {
-          return;
-        }
-
         const convertedAmount =
           fromCurrency === toCurrency
             ? numAmount
             : conversionResult?.result || numAmount;
         const exchangeRate =
-          fromCurrency === toCurrency ? 1 : conversionResult?.info.rate || 1;
+          fromCurrency === toCurrency ? 1 : conversionResult?.info?.rate || 1;
 
         this.store.dispatch(
           transfer({

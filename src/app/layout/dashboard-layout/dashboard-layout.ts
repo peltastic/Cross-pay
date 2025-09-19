@@ -55,24 +55,31 @@ export class DashboardLayout implements OnInit, OnDestroy {
     this.isMobileSidebarOpen = isOpen;
 
     if (isOpen && !this.mobileSidebarRef) {
-      this.mobileSidebarRef = await this.lazyLoadService.loadComponent(
-        () => import('../../shared/components/navigation/mobile-sidebar/mobile-sidebar'),
-        'MobileSidebarComponent',
-        this.mobileSidebarContainer
-      );
+      try {
+        this.mobileSidebarRef = await this.lazyLoadService.loadComponent(
+          () => import('../../shared/components/navigation/mobile-sidebar/mobile-sidebar'),
+          'MobileSidebarComponent',
+          this.mobileSidebarContainer
+        );
 
-      this.mobileSidebarRef.instance.isOpen = true;
-      this.mobileSidebarRef.instance.close.pipe(takeUntil(this.destroy$)).subscribe(() => {
-        this.onCloseMobileSidebar();
-      });
-    } else if (this.mobileSidebarRef) {
+        this.mobileSidebarRef.instance.isOpen = true;
+        
+        if (this.mobileSidebarRef.instance.close && typeof this.mobileSidebarRef.instance.close.pipe === 'function') {
+          this.mobileSidebarRef.instance.close.pipe(takeUntil(this.destroy$)).subscribe(() => {
+            this.onCloseMobileSidebar();
+          });
+        }
+      } catch (error) {
+        console.error('Failed to load mobile sidebar:', error);
+      }
+    } else if (this.mobileSidebarRef && this.mobileSidebarRef.instance) {
       this.mobileSidebarRef.instance.isOpen = isOpen;
     }
   }
 
   onCloseMobileSidebar() {
     this.isMobileSidebarOpen = false;
-    if (this.mobileSidebarRef) {
+    if (this.mobileSidebarRef && this.mobileSidebarRef.instance) {
       this.mobileSidebarRef.instance.isOpen = false;
     }
   }

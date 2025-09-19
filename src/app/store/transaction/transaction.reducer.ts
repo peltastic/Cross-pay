@@ -9,6 +9,8 @@ import {
   loadMoreTransactionsFailure,
   setTransactionPageSize,
   resetTransactions,
+  nextPage,
+  setPageAction,
 } from './transaction.actions';
 
 const _transactionReducer = createReducer(
@@ -23,10 +25,10 @@ const _transactionReducer = createReducer(
   on(getTransactionsSuccess, (state, { response }) => ({
     ...state,
     transactions: response.transactions,
-    totalCount: response.totalCount,
-    currentPage: response.page,
-    pageSize: response.pageSize,
-    hasMore: response.hasMore,
+    totalCount: response.transactions.length,
+    currentPage: 0,
+    pageSize: state.pageSize,
+    hasMore: response.transactions.length > state.pageSize,
     isFetching: false,
     fetchError: null,
   })),
@@ -46,8 +48,7 @@ const _transactionReducer = createReducer(
   on(loadMoreTransactionsSuccess, (state, { response }) => ({
     ...state,
     transactions: [...state.transactions, ...response.transactions],
-    totalCount: response.totalCount,
-    currentPage: response.page,
+    currentPage: state.currentPage + 1,
     hasMore: response.hasMore,
     isLoadingMore: false,
     loadMoreError: null,
@@ -64,7 +65,17 @@ const _transactionReducer = createReducer(
     pageSize,
   })),
   
-  on(resetTransactions, () => initialState)
+  on(resetTransactions, () => initialState),
+  
+  on(nextPage, (state) => ({
+    ...state,
+    currentPage: state.currentPage + 1,
+  })),
+  
+  on(setPageAction, (state, { page }) => ({
+    ...state,
+    currentPage: page,
+  }))
 );
 
 export function transactionReducer(state: any | undefined, action: Action) {

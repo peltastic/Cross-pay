@@ -502,9 +502,14 @@ describe('WalletService', () => {
     it('should handle very long email addresses', () => {
       const longEmail = 'a'.repeat(100) + '@example.com';
 
-      service.getWallet(longEmail).subscribe();
+      service.getWallet(longEmail).subscribe(
+        (wallet) => {
+          expect(wallet).toEqual(mockWallet);
+        }
+      );
 
       const req = httpMock.expectOne(`/api/wallet/${encodeURIComponent(longEmail)}`);
+      expect(req.request.method).toBe('GET');
       req.flush(mockWallet);
     });
   });

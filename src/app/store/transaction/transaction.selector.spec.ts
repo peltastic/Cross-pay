@@ -42,10 +42,10 @@ describe('Transaction Selectors', () => {
 
   const mockTransactionState: TransactionStateModel = {
     transactions: mockTransactions,
-    totalCount: 50,
-    currentPage: 1,
-    pageSize: 20,
-    hasMore: true,
+    totalCount: 2,
+    currentPage: 0,
+    pageSize: 10,
+    hasMore: false,
     isFetching: false,
     fetchError: null,
     isLoadingMore: false,
@@ -88,10 +88,10 @@ describe('Transaction Selectors', () => {
     it('should select pagination info', (done) => {
       store.select(selectTransactionPagination).subscribe((result) => {
         expect(result).toEqual({
-          totalCount: 50,
-          currentPage: 1,
-          pageSize: 20,
-          hasMore: true,
+          totalCount: 2,
+          currentPage: 0,
+          pageSize: 10,
+          hasMore: false,
         });
         done();
       });
@@ -128,7 +128,7 @@ describe('Transaction Selectors', () => {
   describe('selectTransactionHasMore', () => {
     it('should select hasMore state', (done) => {
       store.select(selectTransactionHasMore).subscribe((result) => {
-        expect(result).toBe(true);
+        expect(result).toBe(false);
         done();
       });
     });
@@ -140,10 +140,10 @@ describe('Transaction Selectors', () => {
         expect(result).toEqual({
           transactions: mockTransactions,
           pagination: {
-            totalCount: 50,
-            currentPage: 1,
-            pageSize: 20,
-            hasMore: true,
+            totalCount: 2,
+            currentPage: 0,
+            pageSize: 10,
+            hasMore: false,
           },
           loading: false,
           loadingMore: false,

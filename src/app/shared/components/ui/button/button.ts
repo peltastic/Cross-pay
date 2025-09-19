@@ -28,7 +28,7 @@ export class ButtonComponent {
     const variantClasses = {
       primary:
         'bg-button-background text-white hover:bg-primary-button-background-hover focus:ring-primary-button-background-hover disabled:bg-primary-button-background-disabled',
-      secondary: 'dark:text-white text-gray-900 hover:bg-gray-background-2 dark:hover:bg-dark-hover-background focus:ring-gray-500 disabled:bg-gray-100',
+      secondary: 'dark:text-white text-gray-900 hover:bg-gray-background-2 dark:hover:bg-dark-hover-background focus:ring-gray-500 ',
       danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 disabled:bg-red-300',
     };
 

@@ -1,11 +1,24 @@
 import { TestBed } from '@angular/core/testing';
+import { SwUpdate } from '@angular/service-worker';
 import { App } from './app';
 
 describe('App', () => {
+  let swUpdateSpy: jasmine.SpyObj<SwUpdate>;
+
   beforeEach(async () => {
+    const spy = jasmine.createSpyObj('SwUpdate', ['checkForUpdate'], {
+      isEnabled: false,
+      versionUpdates: { pipe: () => ({ subscribe: () => {} }) }
+    });
+
     await TestBed.configureTestingModule({
       imports: [App],
+      providers: [
+        { provide: SwUpdate, useValue: spy }
+      ]
     }).compileComponents();
+
+    swUpdateSpy = TestBed.inject(SwUpdate) as jasmine.SpyObj<SwUpdate>;
   });
 
   it('should create the app', () => {

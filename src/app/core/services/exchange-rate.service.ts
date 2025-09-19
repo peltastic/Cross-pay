@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin, map, catchError, of } from 'rxjs';
 import { EnvironmentService } from './environment.service';
+import { CacheService } from './cache.service';
 import {
   ExchangeRateResponse,
   HistoricalDataPoint,
@@ -22,13 +23,37 @@ export class ExchangeRateService {
     { value: '1Y', label: '1 Year', days: 365 },
   ];
 
-  constructor(private http: HttpClient, private environmentService: EnvironmentService) {}
+  constructor(
+    private http: HttpClient, 
+    private environmentService: EnvironmentService,
+    private cacheService: CacheService
+  ) {}
 
   getLatestRates(baseCurrency: string = 'NGN'): Observable<ExchangeRateResponse> {
+    const cacheKey = `latest_rates_${baseCurrency}`;
+    const cached = this.cacheService.get<ExchangeRateResponse>(cacheKey);
+    
+    if (cached) {
+      return of(cached);
+    }
+
     const url = `${this.environmentService.exchangeRateApiUrl}/latest?access_key=${
       this.environmentService.exchangeRateApiKey
     }&base=${baseCurrency}&symbols=${SUPPORTED_CURRENCIES_SHORT.join(',')}`;
-    return this.http.get<ExchangeRateResponse>(url);
+    
+    return this.http.get<ExchangeRateResponse>(url).pipe(
+      map(response => {
+        this.cacheService.set(cacheKey, response, 30);
+        return response;
+      }),
+      catchError(error => {
+        const fallbackCached = this.cacheService.get<ExchangeRateResponse>(cacheKey);
+        if (fallbackCached) {
+          return of(fallbackCached);
+        }
+        throw error;
+      })
+    );
   }
 
   convertCurrency(from: string, to: string, amount: number): Observable<any> {
@@ -122,11 +147,30 @@ export class ExchangeRateService {
     baseCurrency: string = 'NGN',
     period: TimePeriod = '30D'
   ): Observable<HistoricalRateData[]> {
+    const cacheKey = `historical_rates_${targetCurrencies.join('_')}_${baseCurrency}_${period}`;
+    const cached = this.cacheService.get<HistoricalRateData[]>(cacheKey);
+    
+    if (cached) {
+      return of(cached);
+    }
+
     const requests = targetCurrencies.map((currency) =>
       this.getHistoricalRatesForPeriod(currency, baseCurrency, period)
     );
 
-    return forkJoin(requests);
+    return forkJoin(requests).pipe(
+      map(response => {
+        this.cacheService.set(cacheKey, response, 60);
+        return response;
+      }),
+      catchError(error => {
+        const fallbackCached = this.cacheService.get<HistoricalRateData[]>(cacheKey);
+        if (fallbackCached) {
+          return of(fallbackCached);
+        }
+        throw error;
+      })
+    );
   }
 
   getTimePeriods(): TimePeriodOption[] {

@@ -115,8 +115,19 @@ describe('TransferModalComponent', () => {
     fixture = TestBed.createComponent(TransferModalComponent);
     component = fixture.componentInstance;
 
+    // Set up default selectors
+    store.overrideSelector(selectWallet, initialState.wallet.wallet);
+    store.overrideSelector(getUserEmail, initialState.user.email);
+    store.overrideSelector(selectTransferLoading, false);
+    store.overrideSelector(selectTransferError, null);
+    store.overrideSelector(ExchangeRateSelectors.selectConversionResult, initialState.exchangeRate.conversionResult);
+    store.overrideSelector(ExchangeRateSelectors.selectConversionLoading, false);
+    store.overrideSelector(ExchangeRateSelectors.selectConversionError, null);
+
     spyOn(store, 'dispatch');
     spyOn(component.close, 'emit');
+    
+    store.refreshState();
     fixture.detectChanges();
   });
 
@@ -398,51 +409,63 @@ describe('TransferModalComponent', () => {
       });
     });
 
-    it('should not proceed with transfer when wallet is null', () => {
+    it('should not proceed with transfer when wallet is null', (done) => {
       store.overrideSelector(selectWallet, null);
+      store.refreshState();
 
       const dispatchSpy = store.dispatch as jasmine.Spy;
       dispatchSpy.calls.reset();
 
       component.onSubmit();
 
-      expect(dispatchSpy).not.toHaveBeenCalledWith(
-        jasmine.objectContaining({ type: transfer.type })
-      );
+      setTimeout(() => {
+        expect(dispatchSpy).not.toHaveBeenCalledWith(
+          jasmine.objectContaining({ type: transfer.type })
+        );
+        done();
+      }, 100);
     });
 
-    it('should not proceed with transfer when insufficient balance', () => {
+    it('should not proceed with transfer when insufficient balance', (done) => {
       const lowBalanceWallet = {
         ...initialState.wallet.wallet,
         balance: { ...initialState.wallet.wallet.balance, USD: 50 }, // Less than requested 100
       };
 
       store.overrideSelector(selectWallet, lowBalanceWallet);
+      store.refreshState();
 
       const dispatchSpy = store.dispatch as jasmine.Spy;
       dispatchSpy.calls.reset();
 
       component.onSubmit();
 
-      expect(dispatchSpy).not.toHaveBeenCalledWith(
-        jasmine.objectContaining({ type: transfer.type })
-      );
+      setTimeout(() => {
+        expect(dispatchSpy).not.toHaveBeenCalledWith(
+          jasmine.objectContaining({ type: transfer.type })
+        );
+        done();
+      }, 100);
     });
 
-    it('should not proceed with transfer when user email is null', () => {
+    it('should not proceed with transfer when user email is null', (done) => {
       store.overrideSelector(getUserEmail, null);
+      store.refreshState();
 
       const dispatchSpy = store.dispatch as jasmine.Spy;
       dispatchSpy.calls.reset();
 
       component.onSubmit();
 
-      expect(dispatchSpy).not.toHaveBeenCalledWith(
-        jasmine.objectContaining({ type: transfer.type })
-      );
+      setTimeout(() => {
+        expect(dispatchSpy).not.toHaveBeenCalledWith(
+          jasmine.objectContaining({ type: transfer.type })
+        );
+        done();
+      }, 100);
     });
 
-    it('should dispatch transfer with same currency (no conversion)', () => {
+    it('should dispatch transfer with same currency (no conversion)', (done) => {
       component.transferForm.patchValue({
         fromCurrency: 'USD',
         toCurrency: 'USD',
@@ -455,20 +478,23 @@ describe('TransferModalComponent', () => {
 
       component.onSubmit();
 
-      expect(dispatchSpy).toHaveBeenCalledWith(
-        transfer({
-          fromEmail: 'test@example.com',
-          toWalletAddress: 'valid-wallet-address-123',
-          amount: 100,
-          fromCurrency: 'USD',
-          toCurrency: 'USD',
-          convertedAmount: 100,
-          exchangeRate: 1,
-        })
-      );
+      setTimeout(() => {
+        expect(dispatchSpy).toHaveBeenCalledWith(
+          transfer({
+            fromEmail: 'test@example.com',
+            toWalletAddress: 'valid-wallet-address-123',
+            amount: 100,
+            fromCurrency: 'USD',
+            toCurrency: 'USD',
+            convertedAmount: 100,
+            exchangeRate: 1,
+          })
+        );
+        done();
+      }, 100);
     });
 
-    it('should dispatch transfer with currency conversion using conversion result', () => {
+    it('should dispatch transfer with currency conversion using conversion result', (done) => {
       const mockConversionResult = {
         success: true,
         query: { from: 'USD', to: 'NGN', amount: 100 },
@@ -477,6 +503,7 @@ describe('TransferModalComponent', () => {
       };
 
       store.overrideSelector(ExchangeRateSelectors.selectConversionResult, mockConversionResult);
+      store.refreshState();
 
       component.transferForm.patchValue({
         fromCurrency: 'USD',
@@ -490,38 +517,45 @@ describe('TransferModalComponent', () => {
 
       component.onSubmit();
 
-      expect(dispatchSpy).toHaveBeenCalledWith(
-        transfer({
-          fromEmail: 'test@example.com',
-          toWalletAddress: 'valid-wallet-address-123',
-          amount: 100,
-          fromCurrency: 'USD',
-          toCurrency: 'NGN',
-          convertedAmount: 165000,
-          exchangeRate: 1650,
-        })
-      );
+      setTimeout(() => {
+        expect(dispatchSpy).toHaveBeenCalledWith(
+          transfer({
+            fromEmail: 'test@example.com',
+            toWalletAddress: 'valid-wallet-address-123',
+            amount: 100,
+            fromCurrency: 'USD',
+            toCurrency: 'NGN',
+            convertedAmount: 165000,
+            exchangeRate: 1650,
+          })
+        );
+        done();
+      }, 100);
     });
 
-    it('should dispatch transfer with fallback values when conversion result is null', () => {
+    it('should dispatch transfer with fallback values when conversion result is null', (done) => {
       store.overrideSelector(ExchangeRateSelectors.selectConversionResult, null);
+      store.refreshState();
 
       const dispatchSpy = store.dispatch as jasmine.Spy;
       dispatchSpy.calls.reset();
 
       component.onSubmit();
 
-      expect(dispatchSpy).toHaveBeenCalledWith(
-        transfer({
-          fromEmail: 'test@example.com',
-          toWalletAddress: 'valid-wallet-address-123',
-          amount: 100,
-          fromCurrency: 'USD',
-          toCurrency: 'NGN',
-          convertedAmount: 100, // fallback to original amount
-          exchangeRate: 1, // fallback rate
-        })
-      );
+      setTimeout(() => {
+        expect(dispatchSpy).toHaveBeenCalledWith(
+          transfer({
+            fromEmail: 'test@example.com',
+            toWalletAddress: 'valid-wallet-address-123',
+            amount: 100,
+            fromCurrency: 'USD',
+            toCurrency: 'NGN',
+            convertedAmount: 100, // fallback to original amount
+            exchangeRate: 1, // fallback rate
+          })
+        );
+        done();
+      }, 100);
     });
   });
 

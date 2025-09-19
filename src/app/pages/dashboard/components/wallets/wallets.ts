@@ -43,10 +43,14 @@ export class Wallets implements OnInit {
   }
 
   ngOnInit() {
-    const storedEmail = this.sessionStorageService.getItem<string>('email');
-    if (storedEmail) {
-      this.store.dispatch(setEmail({ email: storedEmail }));
-      this.store.dispatch(getWallet({ email: storedEmail }));
+    try {
+      const storedEmail = this.sessionStorageService.getItem<string>('email');
+      if (storedEmail) {
+        this.store.dispatch(setEmail({ email: storedEmail }));
+        this.store.dispatch(getWallet({ email: storedEmail }));
+      }
+    } catch (error) {
+      console.error('Error accessing session storage:', error);
     }
   }
 
@@ -57,9 +61,13 @@ export class Wallets implements OnInit {
   }
 
   retryGetWallet() {
-    const storedEmail = this.sessionStorageService.getItem<string>('email');
-    if (storedEmail) {
-      this.store.dispatch(getWallet({ email: storedEmail }));
+    try {
+      const storedEmail = this.sessionStorageService.getItem<string>('email');
+      if (storedEmail) {
+        this.store.dispatch(getWallet({ email: storedEmail }));
+      }
+    } catch (error) {
+      console.error('Error accessing session storage:', error);
     }
   }
 

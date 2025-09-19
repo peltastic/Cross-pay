@@ -92,10 +92,13 @@ describe('TransactionService', () => {
     it('should handle empty wallet address', () => {
       const walletAddress = '';
 
-      service.getTransactions(walletAddress).subscribe();
+      service.getTransactions(walletAddress).subscribe(transactions => {
+        expect(transactions).toEqual([]);
+      });
 
       const expectedUrl = `/api/transactions/${encodeURIComponent(walletAddress)}`;
       const req = httpMock.expectOne(expectedUrl);
+      expect(req.request.method).toBe('GET');
       req.flush([]);
     });
 
@@ -182,11 +185,16 @@ describe('TransactionService', () => {
         pageSize: 5,
       };
 
-      service.getTransactionsPaginated(paginationRequest).subscribe();
+      service.getTransactionsPaginated(paginationRequest).subscribe(
+        (transactions) => {
+          expect(transactions).toEqual(mockTransactions);
+        }
+      );
 
       const req = httpMock.expectOne(
         `/api/transactions/${encodeURIComponent(paginationRequest.walletAddress)}`
       );
+      expect(req.request.method).toBe('GET');
       req.flush(mockTransactions);
     });
 
@@ -214,11 +222,16 @@ describe('TransactionService', () => {
         pageSize: 0,
       };
 
-      service.getTransactionsPaginated(paginationRequest).subscribe();
+      service.getTransactionsPaginated(paginationRequest).subscribe(
+        (transactions) => {
+          expect(transactions).toEqual([]);
+        }
+      );
 
       const req = httpMock.expectOne(
         `/api/transactions/${encodeURIComponent(paginationRequest.walletAddress)}`
       );
+      expect(req.request.method).toBe('GET');
       req.flush([]);
     });
 
@@ -229,11 +242,16 @@ describe('TransactionService', () => {
         pageSize: 1000,
       };
 
-      service.getTransactionsPaginated(paginationRequest).subscribe();
+      service.getTransactionsPaginated(paginationRequest).subscribe(
+        (transactions) => {
+          expect(transactions).toEqual(mockTransactions);
+        }
+      );
 
       const req = httpMock.expectOne(
         `/api/transactions/${encodeURIComponent(paginationRequest.walletAddress)}`
       );
+      expect(req.request.method).toBe('GET');
       req.flush(mockTransactions);
     });
 
@@ -244,9 +262,14 @@ describe('TransactionService', () => {
         pageSize: -5,
       };
 
-      service.getTransactionsPaginated(paginationRequest).subscribe();
+      service.getTransactionsPaginated(paginationRequest).subscribe(
+        (transactions) => {
+          expect(transactions).toEqual([]);
+        }
+      );
 
       const req = httpMock.expectOne('/api/transactions/');
+      expect(req.request.method).toBe('GET');
       req.flush([]);
     });
   });
@@ -282,16 +305,26 @@ describe('TransactionService', () => {
         pageSize: 2,
       };
 
-      service.loadMoreTransactions(request1).subscribe();
+      service.loadMoreTransactions(request1).subscribe(
+        (transactions) => {
+          expect(transactions).toEqual(mockTransactions.slice(0, 2));
+        }
+      );
       const req1 = httpMock.expectOne(
         `/api/transactions/${encodeURIComponent(request1.walletAddress)}`
       );
+      expect(req1.request.method).toBe('GET');
       req1.flush(mockTransactions.slice(0, 2));
 
-      service.loadMoreTransactions(request2).subscribe();
+      service.loadMoreTransactions(request2).subscribe(
+        (transactions) => {
+          expect(transactions).toEqual(mockTransactions.slice(2));
+        }
+      );
       const req2 = httpMock.expectOne(
         `/api/transactions/${encodeURIComponent(request2.walletAddress)}`
       );
+      expect(req2.request.method).toBe('GET');
       req2.flush(mockTransactions.slice(2));
     });
 
@@ -338,20 +371,30 @@ describe('TransactionService', () => {
     it('should handle very long wallet addresses', () => {
       const longWalletAddress = 'wallet-' + 'a'.repeat(1000);
 
-      service.getTransactions(longWalletAddress).subscribe();
+      service.getTransactions(longWalletAddress).subscribe(
+        (transactions) => {
+          expect(transactions).toEqual(mockTransactions);
+        }
+      );
 
       const req = httpMock.expectOne(`/api/transactions/${encodeURIComponent(longWalletAddress)}`);
+      expect(req.request.method).toBe('GET');
       req.flush(mockTransactions);
     });
 
     it('should handle wallet addresses with Unicode characters', () => {
       const unicodeWalletAddress = 'wallet-ñàmé-测试-🔑';
 
-      service.getTransactions(unicodeWalletAddress).subscribe();
+      service.getTransactions(unicodeWalletAddress).subscribe(
+        (transactions) => {
+          expect(transactions).toEqual(mockTransactions);
+        }
+      );
 
       const req = httpMock.expectOne(
         `/api/transactions/${encodeURIComponent(unicodeWalletAddress)}`
       );
+      expect(req.request.method).toBe('GET');
       req.flush(mockTransactions);
     });
 

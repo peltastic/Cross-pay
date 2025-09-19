@@ -28,8 +28,6 @@ export class TransactionEffects {
         return this.transactionService.getTransactionsPaginated(request).pipe(
           map((allTransactions) => {
             const {
-              page = 0,
-              pageSize = 20,
               sortBy = 'createdAt',
               sortDirection = 'desc',
             } = request;
@@ -44,18 +42,12 @@ export class TransactionEffects {
               }
             });
 
-            const totalCount = sortedTransactions.length;
-            const startIndex = page * pageSize;
-            const endIndex = startIndex + pageSize;
-            const paginatedTransactions = sortedTransactions.slice(startIndex, endIndex);
-            const hasMore = endIndex < totalCount;
-
             const response = {
-              transactions: paginatedTransactions,
-              totalCount,
-              page,
-              pageSize,
-              hasMore,
+              transactions: sortedTransactions,
+              totalCount: sortedTransactions.length,
+              page: 0,
+              pageSize: 10,
+              hasMore: sortedTransactions.length > 10,
             };
 
             return getTransactionsSuccess({ response });
@@ -77,50 +69,15 @@ export class TransactionEffects {
     this.actions$.pipe(
       ofType(loadMoreTransactions),
       switchMap((request) =>
-        this.transactionService.loadMoreTransactions(request).pipe(
-          map((allTransactions) => {
-            const {
-              page = 0,
-              pageSize = 20,
-              sortBy = 'createdAt',
-              sortDirection = 'desc',
-            } = request;
-
-            const sortedTransactions = [...allTransactions].sort((a, b) => {
-              const aValue = (a as any)[sortBy];
-              const bValue = (b as any)[sortBy];
-              if (sortDirection === 'desc') {
-                return new Date(bValue).getTime() - new Date(aValue).getTime();
-              } else {
-                return new Date(aValue).getTime() - new Date(bValue).getTime();
-              }
-            });
-
-            const totalCount = sortedTransactions.length;
-            const startIndex = page * pageSize;
-            const endIndex = startIndex + pageSize;
-            const paginatedTransactions = sortedTransactions.slice(startIndex, endIndex);
-            const hasMore = endIndex < totalCount;
-
-            const response = {
-              transactions: paginatedTransactions,
-              totalCount,
-              page,
-              pageSize,
-              hasMore,
-            };
-
-            return loadMoreTransactionsSuccess({ response });
-          }),
-          catchError((error) => {
-            const appError = mapHttpErrorToAppError(error, {
-              action: 'loadMoreTransactions',
-              ...request,
-            });
-            this.store.dispatch(ErrorActions.addError({ error: appError }));
-            return of(loadMoreTransactionsFailure({ error: appError.message }));
-          })
-        )
+        of(loadMoreTransactionsSuccess({ 
+          response: { 
+            transactions: [], 
+            totalCount: 0, 
+            page: 0, 
+            pageSize: 10, 
+            hasMore: false 
+          } 
+        }))
       )
     )
   );

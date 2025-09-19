@@ -1,48 +1,42 @@
 <app-dashboard-layout>
   <div class="p-6">
-    <div class="mb-6 bg-white dark:bg-background-dark w-fit rounded-2xl p-6">
+    <div class="mb-6 w-fit rounded-2xl p-6">
       <h1 class="text-2xl font-bold text-gray-text-1 dark:text-white">Transaction History</h1>
     </div>
 
     @if (paginatedData$ | async; as data) {
-      <div class="space-y-4">
+    <div class="space-y-4">
+      <div class="w-dvw md:w-auto overflow-x-scroll scrollbar-hide">
+
         <app-data-table
-          [columns]="columns"
-          [data]="data.transactions || []"
-          [loading]="data.loading"
-          [error]="data.error"
+        [columns]="columns"
+        [data]="data.transactions || []"
+        [loading]="data.loading"
+        [error]="data.error"
         >
-        </app-data-table>
+      </app-data-table>
+    </div>
 
-        @if (data.transactions && data.transactions.length > 0) {
-          <div class="flex flex-col items-center space-y-4">
-            <!-- <div class="text-sm text-gray-600 dark:text-gray-300">
-              Showing {{ data.transactions.length }} of {{ data.pagination.totalCount }} transactions
-            </div> -->
-            
-            @if (data.pagination.hasMore) {
-              <app-button 
-                (click)="onLoadMore()"
-                [disabled]="data.loadingMore"
-                variant="secondary"
-                size="md"
-              >
-                @if (data.loadingMore) {
-                  Loading more...
-                } @else {
-                  Load More Transactions
-                }
-              </app-button>
-            }
-
-            @if (data.loadMoreError) {
-              <div class="text-sm text-red-600 dark:text-red-400">
-                {{ data.loadMoreError }}
-              </div>
-            }
-          </div>
+            @if (data.transactions && data.transactions.length > 0) {
+        @if (data.pagination.totalCount > 10) {
+          <app-pagination 
+            [data]="{
+              currentPage: data.pagination.currentPage,
+              totalCount: data.pagination.totalCount,
+              pageSize: data.pagination.pageSize,
+              hasMore: data.pagination.hasMore
+            }"
+            (pageChange)="onPageChange($event)"
+          ></app-pagination>
         }
-      </div>
+
+        @if (data.loadMoreError) {
+        <div class="text-sm text-red-600 dark:text-red-400">
+          {{ data.loadMoreError }}
+        </div>
+        }
+      }
+    </div>
     }
   </div>
 </app-dashboard-layout>

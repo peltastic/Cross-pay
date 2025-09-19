@@ -18,7 +18,7 @@ export const initialState: TransactionStateModel = {
   transactions: [],
   totalCount: 0,
   currentPage: 0,
-  pageSize: 20,
+  pageSize: 10,
   hasMore: false,
   isFetching: false,
   fetchError: null,

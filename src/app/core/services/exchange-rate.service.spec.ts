@@ -2,12 +2,14 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ExchangeRateService } from './exchange-rate.service';
 import { EnvironmentService } from './environment.service';
+import { CacheService } from './cache.service';
 import { ExchangeRateResponse, HistoricalDataPoint, TimePeriod, HistoricalRateData } from '../models/exchange-rate.model';
 
 describe('ExchangeRateService', () => {
   let service: ExchangeRateService;
   let httpMock: HttpTestingController;
   let mockEnvironmentService: jasmine.SpyObj<EnvironmentService>;
+  let mockCacheService: jasmine.SpyObj<CacheService>;
 
   const mockExchangeRateResponse: ExchangeRateResponse = {
     success: true,
@@ -31,17 +33,21 @@ describe('ExchangeRateService', () => {
       exchangeRateApiKey: 'test-api-key'
     });
 
+    const cacheSpy = jasmine.createSpyObj('CacheService', ['get', 'set']);
+
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [
         ExchangeRateService,
-        { provide: EnvironmentService, useValue: environmentSpy }
+        { provide: EnvironmentService, useValue: environmentSpy },
+        { provide: CacheService, useValue: cacheSpy }
       ]
     });
 
     service = TestBed.inject(ExchangeRateService);
     httpMock = TestBed.inject(HttpTestingController);
     mockEnvironmentService = TestBed.inject(EnvironmentService) as jasmine.SpyObj<EnvironmentService>;
+    mockCacheService = TestBed.inject(CacheService) as jasmine.SpyObj<CacheService>;
   });
 
   afterEach(() => {
@@ -65,6 +71,8 @@ describe('ExchangeRateService', () => {
 
   describe('getLatestRates', () => {
     it('should fetch latest rates with default base currency', () => {
+      mockCacheService.get.and.returnValue(null);
+      
       service.getLatestRates().subscribe(response => {
         expect(response).toEqual(mockExchangeRateResponse);
       });
@@ -77,6 +85,8 @@ describe('ExchangeRateService', () => {
     });
 
     it('should fetch latest rates with custom base currency', () => {
+      mockCacheService.get.and.returnValue(null);
+      
       service.getLatestRates('USD').subscribe(response => {
         expect(response).toEqual(mockExchangeRateResponse);
       });
@@ -89,12 +99,16 @@ describe('ExchangeRateService', () => {
     });
 
     it('should handle HTTP errors', () => {
-      service.getLatestRates().subscribe({
+      mockCacheService.get.and.returnValue(null);
+      
+      service.getLatestRates('NGN').subscribe({
         next: () => fail('should have failed'),
         error: (error) => expect(error).toBeTruthy()
       });
 
-      const req = httpMock.expectOne(req => req.url.includes('/latest'));
+      const req = httpMock.expectOne(
+        'https://api.exchangerate.com/latest?access_key=test-api-key&base=NGN&symbols=USD,EUR,GBP,NGN,JPY,CAD,GHS,BTC'
+      );
       req.flush('Server error', { status: 500, statusText: 'Internal Server Error' });
     });
   });
@@ -305,6 +319,9 @@ describe('ExchangeRateService', () => {
 
   describe('error handling', () => {
     it('should handle network errors in getLatestRates', () => {
+      // Ensure cache returns null so error is not suppressed
+      mockCacheService.get.and.returnValue(null);
+      
       service.getLatestRates().subscribe({
         next: () => fail('should have failed'),
         error: (error) => {
@@ -332,24 +349,42 @@ describe('ExchangeRateService', () => {
   describe('edge cases', () => {
     it('should handle extremely large amounts in conversion', () => {
       const largeAmount = Number.MAX_SAFE_INTEGER;
-      service.convertCurrency('USD', 'EUR', largeAmount).subscribe();
+      const expectedResult = largeAmount * 0.85;
+      
+      service.convertCurrency('USD', 'EUR', largeAmount).subscribe(
+        (result) => {
+          expect(result).toEqual({ success: true, result: expectedResult });
+        }
+      );
 
       const req = httpMock.expectOne(req => req.url.includes(`amount=${largeAmount}`));
-      req.flush({ success: true, result: largeAmount * 0.85 });
+      expect(req.request.method).toBe('GET');
+      req.flush({ success: true, result: expectedResult });
     });
 
     it('should handle special characters in currency codes', () => {
-      service.getLatestRates('NG$').subscribe();
+      service.getLatestRates('NG$').subscribe(
+        (rates) => {
+          expect(rates).toEqual(mockExchangeRateResponse);
+        }
+      );
 
       const req = httpMock.expectOne(req => req.url.includes('base=NG$'));
+      expect(req.request.method).toBe('GET');
       req.flush(mockExchangeRateResponse);
     });
 
     it('should handle date format edge cases', () => {
       const invalidDate = '2023-13-32'; // Invalid date
-      service.getHistoricalRates(invalidDate).subscribe();
+      
+      service.getHistoricalRates(invalidDate).subscribe(
+        (rates) => {
+          expect(rates).toEqual(mockExchangeRateResponse);
+        }
+      );
 
       const req = httpMock.expectOne(req => req.url.includes(invalidDate));
+      expect(req.request.method).toBe('GET');
       req.flush(mockExchangeRateResponse);
     });
   });

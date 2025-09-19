@@ -1,15 +1,15 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngrx/store';
-import { Observable, Subject } from 'rxjs';
-import { getUserEmail } from '../../store/user/user.selector';
+import {  Subject } from 'rxjs';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { filter, takeUntil } from 'rxjs/operators';
 import { SessionStorageService } from '../../core/services/session-storage.service';
+import { DarkModeToggleComponent } from '../../shared/components/dark-mode-toggle/dark-mode-toggle';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, DarkModeToggleComponent],
   templateUrl: './sidebar.html',
 })
 export class Sidebar implements OnInit, OnDestroy {
@@ -46,6 +46,11 @@ export class Sidebar implements OnInit, OnDestroy {
 
   isActive(path: string): boolean {
     return this.currentPath === path;
+  }
+
+  logout(): void {
+    this.sessionService.removeItem('email');
+    this.router.navigate(['/get-started']);
   }
 
   ngOnDestroy() {

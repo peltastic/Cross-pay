@@ -150,7 +150,7 @@ describe('DashboardLayout', () => {
 
       await component.onToggleMobileSidebar(true);
 
-      expect(console.error).toHaveBeenCalledWith('Error loading mobile sidebar:', error);
+      expect(console.error).toHaveBeenCalledWith('Failed to load mobile sidebar:', error);
     });
 
     it('should update existing mobile sidebar instance when already loaded', async () => {
@@ -184,6 +184,11 @@ describe('DashboardLayout', () => {
       const mockMobileSidebarRef = createMockComponentRef({
         isOpen: false,
         close: {
+          pipe: jasmine.createSpy('pipe').and.returnValue({
+            subscribe: jasmine.createSpy('subscribe').and.callFake((callback: Function) => {
+              callback();
+            })
+          }),
           subscribe: jasmine.createSpy('subscribe').and.callFake((callback: Function) => {
             callback();
           }),

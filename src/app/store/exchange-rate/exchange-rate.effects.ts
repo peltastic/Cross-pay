@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { catchError, map, mergeMap, switchMap, withLatestFrom, filter } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { ExchangeRateService } from '../../core/services/exchange-rate.service';
+import { CacheService } from '../../core/services/cache.service';
 import { mapHttpErrorToAppError } from '../../core/models/error.model';
 import * as ExchangeRateActions from './exchange-rate.actions';
 import * as ExchangeRateSelectors from './exchange-rate.selector';
@@ -13,6 +14,7 @@ import * as ErrorActions from '../error/error.actions';
 export class ExchangeRateEffects {
   private actions$ = inject(Actions);
   private exchangeRateService = inject(ExchangeRateService);
+  private cacheService = inject(CacheService);
   private store = inject(Store);
 
   loadLatestRates$ = createEffect(() =>
@@ -37,10 +39,22 @@ export class ExchangeRateEffects {
   loadHistoricalRates$ = createEffect(() =>
     this.actions$.pipe(
       ofType(ExchangeRateActions.loadHistoricalRates),
-      switchMap(({ targetCurrencies, baseCurrency, period }) =>
-        this.exchangeRateService.getHistoricalRatesForMultipleCurrencies(targetCurrencies, baseCurrency, period).pipe(
+      switchMap(({ targetCurrencies, baseCurrency, period }) => {
+        const cacheKey = `historical_rates_${targetCurrencies.join('_')}_${baseCurrency}_${period}`;
+        const cached = this.cacheService.get<any[]>(cacheKey);
+        
+        if (cached && !navigator.onLine) {
+          return of(ExchangeRateActions.loadHistoricalRatesSuccess({ data: cached }));
+        }
+
+        return this.exchangeRateService.getHistoricalRatesForMultipleCurrencies(targetCurrencies, baseCurrency, period).pipe(
           map(data => ExchangeRateActions.loadHistoricalRatesSuccess({ data })),
           catchError(error => {
+            const fallbackCached = this.cacheService.get<any[]>(cacheKey);
+            if (fallbackCached) {
+              return of(ExchangeRateActions.loadHistoricalRatesSuccess({ data: fallbackCached }));
+            }
+            
             const appError = mapHttpErrorToAppError(error, { 
               action: 'loadHistoricalRates', 
               targetCurrencies, 
@@ -52,8 +66,8 @@ export class ExchangeRateEffects {
               error: appError.message 
             }));
           })
-        )
-      )
+        );
+      })
     )
   );
 

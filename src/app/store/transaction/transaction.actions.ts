@@ -9,6 +9,8 @@ export const LOAD_MORE_TRANSACTIONS_SUCCESS = '[Transaction] Load More Transacti
 export const LOAD_MORE_TRANSACTIONS_FAILURE = '[Transaction] Load More Transactions Failure';
 export const SET_TRANSACTION_PAGE_SIZE = '[Transaction] Set Page Size';
 export const RESET_TRANSACTIONS = '[Transaction] Reset Transactions';
+export const NEXT_PAGE = '[Transaction] Next Page';
+export const SET_PAGE = '[Transaction] Set Page';
 
 export interface PaginationRequest {
   walletAddress: string;
@@ -63,4 +65,13 @@ export const setTransactionPageSize = createAction(
 
 export const resetTransactions = createAction(
   RESET_TRANSACTIONS
+);
+
+export const nextPage = createAction(
+  NEXT_PAGE
+);
+
+export const setPageAction = createAction(
+  SET_PAGE,
+  props<{ page: number }>()
 );
