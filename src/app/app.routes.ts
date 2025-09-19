@@ -9,10 +9,12 @@ export const routes: Routes = [
   {
     path: 'get-started',
     loadComponent: () => import('./pages/onboarding/onboarding.component').then(m => m.Onboarding),
+    data: { preload: true }
   },
   {
     path: 'dashboard',
     loadComponent: () => import('./pages/dashboard/dashboard').then(m => m.Dashboard),
+    data: { preload: true }
   },
   {
     path: 'dashboard/transactions',

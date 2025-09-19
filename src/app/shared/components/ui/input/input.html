@@ -5,7 +5,10 @@
   [disabled]="disabled" 
   [step]="step"
   [min]="min"
+  [attr.aria-label]="ariaLabel"
+  [attr.aria-describedby]="ariaDescribedBy"
+  [attr.aria-required]="required"
   (input)="onInput($event)" 
   (blur)="onBlur()" 
-  [class]="'w-full p-3 rounded-lg dark:text-white border border-primary-border outline-black transition-all duration-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-100 ' + class"
+  [class]="'w-full p-3 rounded-lg dark:text-white border border-primary-border outline-black transition-all duration-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-gray-100 focus:ring-2 focus:ring-button-background focus:border-transparent ' + class"
 />

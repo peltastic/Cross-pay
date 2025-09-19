@@ -1,10 +1,11 @@
 <div
   class="flex w-full min-h-screen bg-dashboard-background dark:bg-background-dark lg:py-4 lg:px-4 max-w-[1500px] mx-auto"
 >
-  <div class="w-[35%] max-w-[20rem] hidden lg:block">
+  <aside class="w-[35%] max-w-[20rem] hidden lg:block" aria-label="Navigation sidebar">
     <div #sidebarContainer></div>
-  </div>
+  </aside>
   <main
+    role="main"
     class="flex-1 lg:ml-0 bg-dashboard-secondary-background dark:bg-dashboard-secondary-background-dark sm:rounded-xl"
   >
     <ng-content></ng-content>
@@ -13,5 +14,5 @@
   <app-hamburger-menu #hamburgerMenu (toggleSidebar)="onToggleMobileSidebar($event)">
   </app-hamburger-menu>
 
-  <div #mobileSidebarContainer></div>
+  <div #mobileSidebarContainer role="dialog" aria-label="Mobile navigation" [attr.aria-hidden]="!isMobileSidebarOpen"></div>
 </div>

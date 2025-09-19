@@ -13,6 +13,8 @@ export class ButtonComponent {
   @Input() type: 'button' | 'submit' = 'button';
   @Input() variant: 'primary' | 'secondary' | 'danger' = 'primary';
   @Input() class: string = '';
+  @Input() ariaLabel?: string;
+  @Input() ariaDescribedBy?: string;
   @Output() click = new EventEmitter<void>();
 
   onClick() {

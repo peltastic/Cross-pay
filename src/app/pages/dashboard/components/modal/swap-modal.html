@@ -94,12 +94,14 @@
       </app-button>
       <app-button
         [type]="'submit'"
-        [variant]="'primary'"
-        [loading]="(isSwapping$ | async) || false"
         [disabled]="!swapForm.valid || (isSwapping$ | async) || false"
-        class="ml-auto"
+         class="px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-white"
       >
-        Swap {{ swapForm.get('fromCurrency')?.value }} to {{ swapForm.get('toCurrency')?.value }}
+        @if (isSwapping$ | async) {
+              <div class="flex items-center justify-center">Swapping...</div>
+        } @else { Swap {{ swapForm.get('fromCurrency')?.value }} to
+        {{ swapForm.get('toCurrency')?.value }}
+        }
       </app-button>
     </div>
   </form>

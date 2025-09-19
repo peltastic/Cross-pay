@@ -22,6 +22,9 @@ export class InputComponent implements ControlValueAccessor {
   @AngularInput() class: string = '';
   @AngularInput() step: string = '';
   @AngularInput() min: string = '';
+  @AngularInput() ariaLabel?: string;
+  @AngularInput() ariaDescribedBy?: string;
+  @AngularInput() required?: boolean;
   
   value: string = '';
   onChange = (value: string) => {};

@@ -1,18 +1,24 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()" class="mt-10 max-w-md mx-auto">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="mt-10 max-w-md mx-auto" role="form" aria-label="Account setup form">
   <div class="mb-4 text-left">
     <label for="email" class="block mb-2 dark:text-white">Email</label>
     <app-input
+      id="email"
       type="email"
       formControlName="email"
       [disabled]="(loading$ | async) || false"
+      [ariaLabel]="'Enter your email address'"
+      [ariaDescribedBy]="emailError ? 'email-error' : undefined"
+      [required]="true"
     ></app-input>
     @if (emailError) {
-    <div class="text-error-message-text text-sm mt-1">{{ emailError }}</div>
+    <div id="email-error" class="text-error-message-text text-sm mt-1" role="alert">{{ emailError }}</div>
     }
   </div>
   @if (error$ | async; as error) {
   <div
     class="text-error-message-text py-2 my-4 rounded-md bg-error-message-background text-sm mt-1"
+    role="alert"
+    aria-live="polite"
   >
     {{ error }}
   </div>
