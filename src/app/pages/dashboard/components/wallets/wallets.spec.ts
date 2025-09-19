@@ -262,9 +262,36 @@ describe('Wallets', () => {
     });
 
     it('should handle session storage exceptions gracefully', () => {
-      sessionStorageService.getItem.and.throwError('Session storage error');
+      // Reset TestBed to allow for clean override
+      TestBed.resetTestingModule();
       
-      expect(() => component.ngOnInit()).not.toThrow();
+      const sessionStorageSpy = jasmine.createSpyObj('SessionStorageService', ['getItem']);
+      sessionStorageSpy.getItem.and.throwError('Session storage error');
+      
+      TestBed.configureTestingModule({
+        imports: [Wallets],
+        providers: [
+          provideMockStore({
+            initialState: {
+              wallet: { 
+                wallet: null, 
+                isCreatingWallet: false, 
+                createWalletError: null,
+                isFetching: false,
+                fetchWalletError: null
+              },
+              user: {
+                email: null
+              }
+            }
+          }),
+          { provide: SessionStorageService, useValue: sessionStorageSpy }
+        ]
+      });
+      
+      const errorFixture = TestBed.createComponent(Wallets);
+      
+      expect(() => errorFixture.detectChanges()).not.toThrow();
     });
   });
 });

@@ -78,6 +78,8 @@ export class SwapModalComponent implements OnInit, OnDestroy {
   swapSuccess = false;
   successMessage = '';
 
+  private currentWallet: WalletModel | null = null;
+
   private balanceValidator = (control: AbstractControl): ValidationErrors | null => {
     if (!control.value) return null;
     
@@ -110,6 +112,11 @@ export class SwapModalComponent implements OnInit, OnDestroy {
     
     this.isConverting$ = this.store.select(ExchangeRateSelectors.selectConversionLoading);
     this.conversionError$ = this.store.select(ExchangeRateSelectors.selectConversionError);
+    
+    // Track current wallet for synchronous validation
+    this.wallet$.subscribe(wallet => {
+      this.currentWallet = wallet;
+    });
     
     this.conversionResult$ = this.setupConversionResult();
   }
@@ -263,13 +270,11 @@ export class SwapModalComponent implements OnInit, OnDestroy {
   }
 
   getAvailableBalance(): number {
-    let balance = 0;
-    this.wallet$.pipe(take(1)).subscribe(wallet => {
-      if (wallet) {
-        const currency = this.swapForm.get('fromCurrency')?.value;
-        balance = wallet.balance[currency as keyof typeof wallet.balance] || 0;
-      }
-    });
-    return balance;
+    if (!this.currentWallet || !this.currentWallet.balance) {
+      return 0;
+    }
+    
+    const currency = this.swapForm.get('fromCurrency')?.value || 'USD';
+    return (this.currentWallet.balance as any)[currency] || 0;
   }
 }

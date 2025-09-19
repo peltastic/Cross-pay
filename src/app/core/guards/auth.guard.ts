@@ -11,7 +11,17 @@ export const authGuard: CanActivateFn = (route, state) => {
     return false;
   }
   
-
+  try {
+    const email = JSON.parse(emailData);
+    if (!email || email === '' || email === null) {
+      router.navigate(['/get-started']);
+      return false;
+    }
+  } catch (error) {
+    // Invalid JSON in session storage
+    router.navigate(['/get-started']);
+    return false;
+  }
   
   return true;
 };

@@ -31,10 +31,8 @@ export class LazyLoadService {
       }
     } catch (error) {
       if (error instanceof Error && (error.message.includes('NG0205') || error.message.includes('injector destroyed') || error.message.includes('ViewContainer is destroyed'))) {
-        console.error('Error loading component:', error);
         throw new Error('Component loading failed - injector destroyed');
       }
-      console.error('Error loading component:', error);
       throw error;
     }
   }

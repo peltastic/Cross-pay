@@ -10,6 +10,8 @@ import { ConversionResult } from '../../../../core/models/exchange-rate.model';
 import { WalletModel } from '../../../../core/models/wallet.model';
 import * as WalletActions from '../../../../store/wallet/wallet.actions';
 import * as ExchangeRateActions from '../../../../store/exchange-rate/exchange-rate.actions';
+import { selectWallet } from '../../../../store/wallet/wallet.selector';
+import { getUserEmail } from '../../../../store/user/user.selector';
 
 describe('SwapModalComponent', () => {
   let component: SwapModalComponent;
@@ -69,12 +71,14 @@ describe('SwapModalComponent', () => {
 
   function setupMockStoreSelectors() {
     mockStore.select.and.callFake((selector: any) => {
-      if (selector.toString().includes('selectWallet')) {
+      // Use direct selector comparison for more reliable mocking
+      if (selector === selectWallet) {
         return of(mockWallet);
       }
-      if (selector.toString().includes('getUserEmail')) {
+      if (selector === getUserEmail) {
         return of('test@example.com');
       }
+      // Fallback to string matching for other selectors
       if (selector.toString().includes('selectSwapLoading')) {
         return of(false);
       }
@@ -159,12 +163,18 @@ describe('SwapModalComponent', () => {
       expect(amountControl?.errors?.['pattern']).toBeTruthy();
     });
 
-    it('should accept valid amount', () => {
+    it('should accept valid amount', fakeAsync(() => {
+      // Ensure the wallet observable has emitted
+      tick();
+      fixture.detectChanges();
+      
       const amountControl = component.swapForm.get('amount');
       amountControl?.setValue('100.50');
       
+      tick(); // Let the validator run
+      
       expect(amountControl?.valid).toBeTruthy();
-    });
+    }));
   });
 
   describe('Error message handling', () => {
@@ -212,7 +222,17 @@ describe('SwapModalComponent', () => {
     }));
 
     it('should return 0 when wallet is null', fakeAsync(() => {
-      component.wallet$ = of(null);
+      mockStore.select.and.callFake((selector: any) => {
+        if (selector === selectWallet) {
+          return of(null);
+        }
+        return of(null);
+      });
+      
+      // Force recreation of component to pick up new mock
+      fixture = TestBed.createComponent(SwapModalComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
       tick();
       
       const balance = component.getAvailableBalance();
@@ -355,10 +375,10 @@ describe('SwapModalComponent', () => {
       };
       
       mockStore.select.and.callFake((selector: any) => {
-        if (selector.toString().includes('selectWallet')) {
+        if (selector === selectWallet) {
           return of(insufficientWallet);
         }
-        if (selector.toString().includes('getUserEmail')) {
+        if (selector === getUserEmail) {
           return of('test@example.com');
         }
         if (selector.toString().includes('selectConversionResult')) {
@@ -367,11 +387,21 @@ describe('SwapModalComponent', () => {
         return of(null);
       });
       
+      // Force recreation of component to pick up new mock
+      fixture = TestBed.createComponent(SwapModalComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+      tick();
+      
       component.swapForm.patchValue({
         fromCurrency: 'USD',
         toCurrency: 'EUR',
         amount: '100'
       });
+      
+      tick();
+      
+      expect(component.swapForm.valid).toBeFalsy();
       
       component.onSubmit();
       tick();
