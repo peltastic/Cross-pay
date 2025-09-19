@@ -19,6 +19,11 @@ export const TRANSFER_FAILURE = '[Wallet] Transfer Failure';
 export const TRANSFER = '[Wallet] Transfer';
 export const CLEAR_TRANSFER_ERROR = '[Wallet] Clear Transfer Error';
 
+export const SWAP_SUCCESS = '[Wallet] Swap Success';
+export const SWAP_FAILURE = '[Wallet] Swap Failure';
+export const SWAP = '[Wallet] Swap';
+export const CLEAR_SWAP_ERROR = '[Wallet] Clear Swap Error';
+
 export const createWallet = createAction(CREATE_WALLET, props<{ email: string }>());
 export const createWalletSuccess = createAction(CREATE_WALLET_SUCCESS);
 export const createWalletFailure = createAction(CREATE_WALLET_FAILURE, props<{ error: string }>());
@@ -57,3 +62,17 @@ export const transferFailure = createAction(
   props<{ error: string }>()
 );
 export const clearTransferError = createAction(CLEAR_TRANSFER_ERROR);
+
+export const swap = createAction(
+  SWAP,
+  props<{ fromEmail: string; amount: number; fromCurrency: string; toCurrency: string; convertedAmount: number; exchangeRate: number }>()
+);
+export const swapSuccess = createAction(
+  SWAP_SUCCESS,
+  props<{ wallet: WalletModel; message: string }>()
+);
+export const swapFailure = createAction(
+  SWAP_FAILURE,
+  props<{ error: string }>()
+);
+export const clearSwapError = createAction(CLEAR_SWAP_ERROR);

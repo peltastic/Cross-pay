@@ -24,4 +24,6 @@ export interface WalletStateModel {
   depositError: string | null;
   isTransferring: boolean;
   transferError: string | null;
+  isSwapping: boolean;
+  swapError: string | null;
 }

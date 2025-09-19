@@ -17,6 +17,9 @@ import {
   transfer,
   transferSuccess,
   transferFailure,
+  swap,
+  swapSuccess,
+  swapFailure,
 } from './wallet.actions';
 import { setEmail } from '../user/user.actions';
 
@@ -114,6 +117,47 @@ export class WalletEffects {
                 return of(
                   transferFailure({
                     error: error.error?.error || error.message || 'Failed to process transfer',
+                  })
+                );
+              })
+            );
+        }
+      )
+    )
+  );
+
+  swap$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(swap),
+      switchMap(
+        ({
+          fromEmail,
+          amount,
+          fromCurrency,
+          toCurrency,
+          convertedAmount,
+          exchangeRate,
+        }) => {
+          return this.walletService
+            .swap({
+              fromEmail,
+              amount,
+              fromCurrency,
+              toCurrency,
+              convertedAmount,
+              exchangeRate,
+            })
+            .pipe(
+              map((response) => {
+                return swapSuccess({
+                  wallet: response.wallet,
+                  message: response.message,
+                });
+              }),
+              catchError((error) => {
+                return of(
+                  swapFailure({
+                    error: error.error?.error || error.message || 'Failed to process swap',
                   })
                 );
               })

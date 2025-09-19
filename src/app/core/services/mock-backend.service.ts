@@ -24,6 +24,7 @@ export class MockBackendService implements InMemoryDbService {
       transactions: this.getFromStorage<TransactionModel[]>(this.STORAGE_KEYS.TRANSACTIONS) || [],
       deposit: [],
       transfer: [],
+      swap: [],
     };
   }
 
@@ -124,6 +125,10 @@ export class MockBackendService implements InMemoryDbService {
 
     if (reqInfo.collectionName === 'transfer') {
       return this.handleTransfer(reqInfo);
+    }
+
+    if (reqInfo.collectionName === 'swap') {
+      return this.handleSwap(reqInfo);
     }
 
     return reqInfo.utils.createResponse$(() => ({
@@ -419,6 +424,110 @@ export class MockBackendService implements InMemoryDbService {
         message: `Successfully transferred ${amount} ${fromCurrency} to ${toWalletAddress}`,
         senderWallet: updatedSenderWallet,
         receiverWallet: updatedReceiverWallet,
+      },
+      status: 200,
+    };
+    return reqInfo.utils.createResponse$(() => options);
+  }
+
+  private handleSwap(reqInfo: RequestInfo): Observable<any> {
+    const body = reqInfo.utils.getJsonBody(reqInfo.req);
+    const {
+      fromEmail,
+      amount,
+      fromCurrency,
+      toCurrency,
+      convertedAmount,
+      exchangeRate,
+    } = body;
+
+    const wallets = this.getFromStorage<WalletModel[]>(this.STORAGE_KEYS.WALLETS) || [];
+    const transactions =
+      this.getFromStorage<TransactionModel[]>(this.STORAGE_KEYS.TRANSACTIONS) || [];
+
+    const walletIndex = wallets.findIndex((w) => w.userId === fromEmail);
+    if (walletIndex === -1) {
+      const options: ResponseOptions = {
+        body: { error: 'Wallet not found' },
+        status: 404,
+      };
+      return reqInfo.utils.createResponse$(() => options);
+    }
+
+    const wallet = wallets[walletIndex];
+
+    if (!wallet.balance.hasOwnProperty(fromCurrency)) {
+      const options: ResponseOptions = {
+        body: { error: 'Invalid source currency' },
+        status: 400,
+      };
+      return reqInfo.utils.createResponse$(() => options);
+    }
+
+    if (!wallet.balance.hasOwnProperty(toCurrency)) {
+      const options: ResponseOptions = {
+        body: { error: 'Invalid target currency' },
+        status: 400,
+      };
+      return reqInfo.utils.createResponse$(() => options);
+    }
+
+    const fromBalance = wallet.balance[fromCurrency as keyof typeof wallet.balance];
+    if (fromBalance < amount) {
+      const options: ResponseOptions = {
+        body: { error: 'Insufficient balance' },
+        status: 400,
+      };
+      return reqInfo.utils.createResponse$(() => options);
+    }
+
+    const toBalance = wallet.balance[toCurrency as keyof typeof wallet.balance];
+    const updatedWallet: WalletModel = {
+      ...wallet,
+      balance: {
+        ...wallet.balance,
+        [fromCurrency]: fromBalance - amount,
+        [toCurrency]: toBalance + convertedAmount,
+      },
+    };
+
+    wallets[walletIndex] = updatedWallet;
+
+    const swapTransaction: TransactionModel = {
+      id: this.generateId(),
+      email: fromEmail,
+      walletAddress: wallet.walletAddress,
+      destinationAddress: wallet.walletAddress,
+      amount,
+      transactionType: 'swap',
+      direction: 'swap',
+      currency: fromCurrency as 'USD' | 'EUR' | 'GBP' | 'NGN' | 'JPY' | 'CAD' | 'GHS' | 'BTC',
+      createdAt: new Date().toISOString(),
+    };
+
+    transactions.push(swapTransaction);
+
+    this.saveToStorage(this.STORAGE_KEYS.WALLETS, wallets);
+    this.saveToStorage(this.STORAGE_KEYS.TRANSACTIONS, transactions);
+
+    const db = reqInfo.utils.getDb() as {
+      users: UserModel[];
+      wallets: WalletModel[];
+      transactions: TransactionModel[];
+    };
+
+    const dbWalletIndex = db.wallets.findIndex((w) => w.userId === fromEmail);
+    if (dbWalletIndex !== -1) {
+      db.wallets[dbWalletIndex] = updatedWallet;
+    }
+
+    db.transactions.push(swapTransaction);
+
+    const options: ResponseOptions = {
+      body: {
+        success: true,
+        message: `Successfully swapped ${amount} ${fromCurrency} to ${convertedAmount.toFixed(2)} ${toCurrency}`,
+        wallet: updatedWallet,
       },
       status: 200,
     };

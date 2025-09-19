@@ -1,7 +1,7 @@
 import { Component, ViewChild, ViewContainerRef, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { heroArrowDownTraySolid, heroArrowRightCircleSolid } from '@ng-icons/heroicons/solid';
+import { heroArrowDownTraySolid, heroArrowRightCircleSolid, heroArrowsRightLeftSolid } from '@ng-icons/heroicons/solid';
 import { QuickActionsCards } from '../quick-actions-cards/quick-actions-cards';
 import { ModalService } from '../../../../core/services/modal.service';
 
@@ -21,6 +21,7 @@ export interface QuickAction {
     provideIcons({
       heroArrowDownTraySolid,
       heroArrowRightCircleSolid,
+      heroArrowsRightLeftSolid,
     }),
   ],
   templateUrl: './quick-actions.html',
@@ -44,6 +45,13 @@ export class QuickActions {
       description: 'Send money to others',
       icon: 'heroArrowRightCircleSolid',
       action: () => this.handleTransfer(),
+    },
+    {
+      id: 'swap',
+      title: 'Swap',
+      description: 'Convert between currencies',
+      icon: 'heroArrowsRightLeftSolid',
+      action: () => this.handleSwap(),
     },
   ];
 
@@ -70,6 +78,18 @@ export class QuickActions {
       await this.modalService.openTransferModal(this.modalContainer);
     } catch (error) {
       console.error('Error opening transfer modal:', error);
+    }
+  }
+
+  async handleSwap() {
+    try {
+      if (!this.modalService) {
+        console.error('Modal service is not available');
+        return;
+      }
+      await this.modalService.openSwapModal(this.modalContainer);
+    } catch (error) {
+      console.error('Error opening swap modal:', error);
     }
   }
 }

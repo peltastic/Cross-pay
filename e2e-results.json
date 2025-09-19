@@ -1,0 +1,3025 @@
+{
+  "config": {
+    "configFile": "/Users/abm/Documents/projects/cross-pay/playwright.config.ts",
+    "rootDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "e2e-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "e2e-results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/abm/Documents/projects/cross-pay/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/abm/Documents/projects/cross-pay/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/abm/Documents/projects/cross-pay/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/abm/Documents/projects/cross-pay/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/abm/Documents/projects/cross-pay/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 4,
+    "webServer": {
+      "command": "npm start",
+      "url": "http://localhost:4200",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "basic-app.spec.ts",
+      "file": "basic-app.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Basic App Functionality",
+          "file": "basic-app.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load the application",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3515,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:04.558Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-a33682444bde0e1db1ae",
+              "file": "basic-app.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "should display onboarding page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5589,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:04.555Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-8f2399283ef7465acd66",
+              "file": "basic-app.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "should handle navigation to dashboard (may redirect)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 5621,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:04.559Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-2e673988936558c7cf4b",
+              "file": "basic-app.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "should handle navigation to transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5569,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:04.562Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-2dfd03e505d9d42b271f",
+              "file": "basic-app.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "should handle navigation to fx-analytics",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7235,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:09.280Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-0b2ad5022305e1dc5a00",
+              "file": "basic-app.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "should handle 404 pages gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3737,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:10.753Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-1bdfa01b2a180b7cafe2",
+              "file": "basic-app.spec.ts",
+              "line": 57,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "comprehensive.spec.ts",
+      "file": "comprehensive.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cross-Pay Application E2E Tests",
+          "file": "comprehensive.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the onboarding page with form elements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 3273,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:10.777Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-eae1e18f4afaf39a9fe7",
+              "file": "comprehensive.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should have working navigation and routing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 6214,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:10.805Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-774dc7b1edd43e4a98b0",
+              "file": "comprehensive.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "should be responsive and work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2984,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:14.088Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-7cf64de5e6e9d6e253eb",
+              "file": "comprehensive.spec.ts",
+              "line": 58,
+              "column": 7
+            },
+            {
+              "title": "should handle form interactions on onboarding page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3148,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:14.517Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-189f2ea89f29a7e4216d",
+              "file": "comprehensive.spec.ts",
+              "line": 77,
+              "column": 7
+            },
+            {
+              "title": "should load without JavaScript errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3518,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:17.057Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-0efe5f84593529a63380",
+              "file": "comprehensive.spec.ts",
+              "line": 107,
+              "column": 7
+            },
+            {
+              "title": "should have proper meta tags and title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 3033,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:17.054Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-ad50c81d5484b2adf380",
+              "file": "comprehensive.spec.ts",
+              "line": 135,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.ts",
+      "file": "dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard Functionality",
+          "file": "dashboard.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display dashboard with user data",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 297,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:17.105Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-51816-ay-dashboard-with-user-data-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-51816-ay-dashboard-with-user-data-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-317fc9ce3846f74dc524",
+              "file": "dashboard.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "should navigate to transactions page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 544,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:18.788Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-f8264-vigate-to-transactions-page-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-f8264-vigate-to-transactions-page-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4f7454a459a7aa8bbc15",
+              "file": "dashboard.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should navigate to fx analytics page",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 318,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:17.689Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-797d4-vigate-to-fx-analytics-page-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-797d4-vigate-to-fx-analytics-page-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-06001ec9e82fca4c8e5b",
+              "file": "dashboard.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "should open transfer modal",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 382,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:19.659Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functionality-should-open-transfer-modal-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functionality-should-open-transfer-modal-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-fe107ca315b43a52e74f",
+              "file": "dashboard.spec.ts",
+              "line": 43,
+              "column": 7
+            },
+            {
+              "title": "should complete a transfer",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 289,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:21.018Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functionality-should-complete-a-transfer-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functionality-should-complete-a-transfer-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-7b58314a05f4b49e750e",
+              "file": "dashboard.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "should validate transfer form",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 290,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:20.128Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-a4253-ould-validate-transfer-form-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-a4253-ould-validate-transfer-form-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-e69af3a49b1565a4ac36",
+              "file": "dashboard.spec.ts",
+              "line": 68,
+              "column": 7
+            },
+            {
+              "title": "should handle insufficient balance",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 354,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:21.343Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-b7fbf-handle-insufficient-balance-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-b7fbf-handle-insufficient-balance-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-2826f145444c3d487ce9",
+              "file": "dashboard.spec.ts",
+              "line": 80,
+              "column": 7
+            },
+            {
+              "title": "should display recent transactions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 361,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:21.342Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-8148a-display-recent-transactions-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-8148a-display-recent-transactions-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-0b878830286e2ddab037",
+              "file": "dashboard.spec.ts",
+              "line": 92,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors gracefully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 203,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:20.606Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-3dffd-andle-API-errors-gracefully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/dashboard-Dashboard-Functi-3dffd-andle-API-errors-gracefully-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-12700b2ef07c031fa6e4",
+              "file": "dashboard.spec.ts",
+              "line": 108,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "fx-analytics.spec.ts",
+      "file": "fx-analytics.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FX Analytics Page",
+          "file": "fx-analytics.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display FX analytics dashboard",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 317,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:21.890Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics--f09c9-play-FX-analytics-dashboard-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics--f09c9-play-FX-analytics-dashboard-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-696efd84ad0ec21c79f6",
+              "file": "fx-analytics.spec.ts",
+              "line": 31,
+              "column": 7
+            },
+            {
+              "title": "should display current exchange rate",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 271,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:22.677Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics--17dd2-splay-current-exchange-rate-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics--17dd2-splay-current-exchange-rate-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-423b50937664b029ece6",
+              "file": "fx-analytics.spec.ts",
+              "line": 36,
+              "column": 7
+            },
+            {
+              "title": "should change currency pair",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 351,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:23.003Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics-Page-should-change-currency-pair-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics-Page-should-change-currency-pair-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-fd5a0e9c3902448c336a",
+              "file": "fx-analytics.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "should change time range",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 327,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:22.985Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics-Page-should-change-time-range-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics-Page-should-change-time-range-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-7999590b7e9e8c1f7b5a",
+              "file": "fx-analytics.spec.ts",
+              "line": 58,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors gracefully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 289,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:23.536Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics--8bfa2-andle-API-errors-gracefully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/fx-analytics-FX-Analytics--8bfa2-andle-API-errors-gracefully-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-8641baf7c61e6b6dd372",
+              "file": "fx-analytics.spec.ts",
+              "line": 74,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "integration.spec.ts",
+      "file": "integration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "End-to-End User Journey",
+          "file": "integration.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete full user journey from onboarding to transfer",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 276,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts:19:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts:19:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:24.195Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/integration-End-to-End-Use-e261a-from-onboarding-to-transfer-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/integration-End-to-End-Use-e261a-from-onboarding-to-transfer-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-83f53ff8b7c981a66190",
+              "file": "integration.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should handle network failures gracefully throughout the journey",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 30149,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/onboarding.page.ts",
+                            "column": 21,
+                            "line": 19
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"email-input\"]')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages/onboarding.page.ts:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m fillUserDetails(email\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m firstName\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m lastName\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'[data-testid=\"email-input\"]'\u001b[39m\u001b[33m,\u001b[39m email)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'[data-testid=\"first-name-input\"]'\u001b[39m\u001b[33m,\u001b[39m firstName)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mfill(\u001b[32m'[data-testid=\"last-name-input\"]'\u001b[39m\u001b[33m,\u001b[39m lastName)\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m   }\u001b[0m\n\u001b[2m    at OnboardingPage.fillUserDetails (/Users/abm/Documents/projects/cross-pay/e2e/pages/onboarding.page.ts:19:21)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts:111:26\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:24.486Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-c71423d6d9e461f5cf4f",
+              "file": "integration.spec.ts",
+              "line": 102,
+              "column": 7
+            },
+            {
+              "title": "should work across different browsers and screen sizes",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 8110,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"mobile-header\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"mobile-header\"]')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"mobile-header\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"mobile-header\"]')\u001b[22m\n\n    at /Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts:146:65",
+                        "location": {
+                          "file": "/Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts",
+                          "column": 65,
+                          "line": 146
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 144 |\u001b[39m\n \u001b[90m 145 |\u001b[39m     \u001b[90m// Verify mobile layout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 146 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-testid=\"mobile-header\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 147 |\u001b[39m\n \u001b[90m 148 |\u001b[39m     \u001b[36mconst\u001b[39m user \u001b[33m=\u001b[39m testUsers\u001b[33m.\u001b[39mvalidUser\u001b[33m;\u001b[39m\n \u001b[90m 149 |\u001b[39m     \u001b[36mawait\u001b[39m onboardingPage\u001b[33m.\u001b[39mfillUserDetails(user\u001b[33m.\u001b[39memail\u001b[33m,\u001b[39m user\u001b[33m.\u001b[39mfirstName\u001b[33m,\u001b[39m user\u001b[33m.\u001b[39mlastName)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts",
+                            "column": 65,
+                            "line": 146
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"mobile-header\"]')\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"mobile-header\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 144 |\u001b[39m\n \u001b[90m 145 |\u001b[39m     \u001b[90m// Verify mobile layout\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 146 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-testid=\"mobile-header\"]'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 147 |\u001b[39m\n \u001b[90m 148 |\u001b[39m     \u001b[36mconst\u001b[39m user \u001b[33m=\u001b[39m testUsers\u001b[33m.\u001b[39mvalidUser\u001b[33m;\u001b[39m\n \u001b[90m 149 |\u001b[39m     \u001b[36mawait\u001b[39m onboardingPage\u001b[33m.\u001b[39mfillUserDetails(user\u001b[33m.\u001b[39memail\u001b[33m,\u001b[39m user\u001b[33m.\u001b[39mfirstName\u001b[33m,\u001b[39m user\u001b[33m.\u001b[39mlastName)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts:146:65\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:24.475Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts",
+                        "column": 65,
+                        "line": 146
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-884c44861d72cd56251f",
+              "file": "integration.spec.ts",
+              "line": 135,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "onboarding.spec.ts",
+      "file": "onboarding.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Onboarding Flow",
+          "file": "onboarding.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete successful onboarding flow",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 223,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:25.109Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-a5f0a--successful-onboarding-flow-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-a5f0a--successful-onboarding-flow-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fe534f0825407f213faa-d99d2de46dfabc5dca27",
+              "file": "onboarding.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should validate required fields",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 323,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:25.833Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-should-validate-required-fields-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-should-validate-required-fields-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fe534f0825407f213faa-b3ead1897862c9b62082",
+              "file": "onboarding.spec.ts",
+              "line": 42,
+              "column": 7
+            },
+            {
+              "title": "should validate email format",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 294,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:26.615Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-should-validate-email-format-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-should-validate-email-format-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fe534f0825407f213faa-49083a14aa37cc9abd07",
+              "file": "onboarding.spec.ts",
+              "line": 52,
+              "column": 7
+            },
+            {
+              "title": "should validate minimum name length",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 274,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:27.262Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-4a8e8-alidate-minimum-name-length-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-4a8e8-alidate-minimum-name-length-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fe534f0825407f213faa-5a8401dcc1b7647c60bf",
+              "file": "onboarding.spec.ts",
+              "line": 59,
+              "column": 7
+            },
+            {
+              "title": "should work with different countries and currencies",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 246,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:27.979Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-2c2e6-nt-countries-and-currencies-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-2c2e6-nt-countries-and-currencies-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fe534f0825407f213faa-a2de9d903241f647367e",
+              "file": "onboarding.spec.ts",
+              "line": 67,
+              "column": 7
+            },
+            {
+              "title": "should handle server errors gracefully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 257,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:28.549Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-8c96d-le-server-errors-gracefully-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/onboarding-Onboarding-Flow-8c96d-le-server-errors-gracefully-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fe534f0825407f213faa-2f4f8a0acfc9be3943b8",
+              "file": "onboarding.spec.ts",
+              "line": 81,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "performance.spec.ts",
+      "file": "performance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Performance and Accessibility Tests",
+          "file": "performance.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load pages within acceptable time limits",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 23,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6330,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Route / loaded in 1895ms\n"
+                        },
+                        {
+                          "text": "Route /get-started loaded in 834ms\n"
+                        },
+                        {
+                          "text": "Route /dashboard loaded in 719ms\n"
+                        },
+                        {
+                          "text": "Route /dashboard/transactions loaded in 642ms\n"
+                        },
+                        {
+                          "text": "Route /dashboard/fx-analytics loaded in 1972ms\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:29.222Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-9bc9b73230384a38a8c9",
+              "file": "performance.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should have good Core Web Vitals performance",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2398,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:29.874Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-f5832b0e64184b4e2758",
+              "file": "performance.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should handle concurrent user sessions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 2672,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:32.457Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-e2566768292136fde664",
+              "file": "performance.spec.ts",
+              "line": 45,
+              "column": 7
+            },
+            {
+              "title": "should work with slow network conditions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 4904,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Slow network load time: 2542ms\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:34.738Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-b98c41233f0f86ca4339",
+              "file": "performance.spec.ts",
+              "line": 77,
+              "column": 7
+            },
+            {
+              "title": "should handle page reload gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 5091,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:35.147Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-fa1371bf5fe9f56deff2",
+              "file": "performance.spec.ts",
+              "line": 94,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 23,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4509,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:35.745Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-652da1aa5668fbcaa4c4",
+              "file": "performance.spec.ts",
+              "line": 118,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "transactions.spec.ts",
+      "file": "transactions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Transactions Page",
+          "file": "transactions.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display transactions table",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 23,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 287,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:40.291Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--8a95c--display-transactions-table-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--8a95c--display-transactions-table-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-3ade4976a51938ef24fd",
+              "file": "transactions.spec.ts",
+              "line": 49,
+              "column": 7
+            },
+            {
+              "title": "should display transaction details correctly",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 289,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:40.366Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-faf964ce5af1018241c3",
+              "file": "transactions.spec.ts",
+              "line": 54,
+              "column": 7
+            },
+            {
+              "title": "should filter transactions by type",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 267,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:40.392Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--a7116-filter-transactions-by-type-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--a7116-filter-transactions-by-type-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-01e7ef9ece1dc9bdf117",
+              "file": "transactions.spec.ts",
+              "line": 70,
+              "column": 7
+            },
+            {
+              "title": "should filter transactions by date range",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 26,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 534,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:41.535Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--c9b0b--transactions-by-date-range-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--c9b0b--transactions-by-date-range-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-8965102391dd8ce5f80b",
+              "file": "transactions.spec.ts",
+              "line": 95,
+              "column": 7
+            },
+            {
+              "title": "should search transactions",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 27,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 533,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:41.581Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions-Page-should-search-transactions-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions-Page-should-search-transactions-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-ee32bd031729581b8a3c",
+              "file": "transactions.spec.ts",
+              "line": 122,
+              "column": 7
+            },
+            {
+              "title": "should handle pagination",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 523,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:41.590Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions-Page-should-handle-pagination-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions-Page-should-handle-pagination-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-945b3b825f5a3a0c477b",
+              "file": "transactions.spec.ts",
+              "line": 149,
+              "column": 7
+            },
+            {
+              "title": "should handle empty state",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 29,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 361,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:43.122Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions-Page-should-handle-empty-state-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions-Page-should-handle-empty-state-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-f38520193dd1c0828b69",
+              "file": "transactions.spec.ts",
+              "line": 176,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 364,
+                      "error": {
+                        "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at UtilityScript.evaluate (<anonymous>:293:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21",
+                        "location": {
+                          "file": "<anonymous>",
+                          "column": 16,
+                          "line": 293
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "<anonymous>",
+                            "column": 16,
+                            "line": 293
+                          },
+                          "message": "Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:293:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T07:33:43.119Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions-Page-should-handle-API-errors-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions-Page-should-handle-API-errors-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "<anonymous>",
+                        "column": 16,
+                        "line": 293
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-cef6411147b424c736b9",
+              "file": "transactions.spec.ts",
+              "line": 194,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-19T07:32:51.555Z",
+    "duration": 63444.609,
+    "expected": 18,
+    "skipped": 0,
+    "unexpected": 31,
+    "flaky": 0
+  }
+}

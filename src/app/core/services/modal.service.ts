@@ -43,6 +43,23 @@ export class ModalService {
     return modalComponent;
   }
 
+  async openSwapModal(viewContainer: ViewContainerRef): Promise<ComponentRef<any>> {
+    const modalComponent = await this.lazyLoadService.loadComponent(
+      () => import('../../pages/dashboard/components/modal/swap-modal'),
+      'SwapModalComponent',
+      viewContainer
+    );
+
+    modalComponent.instance.isOpen = true;
+    
+    modalComponent.instance.close.subscribe(() => {
+      this.closeModal(modalComponent);
+    });
+
+    this.openModals.push(modalComponent);
+    return modalComponent;
+  }
+
   private closeModal(modalRef: ComponentRef<any>) {
     const index = this.openModals.indexOf(modalRef);
     if (index !== -1) {

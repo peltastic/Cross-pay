@@ -56,10 +56,11 @@ describe('QuickActions', () => {
 
   it('should initialize with default quick actions', () => {
     expect(component.quickActions).toBeDefined();
-    expect(component.quickActions.length).toBe(2);
+    expect(component.quickActions.length).toBe(3);
 
     const depositAction = component.quickActions.find((action) => action.id === 'deposit');
     const transferAction = component.quickActions.find((action) => action.id === 'transfer');
+    const swapAction = component.quickActions.find((action) => action.id === 'swap');
 
     expect(depositAction).toBeDefined();
     expect(depositAction?.title).toBe('Deposit');
@@ -70,6 +71,11 @@ describe('QuickActions', () => {
     expect(transferAction?.title).toBe('Transfer');
     expect(transferAction?.description).toBe('Send money to others');
     expect(transferAction?.icon).toBe('heroArrowRightCircleSolid');
+
+    expect(swapAction).toBeDefined();
+    expect(swapAction?.title).toBe('Swap');
+    expect(swapAction?.description).toBe('Convert between currencies');
+    expect(swapAction?.icon).toBe('heroArrowsRightLeftSolid');
   });
 
   describe('handleDeposit', () => {

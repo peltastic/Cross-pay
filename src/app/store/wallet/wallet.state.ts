@@ -9,5 +9,7 @@ export const initialState: WalletStateModel = {
     isDepositing: false,
     depositError: null,
     isTransferring: false,
-    transferError: null
+    transferError: null,
+    isSwapping: false,
+    swapError: null
 }

@@ -33,6 +33,21 @@ export interface TransferResponse {
   receiverWallet: WalletModel;
 }
 
+export interface SwapRequest {
+  fromEmail: string;
+  amount: number;
+  fromCurrency: string;
+  toCurrency: string;
+  convertedAmount: number;
+  exchangeRate: number;
+}
+
+export interface SwapResponse {
+  success: boolean;
+  message: string;
+  wallet: WalletModel;
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -56,5 +71,9 @@ export class WalletService {
 
   transfer(transferRequest: TransferRequest): Observable<TransferResponse> {
     return this.http.post<TransferResponse>('/api/transfer', transferRequest);
+  }
+
+  swap(swapRequest: SwapRequest): Observable<SwapResponse> {
+    return this.http.post<SwapResponse>('/api/swap', swapRequest);
   }
 }

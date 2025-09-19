@@ -15,6 +15,10 @@ import {
   transferSuccess,
   transferFailure,
   clearTransferError,
+  swap,
+  swapSuccess,
+  swapFailure,
+  clearSwapError,
 } from './wallet.actions';
 import { WalletStateModel } from '../../core/models/wallet.model';
 
@@ -82,6 +86,26 @@ const _walletReducer = createReducer(
   on(clearTransferError, (state) => ({
     ...state,
     transferError: null,
+  })),
+  on(swap, (state) => ({ 
+    ...state, 
+    isSwapping: true, 
+    swapError: null 
+  })),
+  on(swapSuccess, (state, { wallet }) => ({
+    ...state,
+    wallet,
+    isSwapping: false,
+    swapError: null,
+  })),
+  on(swapFailure, (state, { error }) => ({
+    ...state,
+    isSwapping: false,
+    swapError: error,
+  })),
+  on(clearSwapError, (state) => ({
+    ...state,
+    swapError: null,
   }))
 );
 

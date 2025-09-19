@@ -47,3 +47,13 @@ export const selectTransferError = createSelector(
   selectWalletState,
   (state) => state.transferError
 );
+
+export const selectSwapLoading = createSelector(
+  selectWalletState,
+  (state) => state.isSwapping
+);
+
+export const selectSwapError = createSelector(
+  selectWalletState,
+  (state) => state.swapError
+);

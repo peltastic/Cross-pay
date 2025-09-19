@@ -6,6 +6,8 @@ import {
   DepositResponse,
   TransferRequest,
   TransferResponse,
+  SwapRequest,
+  SwapResponse,
 } from './wallet.service';
 import { WalletModel } from '../models/wallet.model';
 import { UserModel } from '../models/user.model';
@@ -511,6 +513,278 @@ describe('WalletService', () => {
       const req = httpMock.expectOne(`/api/wallet/${encodeURIComponent(longEmail)}`);
       expect(req.request.method).toBe('GET');
       req.flush(mockWallet);
+    });
+  });
+
+  describe('swap', () => {
+    it('should perform currency swap successfully', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'test@example.com',
+        amount: 100,
+        fromCurrency: 'USD',
+        toCurrency: 'EUR',
+        convertedAmount: 85,
+        exchangeRate: 0.85
+      };
+
+      const mockResponse: SwapResponse = {
+        success: true,
+        message: 'Swap completed successfully',
+        wallet: {
+          ...mockWallet,
+          balance: {
+            ...mockWallet.balance,
+            USD: 900,
+            EUR: 935
+          }
+        }
+      };
+
+      service.swap(swapRequest).subscribe((response) => {
+        expect(response).toEqual(mockResponse);
+        expect(response.success).toBe(true);
+        expect(response.wallet.balance.USD).toBe(900);
+        expect(response.wallet.balance.EUR).toBe(935);
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      expect(req.request.method).toBe('POST');
+      expect(req.request.body).toEqual(swapRequest);
+      req.flush(mockResponse);
+    });
+
+    it('should handle same currency swap', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'test@example.com',
+        amount: 100,
+        fromCurrency: 'USD',
+        toCurrency: 'USD',
+        convertedAmount: 100,
+        exchangeRate: 1
+      };
+
+      const mockResponse: SwapResponse = {
+        success: true,
+        message: 'Swap completed successfully',
+        wallet: mockWallet
+      };
+
+      service.swap(swapRequest).subscribe((response) => {
+        expect(response).toEqual(mockResponse);
+        expect(response.success).toBe(true);
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      expect(req.request.body).toEqual(swapRequest);
+      req.flush(mockResponse);
+    });
+
+    it('should handle swap with fractional amounts', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'test@example.com',
+        amount: 99.99,
+        fromCurrency: 'USD',
+        toCurrency: 'GBP',
+        convertedAmount: 79.99,
+        exchangeRate: 0.8
+      };
+
+      const mockResponse: SwapResponse = {
+        success: true,
+        message: 'Swap completed successfully',
+        wallet: {
+          ...mockWallet,
+          balance: {
+            ...mockWallet.balance,
+            USD: 900.01,
+            GBP: 829.99
+          }
+        }
+      };
+
+      service.swap(swapRequest).subscribe((response) => {
+        expect(response).toEqual(mockResponse);
+        expect(response.wallet.balance.USD).toBe(900.01);
+        expect(response.wallet.balance.GBP).toBe(829.99);
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      expect(req.request.body.amount).toBe(99.99);
+      expect(req.request.body.convertedAmount).toBe(79.99);
+      req.flush(mockResponse);
+    });
+
+    it('should handle insufficient balance error', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'test@example.com',
+        amount: 10000,
+        fromCurrency: 'USD',
+        toCurrency: 'EUR',
+        convertedAmount: 8500,
+        exchangeRate: 0.85
+      };
+
+      const errorResponse = {
+        error: 'Insufficient balance',
+        status: 400
+      };
+
+      service.swap(swapRequest).subscribe({
+        next: () => fail('should have failed'),
+        error: (error) => {
+          expect(error.status).toBe(400);
+        }
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      req.flush(errorResponse, { status: 400, statusText: 'Bad Request' });
+    });
+
+    it('should handle invalid currency error', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'test@example.com',
+        amount: 100,
+        fromCurrency: 'INVALID',
+        toCurrency: 'EUR',
+        convertedAmount: 85,
+        exchangeRate: 0.85
+      };
+
+      service.swap(swapRequest).subscribe({
+        next: () => fail('should have failed'),
+        error: (error) => {
+          expect(error.status).toBe(400);
+        }
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      req.flush('Invalid currency', { status: 400, statusText: 'Bad Request' });
+    });
+
+    it('should handle network errors', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'test@example.com',
+        amount: 100,
+        fromCurrency: 'USD',
+        toCurrency: 'EUR',
+        convertedAmount: 85,
+        exchangeRate: 0.85
+      };
+
+      service.swap(swapRequest).subscribe({
+        next: () => fail('should have failed'),
+        error: (error) => {
+          expect(error.status).toBe(500);
+        }
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      req.flush('Server error', { status: 500, statusText: 'Internal Server Error' });
+    });
+
+    it('should handle zero amount swap', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'test@example.com',
+        amount: 0,
+        fromCurrency: 'USD',
+        toCurrency: 'EUR',
+        convertedAmount: 0,
+        exchangeRate: 0.85
+      };
+
+      service.swap(swapRequest).subscribe({
+        next: () => fail('should have failed'),
+        error: (error) => {
+          expect(error.status).toBe(400);
+        }
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      req.flush('Amount must be greater than 0', { status: 400, statusText: 'Bad Request' });
+    });
+
+    it('should handle large amount swap', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'test@example.com',
+        amount: 999999.99,
+        fromCurrency: 'USD',
+        toCurrency: 'EUR',
+        convertedAmount: 849999.99,
+        exchangeRate: 0.85
+      };
+
+      const mockResponse: SwapResponse = {
+        success: true,
+        message: 'Large swap completed successfully',
+        wallet: {
+          ...mockWallet,
+          balance: {
+            ...mockWallet.balance,
+            USD: 1000 - 999999.99,
+            EUR: 850 + 849999.99
+          }
+        }
+      };
+
+      service.swap(swapRequest).subscribe((response) => {
+        expect(response).toEqual(mockResponse);
+        expect(response.success).toBe(true);
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      expect(req.request.body.amount).toBe(999999.99);
+      req.flush(mockResponse);
+    });
+
+    it('should preserve request body structure', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: 'user@test.com',
+        amount: 50.25,
+        fromCurrency: 'GBP',
+        toCurrency: 'JPY',
+        convertedAmount: 7537.5,
+        exchangeRate: 150
+      };
+
+      const mockResponse: SwapResponse = {
+        success: true,
+        message: 'Swap successful',
+        wallet: mockWallet
+      };
+
+      service.swap(swapRequest).subscribe();
+
+      const req = httpMock.expectOne('/api/swap');
+      expect(req.request.body).toEqual({
+        fromEmail: 'user@test.com',
+        amount: 50.25,
+        fromCurrency: 'GBP',
+        toCurrency: 'JPY',
+        convertedAmount: 7537.5,
+        exchangeRate: 150
+      });
+      req.flush(mockResponse);
+    });
+
+    it('should handle empty email in swap request', () => {
+      const swapRequest: SwapRequest = {
+        fromEmail: '',
+        amount: 100,
+        fromCurrency: 'USD',
+        toCurrency: 'EUR',
+        convertedAmount: 85,
+        exchangeRate: 0.85
+      };
+
+      service.swap(swapRequest).subscribe({
+        next: () => fail('should have failed'),
+        error: (error) => {
+          expect(error.status).toBe(400);
+        }
+      });
+
+      const req = httpMock.expectOne('/api/swap');
+      req.flush('Email is required', { status: 400, statusText: 'Bad Request' });
     });
   });
 });

@@ -1,0 +1,997 @@
+<testsuites id="" name="" tests="49" failures="31" skipped="0" errors="0" time="63.444609">
+<testsuite name="basic-app.spec.ts" timestamp="2025-09-19T07:33:03.459Z" hostname="chromium" tests="6" failures="0" skipped="0" time="31.266" errors="0">
+<testcase name="Basic App Functionality › should load the application" classname="basic-app.spec.ts" time="3.515">
+</testcase>
+<testcase name="Basic App Functionality › should display onboarding page" classname="basic-app.spec.ts" time="5.589">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to dashboard (may redirect)" classname="basic-app.spec.ts" time="5.621">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to transactions" classname="basic-app.spec.ts" time="5.569">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to fx-analytics" classname="basic-app.spec.ts" time="7.235">
+</testcase>
+<testcase name="Basic App Functionality › should handle 404 pages gracefully" classname="basic-app.spec.ts" time="3.737">
+</testcase>
+</testsuite>
+<testsuite name="comprehensive.spec.ts" timestamp="2025-09-19T07:33:03.459Z" hostname="chromium" tests="6" failures="0" skipped="0" time="22.17" errors="0">
+<testcase name="Cross-Pay Application E2E Tests › should display the onboarding page with form elements" classname="comprehensive.spec.ts" time="3.273">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should have working navigation and routing" classname="comprehensive.spec.ts" time="6.214">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should be responsive and work on mobile viewport" classname="comprehensive.spec.ts" time="2.984">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should handle form interactions on onboarding page" classname="comprehensive.spec.ts" time="3.148">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should load without JavaScript errors" classname="comprehensive.spec.ts" time="3.518">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should have proper meta tags and title" classname="comprehensive.spec.ts" time="3.033">
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-19T07:33:03.459Z" hostname="chromium" tests="9" failures="9" skipped="0" time="3.038" errors="0">
+<testcase name="Dashboard Functionality › should display dashboard with user data" classname="dashboard.spec.ts" time="0.297">
+<failure message="dashboard.spec.ts:24:7 should display dashboard with user data" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:24:7 › Dashboard Functionality › should display dashboard with user data 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-51816-ay-dashboard-with-user-data-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-51816-ay-dashboard-with-user-data-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-51816-ay-dashboard-with-user-data-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-51816-ay-dashboard-with-user-data-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Functionality › should navigate to transactions page" classname="dashboard.spec.ts" time="0.544">
+<failure message="dashboard.spec.ts:33:7 should navigate to transactions page" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:33:7 › Dashboard Functionality › should navigate to transactions page 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-f8264-vigate-to-transactions-page-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-f8264-vigate-to-transactions-page-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-f8264-vigate-to-transactions-page-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-f8264-vigate-to-transactions-page-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Functionality › should navigate to fx analytics page" classname="dashboard.spec.ts" time="0.318">
+<failure message="dashboard.spec.ts:38:7 should navigate to fx analytics page" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:38:7 › Dashboard Functionality › should navigate to fx analytics page 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-797d4-vigate-to-fx-analytics-page-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-797d4-vigate-to-fx-analytics-page-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-797d4-vigate-to-fx-analytics-page-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-797d4-vigate-to-fx-analytics-page-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Functionality › should open transfer modal" classname="dashboard.spec.ts" time="0.382">
+<failure message="dashboard.spec.ts:43:7 should open transfer modal" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:43:7 › Dashboard Functionality › should open transfer modal ───────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functionality-should-open-transfer-modal-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functionality-should-open-transfer-modal-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functionality-should-open-transfer-modal-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functionality-should-open-transfer-modal-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Functionality › should complete a transfer" classname="dashboard.spec.ts" time="0.289">
+<failure message="dashboard.spec.ts:48:7 should complete a transfer" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:48:7 › Dashboard Functionality › should complete a transfer ───────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functionality-should-complete-a-transfer-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functionality-should-complete-a-transfer-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functionality-should-complete-a-transfer-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functionality-should-complete-a-transfer-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Functionality › should validate transfer form" classname="dashboard.spec.ts" time="0.29">
+<failure message="dashboard.spec.ts:68:7 should validate transfer form" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:68:7 › Dashboard Functionality › should validate transfer form ────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-a4253-ould-validate-transfer-form-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-a4253-ould-validate-transfer-form-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-a4253-ould-validate-transfer-form-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-a4253-ould-validate-transfer-form-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Functionality › should handle insufficient balance" classname="dashboard.spec.ts" time="0.354">
+<failure message="dashboard.spec.ts:80:7 should handle insufficient balance" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:80:7 › Dashboard Functionality › should handle insufficient balance 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-b7fbf-handle-insufficient-balance-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-b7fbf-handle-insufficient-balance-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-b7fbf-handle-insufficient-balance-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-b7fbf-handle-insufficient-balance-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Functionality › should display recent transactions" classname="dashboard.spec.ts" time="0.361">
+<failure message="dashboard.spec.ts:92:7 should display recent transactions" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:92:7 › Dashboard Functionality › should display recent transactions 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-8148a-display-recent-transactions-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-8148a-display-recent-transactions-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-8148a-display-recent-transactions-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-8148a-display-recent-transactions-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard Functionality › should handle API errors gracefully" classname="dashboard.spec.ts" time="0.203">
+<failure message="dashboard.spec.ts:108:7 should handle API errors gracefully" type="FAILURE">
+<![CDATA[  [chromium] › dashboard.spec.ts:108:7 › Dashboard Functionality › should handle API errors gracefully 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/dashboard.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-3dffd-andle-API-errors-gracefully-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/dashboard-Dashboard-Functi-3dffd-andle-API-errors-gracefully-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-3dffd-andle-API-errors-gracefully-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/dashboard-Dashboard-Functi-3dffd-andle-API-errors-gracefully-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="fx-analytics.spec.ts" timestamp="2025-09-19T07:33:03.459Z" hostname="chromium" tests="5" failures="5" skipped="0" time="1.555" errors="0">
+<testcase name="FX Analytics Page › should display FX analytics dashboard" classname="fx-analytics.spec.ts" time="0.317">
+<failure message="fx-analytics.spec.ts:31:7 should display FX analytics dashboard" type="FAILURE">
+<![CDATA[  [chromium] › fx-analytics.spec.ts:31:7 › FX Analytics Page › should display FX analytics dashboard 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics--f09c9-play-FX-analytics-dashboard-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics--f09c9-play-FX-analytics-dashboard-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics--f09c9-play-FX-analytics-dashboard-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics--f09c9-play-FX-analytics-dashboard-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="FX Analytics Page › should display current exchange rate" classname="fx-analytics.spec.ts" time="0.271">
+<failure message="fx-analytics.spec.ts:36:7 should display current exchange rate" type="FAILURE">
+<![CDATA[  [chromium] › fx-analytics.spec.ts:36:7 › FX Analytics Page › should display current exchange rate 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics--17dd2-splay-current-exchange-rate-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics--17dd2-splay-current-exchange-rate-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics--17dd2-splay-current-exchange-rate-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics--17dd2-splay-current-exchange-rate-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="FX Analytics Page › should change currency pair" classname="fx-analytics.spec.ts" time="0.351">
+<failure message="fx-analytics.spec.ts:41:7 should change currency pair" type="FAILURE">
+<![CDATA[  [chromium] › fx-analytics.spec.ts:41:7 › FX Analytics Page › should change currency pair ─────────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics-Page-should-change-currency-pair-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics-Page-should-change-currency-pair-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics-Page-should-change-currency-pair-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics-Page-should-change-currency-pair-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="FX Analytics Page › should change time range" classname="fx-analytics.spec.ts" time="0.327">
+<failure message="fx-analytics.spec.ts:58:7 should change time range" type="FAILURE">
+<![CDATA[  [chromium] › fx-analytics.spec.ts:58:7 › FX Analytics Page › should change time range ────────────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics-Page-should-change-time-range-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics-Page-should-change-time-range-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics-Page-should-change-time-range-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics-Page-should-change-time-range-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="FX Analytics Page › should handle API errors gracefully" classname="fx-analytics.spec.ts" time="0.289">
+<failure message="fx-analytics.spec.ts:74:7 should handle API errors gracefully" type="FAILURE">
+<![CDATA[  [chromium] › fx-analytics.spec.ts:74:7 › FX Analytics Page › should handle API errors gracefully ─
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/fx-analytics.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics--8bfa2-andle-API-errors-gracefully-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/fx-analytics-FX-Analytics--8bfa2-andle-API-errors-gracefully-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics--8bfa2-andle-API-errors-gracefully-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/fx-analytics-FX-Analytics--8bfa2-andle-API-errors-gracefully-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="integration.spec.ts" timestamp="2025-09-19T07:33:03.459Z" hostname="chromium" tests="3" failures="3" skipped="0" time="38.535" errors="0">
+<testcase name="End-to-End User Journey › should complete full user journey from onboarding to transfer" classname="integration.spec.ts" time="0.276">
+<failure message="integration.spec.ts:11:7 should complete full user journey from onboarding to transfer" type="FAILURE">
+<![CDATA[  [chromium] › integration.spec.ts:11:7 › End-to-End User Journey › should complete full user journey from onboarding to transfer 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts:19:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/integration-End-to-End-Use-e261a-from-onboarding-to-transfer-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/integration-End-to-End-Use-e261a-from-onboarding-to-transfer-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/integration-End-to-End-Use-e261a-from-onboarding-to-transfer-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/integration-End-to-End-Use-e261a-from-onboarding-to-transfer-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="End-to-End User Journey › should handle network failures gracefully throughout the journey" classname="integration.spec.ts" time="30.149">
+<failure message="integration.spec.ts:102:7 should handle network failures gracefully throughout the journey" type="FAILURE">
+<![CDATA[  [chromium] › integration.spec.ts:102:7 › End-to-End User Journey › should handle network failures gracefully throughout the journey 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('[data-testid="email-input"]')
+
+
+       at pages/onboarding.page.ts:19
+
+      17 |
+      18 |   async fillUserDetails(email: string, firstName: string, lastName: string) {
+    > 19 |     await this.page.fill('[data-testid="email-input"]', email);
+         |                     ^
+      20 |     await this.page.fill('[data-testid="first-name-input"]', firstName);
+      21 |     await this.page.fill('[data-testid="last-name-input"]', lastName);
+      22 |   }
+        at OnboardingPage.fillUserDetails (/Users/abm/Documents/projects/cross-pay/e2e/pages/onboarding.page.ts:19:21)
+        at /Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts:111:26
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/video.webm]]
+
+[[ATTACHMENT|test-results/integration-End-to-End-Use-56cb2-ully-throughout-the-journey-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+<testcase name="End-to-End User Journey › should work across different browsers and screen sizes" classname="integration.spec.ts" time="8.11">
+<failure message="integration.spec.ts:135:7 should work across different browsers and screen sizes" type="FAILURE">
+<![CDATA[  [chromium] › integration.spec.ts:135:7 › End-to-End User Journey › should work across different browsers and screen sizes 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('[data-testid="mobile-header"]')
+    Expected: visible
+    Received: <element(s) not found>
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" with timeout 5000ms
+      - waiting for locator('[data-testid="mobile-header"]')
+
+
+      144 |
+      145 |     // Verify mobile layout
+    > 146 |     await expect(page.locator('[data-testid="mobile-header"]')).toBeVisible();
+          |                                                                 ^
+      147 |
+      148 |     const user = testUsers.validUser;
+      149 |     await onboardingPage.fillUserDetails(user.email, user.firstName, user.lastName);
+        at /Users/abm/Documents/projects/cross-pay/e2e/integration.spec.ts:146:65
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/video.webm]]
+
+[[ATTACHMENT|test-results/integration-End-to-End-Use-6fd02-t-browsers-and-screen-sizes-chromium/error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="onboarding.spec.ts" timestamp="2025-09-19T07:33:03.459Z" hostname="chromium" tests="6" failures="6" skipped="0" time="1.617" errors="0">
+<testcase name="Onboarding Flow › should complete successful onboarding flow" classname="onboarding.spec.ts" time="0.223">
+<failure message="onboarding.spec.ts:23:7 should complete successful onboarding flow" type="FAILURE">
+<![CDATA[  [chromium] › onboarding.spec.ts:23:7 › Onboarding Flow › should complete successful onboarding flow 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-a5f0a--successful-onboarding-flow-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-a5f0a--successful-onboarding-flow-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-a5f0a--successful-onboarding-flow-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-a5f0a--successful-onboarding-flow-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Onboarding Flow › should validate required fields" classname="onboarding.spec.ts" time="0.323">
+<failure message="onboarding.spec.ts:42:7 should validate required fields" type="FAILURE">
+<![CDATA[  [chromium] › onboarding.spec.ts:42:7 › Onboarding Flow › should validate required fields ─────────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-should-validate-required-fields-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-should-validate-required-fields-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-should-validate-required-fields-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-should-validate-required-fields-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Onboarding Flow › should validate email format" classname="onboarding.spec.ts" time="0.294">
+<failure message="onboarding.spec.ts:52:7 should validate email format" type="FAILURE">
+<![CDATA[  [chromium] › onboarding.spec.ts:52:7 › Onboarding Flow › should validate email format ────────────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-should-validate-email-format-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-should-validate-email-format-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-should-validate-email-format-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-should-validate-email-format-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Onboarding Flow › should validate minimum name length" classname="onboarding.spec.ts" time="0.274">
+<failure message="onboarding.spec.ts:59:7 should validate minimum name length" type="FAILURE">
+<![CDATA[  [chromium] › onboarding.spec.ts:59:7 › Onboarding Flow › should validate minimum name length ─────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-4a8e8-alidate-minimum-name-length-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-4a8e8-alidate-minimum-name-length-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-4a8e8-alidate-minimum-name-length-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-4a8e8-alidate-minimum-name-length-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Onboarding Flow › should work with different countries and currencies" classname="onboarding.spec.ts" time="0.246">
+<failure message="onboarding.spec.ts:67:7 should work with different countries and currencies" type="FAILURE">
+<![CDATA[  [chromium] › onboarding.spec.ts:67:7 › Onboarding Flow › should work with different countries and currencies 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-2c2e6-nt-countries-and-currencies-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-2c2e6-nt-countries-and-currencies-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-2c2e6-nt-countries-and-currencies-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-2c2e6-nt-countries-and-currencies-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Onboarding Flow › should handle server errors gracefully" classname="onboarding.spec.ts" time="0.257">
+<failure message="onboarding.spec.ts:81:7 should handle server errors gracefully" type="FAILURE">
+<![CDATA[  [chromium] › onboarding.spec.ts:81:7 › Onboarding Flow › should handle server errors gracefully ──
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.clearLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:46:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/onboarding.spec.ts:16:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-8c96d-le-server-errors-gracefully-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/onboarding-Onboarding-Flow-8c96d-le-server-errors-gracefully-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-8c96d-le-server-errors-gracefully-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/onboarding-Onboarding-Flow-8c96d-le-server-errors-gracefully-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="performance.spec.ts" timestamp="2025-09-19T07:33:03.459Z" hostname="chromium" tests="6" failures="0" skipped="0" time="25.904" errors="0">
+<testcase name="Performance and Accessibility Tests › should load pages within acceptable time limits" classname="performance.spec.ts" time="6.33">
+<system-out>
+<![CDATA[Route / loaded in 1895ms
+Route /get-started loaded in 834ms
+Route /dashboard loaded in 719ms
+Route /dashboard/transactions loaded in 642ms
+Route /dashboard/fx-analytics loaded in 1972ms
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance and Accessibility Tests › should have good Core Web Vitals performance" classname="performance.spec.ts" time="2.398">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should handle concurrent user sessions" classname="performance.spec.ts" time="2.672">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should work with slow network conditions" classname="performance.spec.ts" time="4.904">
+<system-out>
+<![CDATA[Slow network load time: 2542ms
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance and Accessibility Tests › should handle page reload gracefully" classname="performance.spec.ts" time="5.091">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should be accessible with keyboard navigation" classname="performance.spec.ts" time="4.509">
+</testcase>
+</testsuite>
+<testsuite name="transactions.spec.ts" timestamp="2025-09-19T07:33:03.459Z" hostname="chromium" tests="8" failures="8" skipped="0" time="3.158" errors="0">
+<testcase name="Transactions Page › should display transactions table" classname="transactions.spec.ts" time="0.287">
+<failure message="transactions.spec.ts:49:7 should display transactions table" type="FAILURE">
+<![CDATA[  [chromium] › transactions.spec.ts:49:7 › Transactions Page › should display transactions table ───
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions--8a95c--display-transactions-table-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions--8a95c--display-transactions-table-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/transactions-Transactions--8a95c--display-transactions-table-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/transactions-Transactions--8a95c--display-transactions-table-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transactions Page › should display transaction details correctly" classname="transactions.spec.ts" time="0.289">
+<failure message="transactions.spec.ts:54:7 should display transaction details correctly" type="FAILURE">
+<![CDATA[  [chromium] › transactions.spec.ts:54:7 › Transactions Page › should display transaction details correctly 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transactions Page › should filter transactions by type" classname="transactions.spec.ts" time="0.267">
+<failure message="transactions.spec.ts:70:7 should filter transactions by type" type="FAILURE">
+<![CDATA[  [chromium] › transactions.spec.ts:70:7 › Transactions Page › should filter transactions by type ──
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions--a7116-filter-transactions-by-type-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions--a7116-filter-transactions-by-type-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/transactions-Transactions--a7116-filter-transactions-by-type-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/transactions-Transactions--a7116-filter-transactions-by-type-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transactions Page › should filter transactions by date range" classname="transactions.spec.ts" time="0.534">
+<failure message="transactions.spec.ts:95:7 should filter transactions by date range" type="FAILURE">
+<![CDATA[  [chromium] › transactions.spec.ts:95:7 › Transactions Page › should filter transactions by date range 
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions--c9b0b--transactions-by-date-range-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions--c9b0b--transactions-by-date-range-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/transactions-Transactions--c9b0b--transactions-by-date-range-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/transactions-Transactions--c9b0b--transactions-by-date-range-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transactions Page › should search transactions" classname="transactions.spec.ts" time="0.533">
+<failure message="transactions.spec.ts:122:7 should search transactions" type="FAILURE">
+<![CDATA[  [chromium] › transactions.spec.ts:122:7 › Transactions Page › should search transactions ─────────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions-Page-should-search-transactions-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions-Page-should-search-transactions-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/transactions-Transactions-Page-should-search-transactions-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/transactions-Transactions-Page-should-search-transactions-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transactions Page › should handle pagination" classname="transactions.spec.ts" time="0.523">
+<failure message="transactions.spec.ts:149:7 should handle pagination" type="FAILURE">
+<![CDATA[  [chromium] › transactions.spec.ts:149:7 › Transactions Page › should handle pagination ───────────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions-Page-should-handle-pagination-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions-Page-should-handle-pagination-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/transactions-Transactions-Page-should-handle-pagination-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/transactions-Transactions-Page-should-handle-pagination-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transactions Page › should handle empty state" classname="transactions.spec.ts" time="0.361">
+<failure message="transactions.spec.ts:176:7 should handle empty state" type="FAILURE">
+<![CDATA[  [chromium] › transactions.spec.ts:176:7 › Transactions Page › should handle empty state ──────────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions-Page-should-handle-empty-state-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions-Page-should-handle-empty-state-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/transactions-Transactions-Page-should-handle-empty-state-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/transactions-Transactions-Page-should-handle-empty-state-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transactions Page › should handle API errors" classname="transactions.spec.ts" time="0.364">
+<failure message="transactions.spec.ts:194:7 should handle API errors" type="FAILURE">
+<![CDATA[  [chromium] › transactions.spec.ts:194:7 › Transactions Page › should handle API errors ───────────
+
+    Error: page.evaluate: SecurityError: Failed to read the 'localStorage' property from 'Window': Access is denied for this document.
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at UtilityScript.evaluate (<anonymous>:293:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at Function.setLocalStorage (/Users/abm/Documents/projects/cross-pay/e2e/utils/test-utils.ts:40:16)
+        at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:13:21
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions-Page-should-handle-API-errors-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../test-results/transactions-Transactions-Page-should-handle-API-errors-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/transactions-Transactions-Page-should-handle-API-errors-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|test-results/transactions-Transactions-Page-should-handle-API-errors-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
