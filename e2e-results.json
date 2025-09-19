@@ -129,12 +129,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3503,
+                      "duration": 3510,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:04:58.419Z",
+                      "startTime": "2025-09-19T21:23:08.040Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -163,12 +163,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4182,
+                      "duration": 4032,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:04:58.416Z",
+                      "startTime": "2025-09-19T21:23:08.040Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -197,12 +197,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4079,
+                      "duration": 4140,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:04:58.412Z",
+                      "startTime": "2025-09-19T21:23:08.042Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -231,12 +231,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4175,
+                      "duration": 3986,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:04:58.408Z",
+                      "startTime": "2025-09-19T21:23:08.074Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -265,12 +265,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4475,
+                      "duration": 3665,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:02.570Z",
+                      "startTime": "2025-09-19T21:23:12.081Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -296,15 +296,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3793,
+                      "duration": 2998,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:03.099Z",
+                      "startTime": "2025-09-19T21:23:12.570Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -331,14 +331,14 @@
                   "results": [
                     {
                       "workerIndex": 4,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4446,
+                      "duration": 4975,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:38.140Z",
+                      "startTime": "2025-09-19T21:23:41.815Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -365,14 +365,14 @@
                   "results": [
                     {
                       "workerIndex": 5,
-                      "parallelIndex": 3,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 6160,
+                      "duration": 7857,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:38.666Z",
+                      "startTime": "2025-09-19T21:23:42.021Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -399,14 +399,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 6328,
+                      "duration": 6706,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:39.378Z",
+                      "startTime": "2025-09-19T21:23:42.103Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -432,15 +432,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 4,
+                      "workerIndex": 7,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4309,
+                      "duration": 7470,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:44.668Z",
+                      "startTime": "2025-09-19T21:23:44.221Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -466,15 +466,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 8156,
+                      "duration": 6007,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:47.001Z",
+                      "startTime": "2025-09-19T21:23:48.728Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -500,15 +500,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 6,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4347,
+                      "duration": 4888,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:46.890Z",
+                      "startTime": "2025-09-19T21:23:51.148Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -535,14 +535,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2287,
+                      "duration": 2288,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:33.976Z",
+                      "startTime": "2025-09-19T21:24:30.990Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -569,14 +569,14 @@
                   "results": [
                     {
                       "workerIndex": 9,
-                      "parallelIndex": 3,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2735,
+                      "duration": 2776,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:35.562Z",
+                      "startTime": "2025-09-19T21:24:31.514Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -602,15 +602,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2601,
+                      "duration": 2720,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:36.679Z",
+                      "startTime": "2025-09-19T21:24:32.241Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -636,15 +636,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 11,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2541,
+                      "duration": 2607,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:38.589Z",
+                      "startTime": "2025-09-19T21:24:33.358Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -671,14 +671,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2637,
+                      "duration": 2542,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:39.309Z",
+                      "startTime": "2025-09-19T21:24:33.694Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -704,15 +704,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2613,
+                      "duration": 2430,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:40.393Z",
+                      "startTime": "2025-09-19T21:24:34.586Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -758,12 +758,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3164,
+                      "duration": 2733,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:03.200Z",
+                      "startTime": "2025-09-19T21:23:12.589Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -789,15 +789,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 6362,
+                      "duration": 5489,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:03.235Z",
+                      "startTime": "2025-09-19T21:23:12.720Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -826,12 +826,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3704,
+                      "duration": 3496,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:06.396Z",
+                      "startTime": "2025-09-19T21:23:15.355Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -857,15 +857,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3838,
+                      "duration": 3758,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:06.987Z",
+                      "startTime": "2025-09-19T21:23:15.624Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -894,12 +894,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4044,
+                      "duration": 3948,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:07.125Z",
+                      "startTime": "2025-09-19T21:23:15.806Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -925,15 +925,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3311,
+                      "duration": 3192,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:09.655Z",
+                      "startTime": "2025-09-19T21:23:18.296Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -959,15 +959,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 5,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3338,
+                      "duration": 3350,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:47.993Z",
+                      "startTime": "2025-09-19T21:23:53.268Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -993,15 +993,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 4,
+                      "workerIndex": 7,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6733,
+                      "duration": 7513,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:49.012Z",
+                      "startTime": "2025-09-19T21:23:54.250Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1027,15 +1027,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 3,
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4226,
+                      "duration": 4376,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:51.279Z",
+                      "startTime": "2025-09-19T21:23:54.795Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1062,14 +1062,14 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3989,
+                      "duration": 4741,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:51.373Z",
+                      "startTime": "2025-09-19T21:23:56.075Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1095,15 +1095,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 5,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5531,
+                      "duration": 6151,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:55.392Z",
+                      "startTime": "2025-09-19T21:23:56.741Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1129,15 +1129,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 3,
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4323,
+                      "duration": 4567,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:55.551Z",
+                      "startTime": "2025-09-19T21:23:59.203Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1163,15 +1163,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 3,
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1908,
+                      "duration": 1964,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:41.144Z",
+                      "startTime": "2025-09-19T21:24:35.166Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1197,15 +1197,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "workerIndex": 11,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3836,
+                      "duration": 3971,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:41.962Z",
+                      "startTime": "2025-09-19T21:24:36.130Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1231,15 +1231,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 3,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2503,
+                      "duration": 2525,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:43.064Z",
+                      "startTime": "2025-09-19T21:24:36.264Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1265,15 +1265,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2692,
+                      "duration": 2730,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:43.238Z",
+                      "startTime": "2025-09-19T21:24:37.030Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1299,15 +1299,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 3,
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3244,
+                      "duration": 3281,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:45.582Z",
+                      "startTime": "2025-09-19T21:24:37.150Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1334,14 +1334,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2714,
+                      "duration": 2776,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:45.813Z",
+                      "startTime": "2025-09-19T21:24:38.799Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1387,12 +1387,12 @@
                       "workerIndex": 3,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 4535,
+                      "duration": 4952,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:10.219Z",
+                      "startTime": "2025-09-19T21:23:18.942Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1418,15 +1418,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4277,
+                      "duration": 4748,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:10.881Z",
+                      "startTime": "2025-09-19T21:23:19.512Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1455,12 +1455,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4057,
+                      "duration": 4934,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:11.258Z",
+                      "startTime": "2025-09-19T21:23:19.813Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1471,44 +1471,6 @@
               "id": "90cda532ab82d274b30b-06001ec9e82fca4c8e5b",
               "file": "dashboard.spec.ts",
               "line": 58,
-              "column": 7
-            },
-            {
-              "title": "should display recent transactions",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3735,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [
-                        {
-                          "text": "verifyRecentTransactions: Recent transactions are not displayed on the current dashboard\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:05:13.047Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "90cda532ab82d274b30b-0b878830286e2ddab037",
-              "file": "dashboard.spec.ts",
-              "line": 63,
               "column": 7
             },
             {
@@ -1524,15 +1486,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3803,
+                      "duration": 4506,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:14.790Z",
+                      "startTime": "2025-09-19T21:23:21.535Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1542,7 +1504,7 @@
               ],
               "id": "90cda532ab82d274b30b-12700b2ef07c031fa6e4",
               "file": "dashboard.spec.ts",
-              "line": 78,
+              "line": 63,
               "column": 7
             },
             {
@@ -1558,15 +1520,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 1,
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5781,
+                      "duration": 5801,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:55.787Z",
+                      "startTime": "2025-09-19T21:24:00.876Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1593,14 +1555,14 @@
                   "results": [
                     {
                       "workerIndex": 7,
-                      "parallelIndex": 0,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6270,
+                      "duration": 5897,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:57.577Z",
+                      "startTime": "2025-09-19T21:24:01.816Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1627,14 +1589,14 @@
                   "results": [
                     {
                       "workerIndex": 5,
-                      "parallelIndex": 3,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 6919,
+                      "duration": 5722,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:59.915Z",
+                      "startTime": "2025-09-19T21:24:02.924Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1645,44 +1607,6 @@
               "id": "90cda532ab82d274b30b-581f84a7ec573f62dac4",
               "file": "dashboard.spec.ts",
               "line": 58,
-              "column": 7
-            },
-            {
-              "title": "should display recent transactions",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 6,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 6281,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [
-                        {
-                          "text": "verifyRecentTransactions: Recent transactions are not displayed on the current dashboard\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:06:00.954Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "90cda532ab82d274b30b-d5e7e8db9882e611f16f",
-              "file": "dashboard.spec.ts",
-              "line": 63,
               "column": 7
             },
             {
@@ -1699,14 +1623,14 @@
                   "results": [
                     {
                       "workerIndex": 4,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5891,
+                      "duration": 5667,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:01.602Z",
+                      "startTime": "2025-09-19T21:24:03.815Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1716,7 +1640,7 @@
               ],
               "id": "90cda532ab82d274b30b-7c8d0fd08e2556eee076",
               "file": "dashboard.spec.ts",
-              "line": 78,
+              "line": 63,
               "column": 7
             },
             {
@@ -1732,15 +1656,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3215,
+                      "duration": 3207,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:45.963Z",
+                      "startTime": "2025-09-19T21:24:39.783Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1766,15 +1690,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "workerIndex": 11,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3946,
+                      "duration": 3804,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:48.566Z",
+                      "startTime": "2025-09-19T21:24:40.146Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1800,15 +1724,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 3,
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4473,
+                      "duration": 3798,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:48.857Z",
+                      "startTime": "2025-09-19T21:24:40.458Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1819,44 +1743,6 @@
               "id": "90cda532ab82d274b30b-e874aedf6c40a8d95643",
               "file": "dashboard.spec.ts",
               "line": 58,
-              "column": 7
-            },
-            {
-              "title": "should display recent transactions",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Chrome",
-                  "projectName": "Mobile Chrome",
-                  "results": [
-                    {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 3808,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [
-                        {
-                          "text": "verifyRecentTransactions: Recent transactions are not displayed on the current dashboard\n"
-                        }
-                      ],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:06:49.208Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "90cda532ab82d274b30b-152c34c5034257b9df16",
-              "file": "dashboard.spec.ts",
-              "line": 63,
               "column": 7
             },
             {
@@ -1873,14 +1759,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3973,
+                      "duration": 2995,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:52.627Z",
+                      "startTime": "2025-09-19T21:24:41.604Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1890,7 +1776,7 @@
               ],
               "id": "90cda532ab82d274b30b-3f42c3fcf2672fd146a9",
               "file": "dashboard.spec.ts",
-              "line": 78,
+              "line": 63,
               "column": 7
             }
           ]
@@ -1923,15 +1809,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5999,
+                      "duration": 5668,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:15.192Z",
+                      "startTime": "2025-09-19T21:23:24.063Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1957,15 +1843,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 5804,
+                      "duration": 5634,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:15.368Z",
+                      "startTime": "2025-09-19T21:23:24.422Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1991,15 +1877,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5239,
+                      "duration": 6585,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:16.872Z",
+                      "startTime": "2025-09-19T21:23:24.809Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2025,15 +1911,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 6924,
+                      "duration": 5774,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:18.633Z",
+                      "startTime": "2025-09-19T21:23:26.122Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2059,15 +1945,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 7639,
+                      "duration": 4846,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:21.236Z",
+                      "startTime": "2025-09-19T21:23:29.783Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2093,15 +1979,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 6764,
+                      "duration": 6128,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:03.881Z",
+                      "startTime": "2025-09-19T21:24:06.719Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2127,15 +2013,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 3,
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6488,
+                      "duration": 6192,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:06.902Z",
+                      "startTime": "2025-09-19T21:24:07.745Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2161,15 +2047,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 5,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7191,
+                      "duration": 6801,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:07.266Z",
+                      "startTime": "2025-09-19T21:24:08.685Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2196,14 +2082,14 @@
                   "results": [
                     {
                       "workerIndex": 4,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 7160,
+                      "duration": 6701,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:07.525Z",
+                      "startTime": "2025-09-19T21:24:09.514Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2229,15 +2115,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5713,
+                      "duration": 6282,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:10.673Z",
+                      "startTime": "2025-09-19T21:24:12.874Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2263,15 +2149,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5354,
+                      "duration": 4074,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:53.069Z",
+                      "startTime": "2025-09-19T21:24:43.016Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2297,15 +2183,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 11,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5531,
+                      "duration": 3737,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:53.379Z",
+                      "startTime": "2025-09-19T21:24:43.987Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2331,15 +2217,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4747,
+                      "duration": 4010,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:56.678Z",
+                      "startTime": "2025-09-19T21:24:44.281Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2365,15 +2251,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4202,
+                      "duration": 3991,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:58.554Z",
+                      "startTime": "2025-09-19T21:24:44.619Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2399,15 +2285,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 1,
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3997,
+                      "duration": 3869,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:59.674Z",
+                      "startTime": "2025-09-19T21:24:47.115Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2450,15 +2336,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4911,
+                      "duration": 3678,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:21.253Z",
+                      "startTime": "2025-09-19T21:23:30.145Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2484,15 +2370,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 3,
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 4674,
+                      "duration": 5113,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:13.442Z",
+                      "startTime": "2025-09-19T21:24:13.974Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2518,15 +2404,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 11,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3697,
+                      "duration": 3707,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:58.945Z",
+                      "startTime": "2025-09-19T21:24:47.761Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2569,15 +2455,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3302,
+                      "duration": 2161,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:22.184Z",
+                      "startTime": "2025-09-19T21:23:31.440Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2603,15 +2489,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4644,
+                      "duration": 3000,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:25.612Z",
+                      "startTime": "2025-09-19T21:23:31.948Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2622,44 +2508,6 @@
               "id": "fe534f0825407f213faa-d99d2de46dfabc5dca27",
               "file": "onboarding.spec.ts",
               "line": 29,
-              "column": 7
-            },
-            {
-              "title": "should preserve email value on reload",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "passed",
-                      "duration": 4644,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Email preservation test - current value: \n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:05:25.624Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fe534f0825407f213faa-bf284806dd179c8fb61e",
-              "file": "onboarding.spec.ts",
-              "line": 40,
               "column": 7
             },
             {
@@ -2675,15 +2523,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4205,
+                      "duration": 3115,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:26.198Z",
+                      "startTime": "2025-09-19T21:23:33.629Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2693,7 +2541,7 @@
               ],
               "id": "fe534f0825407f213faa-5b8c5555a43a9a589cc4",
               "file": "onboarding.spec.ts",
-              "line": 51,
+              "line": 40,
               "column": 7
             },
             {
@@ -2709,15 +2557,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 5,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 2895,
+                      "duration": 3025,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:14.492Z",
+                      "startTime": "2025-09-19T21:24:15.515Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2744,14 +2592,14 @@
                   "results": [
                     {
                       "workerIndex": 4,
-                      "parallelIndex": 1,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3463,
+                      "duration": 4105,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:14.712Z",
+                      "startTime": "2025-09-19T21:24:16.248Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2762,44 +2610,6 @@
               "id": "fe534f0825407f213faa-992cb031ad032227906c",
               "file": "onboarding.spec.ts",
               "line": 29,
-              "column": 7
-            },
-            {
-              "title": "should preserve email value on reload",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 5712,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Email preservation test - current value: \n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:06:16.412Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fe534f0825407f213faa-121d649e7d9fb60e93da",
-              "file": "onboarding.spec.ts",
-              "line": 40,
               "column": 7
             },
             {
@@ -2815,15 +2625,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 5,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4018,
+                      "duration": 4491,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:17.411Z",
+                      "startTime": "2025-09-19T21:24:18.572Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2833,7 +2643,7 @@
               ],
               "id": "fe534f0825407f213faa-a15a6280bc5b77de581a",
               "file": "onboarding.spec.ts",
-              "line": 51,
+              "line": 40,
               "column": 7
             },
             {
@@ -2849,15 +2659,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1892,
+                      "duration": 1990,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:01.451Z",
+                      "startTime": "2025-09-19T21:24:48.313Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2883,15 +2693,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 3,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2618,
+                      "duration": 2677,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:02.663Z",
+                      "startTime": "2025-09-19T21:24:48.622Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2902,44 +2712,6 @@
               "id": "fe534f0825407f213faa-865f1a3e3dccf08efc33",
               "file": "onboarding.spec.ts",
               "line": 29,
-              "column": 7
-            },
-            {
-              "title": "should preserve email value on reload",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Chrome",
-                  "projectName": "Mobile Chrome",
-                  "results": [
-                    {
-                      "workerIndex": 10,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 2676,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Email preservation test - current value: \n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:07:02.778Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fe534f0825407f213faa-c7d2e032c785a165e723",
-              "file": "onboarding.spec.ts",
-              "line": 40,
               "column": 7
             },
             {
@@ -2955,15 +2727,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1981,
+                      "duration": 2200,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:03.359Z",
+                      "startTime": "2025-09-19T21:24:50.315Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2973,7 +2745,7 @@
               ],
               "id": "fe534f0825407f213faa-8a83e84bb7ec45cca011",
               "file": "onboarding.spec.ts",
-              "line": 51,
+              "line": 40,
               "column": 7
             }
           ]
@@ -3006,31 +2778,31 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 7145,
+                      "duration": 6418,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Route / loaded in 2269ms\n"
+                          "text": "Route / loaded in 1753ms\n"
                         },
                         {
-                          "text": "Route /get-started loaded in 1143ms\n"
+                          "text": "Route /get-started loaded in 1463ms\n"
                         },
                         {
-                          "text": "Route /dashboard loaded in 678ms\n"
+                          "text": "Route /dashboard loaded in 693ms\n"
                         },
                         {
-                          "text": "Route /dashboard/transactions loaded in 825ms\n"
+                          "text": "Route /dashboard/transactions loaded in 616ms\n"
                         },
                         {
-                          "text": "Route /dashboard/fx-analytics loaded in 759ms\n"
+                          "text": "Route /dashboard/fx-analytics loaded in 768ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:29.177Z",
+                      "startTime": "2025-09-19T21:23:33.874Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3056,15 +2828,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2583,
+                      "duration": 2527,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:30.283Z",
+                      "startTime": "2025-09-19T21:23:34.659Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3090,15 +2862,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4017,
+                      "duration": 2293,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:30.297Z",
+                      "startTime": "2025-09-19T21:23:34.984Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3124,19 +2896,19 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4137,
+                      "duration": 3638,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Slow network load time: 2947ms\n"
+                          "text": "Slow network load time: 2421ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:30.624Z",
+                      "startTime": "2025-09-19T21:23:36.808Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3146,7 +2918,7 @@
               ],
               "id": "b15d6361b2fc38288977-b98c41233f0f86ca4339",
               "file": "performance.spec.ts",
-              "line": 67,
+              "line": 68,
               "column": 7
             },
             {
@@ -3162,15 +2934,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3713,
+                      "duration": 3890,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:32.897Z",
+                      "startTime": "2025-09-19T21:23:37.211Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3180,7 +2952,7 @@
               ],
               "id": "b15d6361b2fc38288977-fa1371bf5fe9f56deff2",
               "file": "performance.spec.ts",
-              "line": 82,
+              "line": 83,
               "column": 7
             },
             {
@@ -3196,15 +2968,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3265,
+                      "duration": 3690,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:34.393Z",
+                      "startTime": "2025-09-19T21:23:37.305Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3214,7 +2986,7 @@
               ],
               "id": "b15d6361b2fc38288977-652da1aa5668fbcaa4c4",
               "file": "performance.spec.ts",
-              "line": 101,
+              "line": 102,
               "column": 7
             },
             {
@@ -3230,31 +3002,31 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 5,
-                      "parallelIndex": 3,
+                      "workerIndex": 7,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 10232,
+                      "duration": 9166,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Route / loaded in 2091ms\n"
+                          "text": "Route / loaded in 2011ms\n"
                         },
                         {
-                          "text": "Route /get-started loaded in 1343ms\n"
+                          "text": "Route /get-started loaded in 1675ms\n"
                         },
                         {
-                          "text": "Route /dashboard loaded in 1442ms\n"
+                          "text": "Route /dashboard loaded in 1587ms\n"
                         },
                         {
-                          "text": "Route /dashboard/transactions loaded in 2085ms\n"
+                          "text": "Route /dashboard/transactions loaded in 1728ms\n"
                         },
                         {
-                          "text": "Route /dashboard/fx-analytics loaded in 2398ms\n"
+                          "text": "Route /dashboard/fx-analytics loaded in 1152ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:18.140Z",
+                      "startTime": "2025-09-19T21:24:19.115Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3280,15 +3052,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 4,
-                      "parallelIndex": 1,
+                      "workerIndex": 6,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 3156,
+                      "duration": 2913,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:18.200Z",
+                      "startTime": "2025-09-19T21:24:19.191Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3303,7 +3075,7 @@
             },
             {
               "title": "should handle concurrent user sessions",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -3315,64 +3087,19 @@
                   "results": [
                     {
                       "workerIndex": 4,
-                      "parallelIndex": 1,
-                      "status": "failed",
-                      "duration": 36025,
-                      "error": {
-                        "message": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.",
-                        "stack": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.\n    at map (/Users/abm/Documents/projects/cross-pay/e2e/performance.spec.ts:57:48)\n    at /Users/abm/Documents/projects/cross-pay/e2e/performance.spec.ts:57:29",
-                        "location": {
-                          "file": "/Users/abm/Documents/projects/cross-pay/e2e/performance.spec.ts",
-                          "column": 48,
-                          "line": 57
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall(pages\u001b[33m.\u001b[39mmap((page) \u001b[33m=>\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/get-started'\u001b[39m)))\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall(pages\u001b[33m.\u001b[39mmap((page) \u001b[33m=>\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m page \u001b[36mof\u001b[39m pages) {\n \u001b[90m 60 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-root'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/abm/Documents/projects/cross-pay/e2e/performance.spec.ts",
-                            "column": 48,
-                            "line": 57
-                          },
-                          "message": "TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.\n\n\u001b[0m \u001b[90m 55 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall(pages\u001b[33m.\u001b[39mmap((page) \u001b[33m=>\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/get-started'\u001b[39m)))\u001b[33m;\u001b[39m\n \u001b[90m 56 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall(pages\u001b[33m.\u001b[39mmap((page) \u001b[33m=>\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)))\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 58 |\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m page \u001b[36mof\u001b[39m pages) {\n \u001b[90m 60 |\u001b[39m       \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'app-root'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at map (/Users/abm/Documents/projects/cross-pay/e2e/performance.spec.ts:57:48)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/performance.spec.ts:57:29\u001b[22m"
-                        }
-                      ],
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5403,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:21.378Z",
+                      "startTime": "2025-09-19T21:24:20.386Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/performance-Performance-an-f4cf5-le-concurrent-user-sessions-firefox/test-failed-2.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/performance-Performance-an-f4cf5-le-concurrent-user-sessions-firefox/test-failed-3.png"
-                        },
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/performance-Performance-an-f4cf5-le-concurrent-user-sessions-firefox/test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/performance-Performance-an-f4cf5-le-concurrent-user-sessions-firefox/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/abm/Documents/projects/cross-pay/e2e/performance.spec.ts",
-                        "column": 48,
-                        "line": 57
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "b15d6361b2fc38288977-aa8041403822c6b28e11",
@@ -3394,18 +3121,18 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5226,
+                      "duration": 4556,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Slow network load time: 3156ms\n"
+                          "text": "Slow network load time: 2885ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:21.491Z",
+                      "startTime": "2025-09-19T21:24:22.133Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3415,7 +3142,7 @@
               ],
               "id": "b15d6361b2fc38288977-2e45df88a9c39afddcc1",
               "file": "performance.spec.ts",
-              "line": 67,
+              "line": 68,
               "column": 7
             },
             {
@@ -3431,15 +3158,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
+                      "workerIndex": 5,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 6783,
+                      "duration": 6075,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:22.151Z",
+                      "startTime": "2025-09-19T21:24:23.117Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3449,7 +3176,7 @@
               ],
               "id": "b15d6361b2fc38288977-b8fbd4fc8804f5dfec8f",
               "file": "performance.spec.ts",
-              "line": 82,
+              "line": 83,
               "column": 7
             },
             {
@@ -3465,15 +3192,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 2,
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 4721,
+                      "duration": 3999,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:26.765Z",
+                      "startTime": "2025-09-19T21:24:25.807Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3483,7 +3210,7 @@
               ],
               "id": "b15d6361b2fc38288977-ac89d30f870a49167c03",
               "file": "performance.spec.ts",
-              "line": 101,
+              "line": 102,
               "column": 7
             },
             {
@@ -3499,31 +3226,31 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 11,
-                      "parallelIndex": 1,
+                      "workerIndex": 9,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4398,
+                      "duration": 4346,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Route / loaded in 1670ms\n"
+                          "text": "Route / loaded in 1713ms\n"
                         },
                         {
-                          "text": "Route /get-started loaded in 668ms\n"
+                          "text": "Route /get-started loaded in 620ms\n"
                         },
                         {
-                          "text": "Route /dashboard loaded in 591ms\n"
+                          "text": "Route /dashboard loaded in 592ms\n"
                         },
                         {
-                          "text": "Route /dashboard/transactions loaded in 598ms\n"
+                          "text": "Route /dashboard/transactions loaded in 587ms\n"
                         },
                         {
-                          "text": "Route /dashboard/fx-analytics loaded in 599ms\n"
+                          "text": "Route /dashboard/fx-analytics loaded in 589ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:03.866Z",
+                      "startTime": "2025-09-19T21:24:51.012Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3549,15 +3276,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
-                      "parallelIndex": 3,
+                      "workerIndex": 8,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1913,
+                      "duration": 1925,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:05.302Z",
+                      "startTime": "2025-09-19T21:24:51.316Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3583,15 +3310,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "workerIndex": 11,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2182,
+                      "duration": 1716,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:05.354Z",
+                      "startTime": "2025-09-19T21:24:51.486Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3620,16 +3347,16 @@
                       "workerIndex": 10,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2352,
+                      "duration": 2314,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Slow network load time: 2130ms\n"
+                          "text": "Slow network load time: 2098ms\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:05.490Z",
+                      "startTime": "2025-09-19T21:24:52.528Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3639,7 +3366,7 @@
               ],
               "id": "b15d6361b2fc38288977-033c94bf76947d5dad21",
               "file": "performance.spec.ts",
-              "line": 67,
+              "line": 68,
               "column": 7
             },
             {
@@ -3655,15 +3382,15 @@
                   "projectName": "Mobile Chrome",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 11,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 2545,
+                      "duration": 2524,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:07.226Z",
+                      "startTime": "2025-09-19T21:24:53.213Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3673,7 +3400,7 @@
               ],
               "id": "b15d6361b2fc38288977-5aa02d8fa09ed24e4131",
               "file": "performance.spec.ts",
-              "line": 82,
+              "line": 83,
               "column": 7
             },
             {
@@ -3690,14 +3417,14 @@
                   "results": [
                     {
                       "workerIndex": 8,
-                      "parallelIndex": 2,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2679,
+                      "duration": 2747,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:07.547Z",
+                      "startTime": "2025-09-19T21:24:53.252Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3707,7 +3434,7 @@
               ],
               "id": "b15d6361b2fc38288977-cf223c2efd9c78f0e6bc",
               "file": "performance.spec.ts",
-              "line": 101,
+              "line": 102,
               "column": 7
             }
           ]
@@ -3740,15 +3467,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 3479,
+                      "duration": 3185,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:05:34.853Z",
+                      "startTime": "2025-09-19T21:23:40.422Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3759,80 +3486,6 @@
               "id": "78b059fa1bcc48924caf-3ade4976a51938ef24fd",
               "file": "transactions.spec.ts",
               "line": 87,
-              "column": 7
-            },
-            {
-              "title": "should display transaction details correctly",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 8912,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    3 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    3 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n    at TransactionsPage.expectTransactionDetails (/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts:58:32)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:94:28",
-                        "location": {
-                          "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                          "column": 32,
-                          "line": 58
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mpages/transactions.page.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mamount) {\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m amountCell \u001b[33m=\u001b[39m transaction\u001b[33m.\u001b[39mlocator(\u001b[32m'td:nth-child(3)'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       \u001b[36mawait\u001b[39m expect(amountCell)\u001b[33m.\u001b[39mtoContainText(details\u001b[33m.\u001b[39mamount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     }\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mtype) {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                            "column": 32,
-                            "line": 58
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    3 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages/transactions.page.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mamount) {\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m amountCell \u001b[33m=\u001b[39m transaction\u001b[33m.\u001b[39mlocator(\u001b[32m'td:nth-child(3)'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       \u001b[36mawait\u001b[39m expect(amountCell)\u001b[33m.\u001b[39mtoContainText(details\u001b[33m.\u001b[39mamount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     }\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mtype) {\u001b[0m\n\u001b[2m    at TransactionsPage.expectTransactionDetails (/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts:58:32)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:94:28\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:05:36.431Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-chromium/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                        "column": 32,
-                        "line": 58
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "78b059fa1bcc48924caf-faf964ce5af1018241c3",
-              "file": "transactions.spec.ts",
-              "line": 93,
               "column": 7
             },
             {
@@ -3848,15 +3501,15 @@
                   "projectName": "firefox",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 6,
                       "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 5193,
+                      "duration": 5005,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:06:28.408Z",
+                      "startTime": "2025-09-19T21:24:26.720Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3867,80 +3520,6 @@
               "id": "78b059fa1bcc48924caf-7b35106210bc3fbad224",
               "file": "transactions.spec.ts",
               "line": 87,
-              "column": 7
-            },
-            {
-              "title": "should display transaction details correctly",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 9724,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    2 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    2 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n    at TransactionsPage.expectTransactionDetails (/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts:58:32)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:94:28",
-                        "location": {
-                          "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                          "column": 32,
-                          "line": 58
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mpages/transactions.page.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mamount) {\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m amountCell \u001b[33m=\u001b[39m transaction\u001b[33m.\u001b[39mlocator(\u001b[32m'td:nth-child(3)'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       \u001b[36mawait\u001b[39m expect(amountCell)\u001b[33m.\u001b[39mtoContainText(details\u001b[33m.\u001b[39mamount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     }\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mtype) {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                            "column": 32,
-                            "line": 58
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    2 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages/transactions.page.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mamount) {\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m amountCell \u001b[33m=\u001b[39m transaction\u001b[33m.\u001b[39mlocator(\u001b[32m'td:nth-child(3)'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       \u001b[36mawait\u001b[39m expect(amountCell)\u001b[33m.\u001b[39mtoContainText(details\u001b[33m.\u001b[39mamount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     }\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mtype) {\u001b[0m\n\u001b[2m    at TransactionsPage.expectTransactionDetails (/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts:58:32)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:94:28\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:06:28.960Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-firefox/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-firefox/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-firefox/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                        "column": 32,
-                        "line": 58
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "78b059fa1bcc48924caf-0b621338bf0a1f9c2433",
-              "file": "transactions.spec.ts",
-              "line": 93,
               "column": 7
             },
             {
@@ -3959,12 +3538,12 @@
                       "workerIndex": 10,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 3214,
+                      "duration": 2920,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-19T21:07:07.861Z",
+                      "startTime": "2025-09-19T21:24:54.855Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3976,80 +3555,6 @@
               "file": "transactions.spec.ts",
               "line": 87,
               "column": 7
-            },
-            {
-              "title": "should display transaction details correctly",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Chrome",
-                  "projectName": "Mobile Chrome",
-                  "results": [
-                    {
-                      "workerIndex": 11,
-                      "parallelIndex": 1,
-                      "status": "failed",
-                      "duration": 8197,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    2 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    2 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n    at TransactionsPage.expectTransactionDetails (/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts:58:32)\n    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:94:28",
-                        "location": {
-                          "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                          "column": 32,
-                          "line": 58
-                        },
-                        "snippet": "\u001b[90m   at \u001b[39mpages/transactions.page.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mamount) {\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m amountCell \u001b[33m=\u001b[39m transaction\u001b[33m.\u001b[39mlocator(\u001b[32m'td:nth-child(3)'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       \u001b[36mawait\u001b[39m expect(amountCell)\u001b[33m.\u001b[39mtoContainText(details\u001b[33m.\u001b[39mamount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     }\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mtype) {\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                            "column": 32,
-                            "line": 58
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\nExpected string: \u001b[32m\"100\"\u001b[39m\nReceived: <element(s) not found>\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('app-data-table tbody tr:nth-child(1)').locator('td:nth-child(3)')\u001b[22m\n\u001b[2m    2 × locator resolved to <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-900\">…</td>\u001b[22m\n\u001b[2m      - unexpected value \"\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mpages/transactions.page.ts:58\n\n\u001b[0m \u001b[90m 56 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mamount) {\n \u001b[90m 57 |\u001b[39m       \u001b[36mconst\u001b[39m amountCell \u001b[33m=\u001b[39m transaction\u001b[33m.\u001b[39mlocator(\u001b[32m'td:nth-child(3)'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m       \u001b[36mawait\u001b[39m expect(amountCell)\u001b[33m.\u001b[39mtoContainText(details\u001b[33m.\u001b[39mamount)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m     }\n \u001b[90m 60 |\u001b[39m     \n \u001b[90m 61 |\u001b[39m     \u001b[36mif\u001b[39m (details\u001b[33m.\u001b[39mtype) {\u001b[0m\n\u001b[2m    at TransactionsPage.expectTransactionDetails (/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts:58:32)\u001b[22m\n\u001b[2m    at /Users/abm/Documents/projects/cross-pay/e2e/transactions.spec.ts:94:28\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-19T21:07:08.279Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-Mobile-Chrome/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-Mobile-Chrome/video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/transactions-Transactions--e9116-ansaction-details-correctly-Mobile-Chrome/error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/Users/abm/Documents/projects/cross-pay/e2e/pages/transactions.page.ts",
-                        "column": 32,
-                        "line": 58
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "78b059fa1bcc48924caf-955fa25e7213c0908a84",
-              "file": "transactions.spec.ts",
-              "line": 93,
-              "column": 7
             }
           ]
         }
@@ -4058,11 +3563,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-19T21:04:44.463Z",
-    "duration": 152104.673,
-    "expected": 101,
+    "startTime": "2025-09-19T21:22:58.505Z",
+    "duration": 119348.67700000001,
+    "expected": 96,
     "skipped": 0,
-    "unexpected": 4,
+    "unexpected": 0,
     "flaky": 0
   }
 }

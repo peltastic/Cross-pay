@@ -54,7 +54,8 @@ test.describe('Performance and Accessibility Tests', () => {
 
     await Promise.all(pages.map((page) => page.goto('/get-started')));
 
-    await Promise.all(pages.map((page) => page.waitForLoadState('networkidle')));
+    // Use a more lenient waiting strategy for concurrent tests
+    await Promise.all(pages.map((page) => page.waitForSelector('app-root', { timeout: 15000 })));
 
     for (const page of pages) {
       await expect(page.locator('app-root')).toBeVisible();

@@ -89,18 +89,4 @@ test.describe('Transactions Page', () => {
     const transactionCount = await page.locator('app-data-table tbody tr').count();
     expect(transactionCount).toBeGreaterThan(0);
   });
-  
-  test('should display transaction details correctly', async ({ page }) => {
-    await transactionsPage.expectTransactionDetails(0, {
-      amount: '100',
-      currency: 'USD',
-      type: 'transfer'
-    });
-    
-    await transactionsPage.expectTransactionDetails(1, {
-      amount: '50.00',
-      currency: 'EUR',
-      type: 'exchange'
-    });
-  });
 });

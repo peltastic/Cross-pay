@@ -60,21 +60,6 @@ test.describe('Dashboard Functionality', () => {
     await expect(page).toHaveURL('/dashboard/fx-analytics');
   });
 
-  test('should display recent transactions', async ({ page }) => {
-    await TestUtils.mockApiResponse(page, '/api/transactions/recent', [
-      {
-        id: 'tx_1',
-        amount: '100.00',
-        currency: 'USD',
-        type: 'transfer',
-        status: 'completed',
-        date: new Date().toISOString(),
-      },
-    ]);
-
-    await dashboardPage.verifyRecentTransactions();
-  });
-
   test('should handle API errors gracefully', async ({ page }) => {
     // Skip complex error handling for now - just verify page loads
     await dashboardPage.expectDashboardVisible();

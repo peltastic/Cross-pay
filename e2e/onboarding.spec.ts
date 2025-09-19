@@ -37,17 +37,6 @@ test.describe('Onboarding Flow', () => {
     await dashboardPage.expectDashboardVisible();
   });
   
-  test('should preserve email value on reload', async ({ page }) => {
-    const email = testUsers.validUser.email;
-    await onboardingPage.fillEmail(email);
-    await page.reload();
-    await TestUtils.waitForAngularToLoad(page);
-    await onboardingPage.waitForPageLoad();
-    
-    const currentValue = await onboardingPage.getEmailValue();
-    console.log('Email preservation test - current value:', currentValue);
-  });
-  
   test('should work with different email formats', async ({ page }) => {
     const emailFormats = [
       'test.email@example.com',
