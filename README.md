@@ -4,7 +4,7 @@
 
 **A modern, scalable cross-border payment dashboard built for the future of finance**
 
-[Live Demo](https://cross-pay.vercel.app)
+[Live Demo](https://cross-payxx.vercel.app)
 
 [Design Document](https://docs.google.com/document/d/1FLz-8zJkq0qL5yNAzAeMIbcFkRXWTZ89Yctb9K4w5XQ/edit?usp=sharing)
 
