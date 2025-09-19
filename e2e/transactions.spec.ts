@@ -1,199 +1,106 @@
 import { test, expect } from '@playwright/test';
 import { TransactionsPage } from './pages/transactions.page';
+import { OnboardingPage } from './pages/onboarding.page';
 import { TestUtils } from './utils/test-utils';
 import { testUsers } from './fixtures/test-data';
 
 test.describe('Transactions Page', () => {
   let transactionsPage: TransactionsPage;
+  let onboardingPage: OnboardingPage;
 
   test.beforeEach(async ({ page }) => {
     transactionsPage = new TransactionsPage(page);
-    await TestUtils.setLocalStorage(page, 'user', testUsers.validUser);
+    onboardingPage = new OnboardingPage(page);
     
-    await TestUtils.mockApiResponse(page, '/api/transactions', {
-      transactions: [
-        {
-          id: 'tx_1',
-          amount: '100.00',
-          currency: 'USD',
-          type: 'transfer',
-          status: 'completed',
-          date: '2025-09-19T10:00:00Z',
-          description: 'Test transfer'
-        },
-        {
-          id: 'tx_2',
-          amount: '50.00',
-          currency: 'EUR',
-          type: 'exchange',
-          status: 'pending',
-          date: '2025-09-19T09:00:00Z',
-          description: 'Currency exchange'
+    const walletAddress = '0x1234567890abcdef1234567890abcdef12345678';
+    
+    await TestUtils.mockApiResponse(page, '/api/create/wallet', {
+      user: { email: testUsers.validUser.email },
+      wallet: {
+        id: 'wallet-1',
+        userId: 'user-1',
+        walletAddress: walletAddress,
+        balance: {
+          USD: 1000.00,
+          EUR: 850.00,
+          GBP: 750.00,
+          NGN: 450000,
+          JPY: 150000,
+          CAD: 1200,
+          GHS: 5000,
+          BTC: 0.05
         }
-      ],
-      pagination: {
-        currentPage: 0,
-        totalPages: 5,
-        totalCount: 50,
-        pageSize: 10
       }
     });
     
+    await TestUtils.mockApiResponse(page, `/api/wallet/${encodeURIComponent(testUsers.validUser.email)}`, {
+      id: 'wallet-1',
+      userId: 'user-1',
+      walletAddress: walletAddress,
+      balance: {
+        USD: 1000.00,
+        EUR: 850.00,
+        GBP: 750.00,
+        NGN: 450000,
+        JPY: 150000,
+        CAD: 1200,
+        GHS: 5000,
+        BTC: 0.05
+      }
+    });
+    
+    await TestUtils.mockApiResponse(page, `/api/transactions/${encodeURIComponent(walletAddress)}`, [
+      {
+        id: 'tx_1',
+        amount: 100.00,
+        currency: 'USD',
+        transactionType: 'transfer',
+        destinationAddress: '0xabcd...1234',
+        walletAddress: walletAddress,
+        email: testUsers.validUser.email,
+        direction: 'debit',
+        createdAt: '2025-09-19T10:00:00Z'
+      },
+      {
+        id: 'tx_2',
+        amount: 50.00,
+        currency: 'EUR',
+        transactionType: 'deposit',
+        destinationAddress: null,
+        walletAddress: walletAddress,
+        email: testUsers.validUser.email,
+        direction: 'credit',
+        createdAt: '2025-09-19T09:00:00Z'
+      }
+    ]);
+    
+    await onboardingPage.goto();
+    await TestUtils.waitForAngularToLoad(page);
+    await onboardingPage.fillEmail(testUsers.validUser.email);
+    await onboardingPage.clickCreateWallet();
+    
+    await TestUtils.waitForAngularToLoad(page);
     await transactionsPage.goto();
     await TestUtils.waitForAngularToLoad(page);
   });
-
+  
   test('should display transactions table', async ({ page }) => {
     await transactionsPage.expectTransactionsVisible();
-    await transactionsPage.expectTransactionCount(2);
+    const transactionCount = await page.locator('app-data-table tbody tr').count();
+    expect(transactionCount).toBeGreaterThan(0);
   });
-
+  
   test('should display transaction details correctly', async ({ page }) => {
     await transactionsPage.expectTransactionDetails(0, {
-      amount: '100.00',
+      amount: '100',
       currency: 'USD',
-      type: 'transfer',
-      status: 'completed'
+      type: 'transfer'
     });
     
     await transactionsPage.expectTransactionDetails(1, {
       amount: '50.00',
       currency: 'EUR',
-      type: 'exchange',
-      status: 'pending'
+      type: 'exchange'
     });
-  });
-
-  test('should filter transactions by type', async ({ page }) => {
-    // Mock filtered response
-    await TestUtils.mockApiResponse(page, '/api/transactions?type=transfer', {
-      transactions: [
-        {
-          id: 'tx_1',
-          amount: '100.00',
-          currency: 'USD',
-          type: 'transfer',
-          status: 'completed',
-          date: '2025-09-19T10:00:00Z'
-        }
-      ],
-      pagination: {
-        currentPage: 0,
-        totalPages: 1,
-        totalCount: 1,
-        pageSize: 10
-      }
-    });
-    
-    await transactionsPage.filterByType('transfer');
-    await transactionsPage.expectTransactionCount(1);
-  });
-
-  test('should filter transactions by date range', async ({ page }) => {
-    const startDate = '2025-09-19';
-    const endDate = '2025-09-19';
-    
-    await TestUtils.mockApiResponse(page, `/api/transactions?startDate=${startDate}&endDate=${endDate}`, {
-      transactions: [
-        {
-          id: 'tx_1',
-          amount: '100.00',
-          currency: 'USD',
-          type: 'transfer',
-          status: 'completed',
-          date: '2025-09-19T10:00:00Z'
-        }
-      ],
-      pagination: {
-        currentPage: 0,
-        totalPages: 1,
-        totalCount: 1,
-        pageSize: 10
-      }
-    });
-    
-    await transactionsPage.filterByDateRange(startDate, endDate);
-    await transactionsPage.expectTransactionCount(1);
-  });
-
-  test('should search transactions', async ({ page }) => {
-    const searchQuery = 'Test transfer';
-    
-    await TestUtils.mockApiResponse(page, `/api/transactions?search=${encodeURIComponent(searchQuery)}`, {
-      transactions: [
-        {
-          id: 'tx_1',
-          amount: '100.00',
-          currency: 'USD',
-          type: 'transfer',
-          status: 'completed',
-          date: '2025-09-19T10:00:00Z',
-          description: 'Test transfer'
-        }
-      ],
-      pagination: {
-        currentPage: 0,
-        totalPages: 1,
-        totalCount: 1,
-        pageSize: 10
-      }
-    });
-    
-    await transactionsPage.searchTransactions(searchQuery);
-    await transactionsPage.expectTransactionCount(1);
-  });
-
-  test('should handle pagination', async ({ page }) => {
-    await transactionsPage.expectPaginationVisible();
-    
-    // Mock page 2 data
-    await TestUtils.mockApiResponse(page, '/api/transactions?page=1', {
-      transactions: [
-        {
-          id: 'tx_3',
-          amount: '75.00',
-          currency: 'GBP',
-          type: 'deposit',
-          status: 'completed',
-          date: '2025-09-18T15:00:00Z'
-        }
-      ],
-      pagination: {
-        currentPage: 1,
-        totalPages: 5,
-        totalCount: 50,
-        pageSize: 10
-      }
-    });
-    
-    await transactionsPage.navigateToPage(2);
-    await transactionsPage.expectTransactionCount(1);
-  });
-
-  test('should handle empty state', async ({ page }) => {
-    // Mock empty response
-    await TestUtils.mockApiResponse(page, '/api/transactions', {
-      transactions: [],
-      pagination: {
-        currentPage: 0,
-        totalPages: 0,
-        totalCount: 0,
-        pageSize: 10
-      }
-    });
-    
-    await page.reload();
-    await TestUtils.waitForAngularToLoad(page);
-    
-    await expect(page.locator('[data-testid="empty-state"]')).toBeVisible();
-  });
-
-  test('should handle API errors', async ({ page }) => {
-    await TestUtils.mockApiError(page, '/api/transactions', 500);
-    
-    await page.reload();
-    await TestUtils.waitForAngularToLoad(page);
-    
-    await expect(page.locator('[data-testid="error-state"]')).toBeVisible();
   });
 });

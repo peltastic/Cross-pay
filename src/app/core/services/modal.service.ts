@@ -10,19 +10,23 @@ export class ModalService {
   constructor(private lazyLoadService: LazyLoadService) {}
 
   async openTransferModal(viewContainer: ViewContainerRef): Promise<ComponentRef<any>> {
+    console.log('Opening transfer modal...');
     const modalComponent = await this.lazyLoadService.loadComponent(
       () => import('../../pages/dashboard/components/modal/transfer-modal'),
       'TransferModalComponent',
       viewContainer
     );
 
+    console.log('Transfer modal component created, setting isOpen to true');
     modalComponent.instance.isOpen = true;
+    console.log('isOpen set to:', modalComponent.instance.isOpen);
     
     modalComponent.instance.close.subscribe(() => {
       this.closeModal(modalComponent);
     });
 
     this.openModals.push(modalComponent);
+    console.log('Transfer modal should now be visible');
     return modalComponent;
   }
 

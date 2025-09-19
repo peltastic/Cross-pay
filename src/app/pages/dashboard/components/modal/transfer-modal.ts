@@ -52,7 +52,19 @@ import * as ExchangeRateSelectors from '../../../../store/exchange-rate/exchange
   templateUrl: './transfer-modal.html',
 })
 export class TransferModalComponent implements OnInit, OnDestroy {
-  @Input() isOpen = false;
+  @Input() 
+  set isOpen(value: boolean) {
+    console.log('Transfer modal isOpen property set to:', value);
+    this._isOpen = value;
+    // Trigger change detection
+    this.cdr.detectChanges();
+  }
+  
+  get isOpen(): boolean {
+    return this._isOpen;
+  }
+  
+  private _isOpen = false;
   @Output() close = new EventEmitter<void>();
 
   transferForm: FormGroup;

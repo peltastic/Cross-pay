@@ -15,7 +15,6 @@ test.describe('Basic App Functionality', () => {
     });
     
     test('should display onboarding page', async ({ page }) => {
-        // Navigate to onboarding page
         await page.goto('/get-started');
         await page.waitForLoadState('networkidle');
         
@@ -41,7 +40,7 @@ test.describe('Basic App Functionality', () => {
     test('should handle navigation to fx-analytics', async ({ page }) => {
         await page.goto('/dashboard/fx-analytics');
         await page.waitForLoadState('networkidle');
-    
+        
         const url = page.url();
         expect(url).toMatch(/\/(dashboard\/fx-analytics|get-started)/);
     });

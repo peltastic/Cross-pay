@@ -1,0 +1,3500 @@
+{
+  "config": {
+    "configFile": "/Users/abm/Documents/projects/cross-pay/playwright.config.ts",
+    "rootDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/abm/Documents/projects/cross-pay/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/abm/Documents/projects/cross-pay/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "/Users/abm/Documents/projects/cross-pay/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/abm/Documents/projects/cross-pay/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 4,
+    "webServer": {
+      "command": "npm start",
+      "url": "http://localhost:4200",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "basic-app.spec.ts",
+      "file": "basic-app.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Basic App Functionality",
+          "file": "basic-app.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load the application",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "interrupted",
+                      "duration": 8108,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T20:31:51.892Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/basic-app-Basic-App-Functi-bf1bc-should-load-the-application-chromium/test-failed-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-a33682444bde0e1db1ae",
+              "file": "basic-app.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should display onboarding page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "interrupted",
+                      "duration": 10328,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T20:31:51.878Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/basic-app-Basic-App-Functi-86fc1-uld-display-onboarding-page-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/basic-app-Basic-App-Functi-86fc1-uld-display-onboarding-page-chromium/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-8f2399283ef7465acd66",
+              "file": "basic-app.spec.ts",
+              "line": 17,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to dashboard (may redirect)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "interrupted",
+                      "duration": 8608,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T20:31:51.885Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-2e673988936558c7cf4b",
+              "file": "basic-app.spec.ts",
+              "line": 25,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "interrupted",
+                      "duration": 10425,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-19T20:31:51.875Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/basic-app-Basic-App-Functi-a4dbc--navigation-to-transactions-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/abm/Documents/projects/cross-pay/test-results/basic-app-Basic-App-Functi-a4dbc--navigation-to-transactions-chromium/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-2dfd03e505d9d42b271f",
+              "file": "basic-app.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to fx-analytics",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-0b2ad5022305e1dc5a00",
+              "file": "basic-app.spec.ts",
+              "line": 41,
+              "column": 9
+            },
+            {
+              "title": "should handle 404 pages gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-1bdfa01b2a180b7cafe2",
+              "file": "basic-app.spec.ts",
+              "line": 49,
+              "column": 9
+            },
+            {
+              "title": "should load the application",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-65ff5197a158b23ead08",
+              "file": "basic-app.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should display onboarding page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-46c29b1c0beb2c9e4db6",
+              "file": "basic-app.spec.ts",
+              "line": 17,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to dashboard (may redirect)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-52f214316c10e9f7fabf",
+              "file": "basic-app.spec.ts",
+              "line": 25,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-9f91d14d0172dfc77023",
+              "file": "basic-app.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to fx-analytics",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-f55be72e49479fe9efdf",
+              "file": "basic-app.spec.ts",
+              "line": 41,
+              "column": 9
+            },
+            {
+              "title": "should handle 404 pages gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-b50f36f592dea256e125",
+              "file": "basic-app.spec.ts",
+              "line": 49,
+              "column": 9
+            },
+            {
+              "title": "should load the application",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-c2d66cf0a323927223a9",
+              "file": "basic-app.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should display onboarding page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-bb609b5e6cedf28477b9",
+              "file": "basic-app.spec.ts",
+              "line": 17,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to dashboard (may redirect)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-6ecf1ff6eb15a5059f17",
+              "file": "basic-app.spec.ts",
+              "line": 25,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-9d511693f20a4c972746",
+              "file": "basic-app.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "should handle navigation to fx-analytics",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-27e719ef5ebcd6a816a1",
+              "file": "basic-app.spec.ts",
+              "line": 41,
+              "column": 9
+            },
+            {
+              "title": "should handle 404 pages gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "3e2b538f4445020ced96-d341d56dd0f550054337",
+              "file": "basic-app.spec.ts",
+              "line": 49,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "comprehensive.spec.ts",
+      "file": "comprehensive.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Cross-Pay Application E2E Tests",
+          "file": "comprehensive.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display the onboarding page with form elements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-eae1e18f4afaf39a9fe7",
+              "file": "comprehensive.spec.ts",
+              "line": 10,
+              "column": 9
+            },
+            {
+              "title": "should have working navigation and routing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-774dc7b1edd43e4a98b0",
+              "file": "comprehensive.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "should be responsive and work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-7cf64de5e6e9d6e253eb",
+              "file": "comprehensive.spec.ts",
+              "line": 52,
+              "column": 5
+            },
+            {
+              "title": "should handle form interactions on onboarding page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-189f2ea89f29a7e4216d",
+              "file": "comprehensive.spec.ts",
+              "line": 68,
+              "column": 5
+            },
+            {
+              "title": "should load without JavaScript errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-0efe5f84593529a63380",
+              "file": "comprehensive.spec.ts",
+              "line": 94,
+              "column": 5
+            },
+            {
+              "title": "should have proper meta tags and title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-ad50c81d5484b2adf380",
+              "file": "comprehensive.spec.ts",
+              "line": 118,
+              "column": 5
+            },
+            {
+              "title": "should display the onboarding page with form elements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-c0c330e22e113fef4221",
+              "file": "comprehensive.spec.ts",
+              "line": 10,
+              "column": 9
+            },
+            {
+              "title": "should have working navigation and routing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-e839d6eddb35fe854d04",
+              "file": "comprehensive.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "should be responsive and work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-0976bd1e3448ae73445d",
+              "file": "comprehensive.spec.ts",
+              "line": 52,
+              "column": 5
+            },
+            {
+              "title": "should handle form interactions on onboarding page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-590aafcf21f05d0d56ac",
+              "file": "comprehensive.spec.ts",
+              "line": 68,
+              "column": 5
+            },
+            {
+              "title": "should load without JavaScript errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-1f640ab91a8d6a9cd8e4",
+              "file": "comprehensive.spec.ts",
+              "line": 94,
+              "column": 5
+            },
+            {
+              "title": "should have proper meta tags and title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-a0db42ae691709c8506f",
+              "file": "comprehensive.spec.ts",
+              "line": 118,
+              "column": 5
+            },
+            {
+              "title": "should display the onboarding page with form elements",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-b564b0156493bf0fee6d",
+              "file": "comprehensive.spec.ts",
+              "line": 10,
+              "column": 9
+            },
+            {
+              "title": "should have working navigation and routing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-ed70fcf2fa7cc46218b4",
+              "file": "comprehensive.spec.ts",
+              "line": 33,
+              "column": 9
+            },
+            {
+              "title": "should be responsive and work on mobile viewport",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-368de3cd668b36419372",
+              "file": "comprehensive.spec.ts",
+              "line": 52,
+              "column": 5
+            },
+            {
+              "title": "should handle form interactions on onboarding page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-f8d00a657f8f1a338057",
+              "file": "comprehensive.spec.ts",
+              "line": 68,
+              "column": 5
+            },
+            {
+              "title": "should load without JavaScript errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-1b02ad8a5b5db8217f1d",
+              "file": "comprehensive.spec.ts",
+              "line": 94,
+              "column": 5
+            },
+            {
+              "title": "should have proper meta tags and title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "ee7a9684fd9fecf71bb2-cde5de1272993a65b24c",
+              "file": "comprehensive.spec.ts",
+              "line": 118,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.ts",
+      "file": "dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard Functionality",
+          "file": "dashboard.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display dashboard with user data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-317fc9ce3846f74dc524",
+              "file": "dashboard.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should navigate to transactions page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4f7454a459a7aa8bbc15",
+              "file": "dashboard.spec.ts",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "should navigate to fx analytics page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-06001ec9e82fca4c8e5b",
+              "file": "dashboard.spec.ts",
+              "line": 65,
+              "column": 7
+            },
+            {
+              "title": "should open transfer modal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-fe107ca315b43a52e74f",
+              "file": "dashboard.spec.ts",
+              "line": 70,
+              "column": 7
+            },
+            {
+              "title": "should complete a transfer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-7b58314a05f4b49e750e",
+              "file": "dashboard.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "should validate transfer form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-e69af3a49b1565a4ac36",
+              "file": "dashboard.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "should handle insufficient balance",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-2826f145444c3d487ce9",
+              "file": "dashboard.spec.ts",
+              "line": 126,
+              "column": 7
+            },
+            {
+              "title": "should display recent transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-0b878830286e2ddab037",
+              "file": "dashboard.spec.ts",
+              "line": 138,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-12700b2ef07c031fa6e4",
+              "file": "dashboard.spec.ts",
+              "line": 153,
+              "column": 7
+            },
+            {
+              "title": "should display dashboard with user data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-543d928f2a74a5499f78",
+              "file": "dashboard.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should navigate to transactions page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-19279d0d1445e4e3b268",
+              "file": "dashboard.spec.ts",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "should navigate to fx analytics page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-581f84a7ec573f62dac4",
+              "file": "dashboard.spec.ts",
+              "line": 65,
+              "column": 7
+            },
+            {
+              "title": "should open transfer modal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-474ed61bd6dfff72a3f6",
+              "file": "dashboard.spec.ts",
+              "line": 70,
+              "column": 7
+            },
+            {
+              "title": "should complete a transfer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-38f60732b6fc2505db1c",
+              "file": "dashboard.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "should validate transfer form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-e81f09908550859475c3",
+              "file": "dashboard.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "should handle insufficient balance",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-e776de6439ae4edc2e71",
+              "file": "dashboard.spec.ts",
+              "line": 126,
+              "column": 7
+            },
+            {
+              "title": "should display recent transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-d5e7e8db9882e611f16f",
+              "file": "dashboard.spec.ts",
+              "line": 138,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-7c8d0fd08e2556eee076",
+              "file": "dashboard.spec.ts",
+              "line": 153,
+              "column": 7
+            },
+            {
+              "title": "should display dashboard with user data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-c5336e41ddfb1a7f3274",
+              "file": "dashboard.spec.ts",
+              "line": 50,
+              "column": 7
+            },
+            {
+              "title": "should navigate to transactions page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-29de6215d382c3817224",
+              "file": "dashboard.spec.ts",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "should navigate to fx analytics page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-e874aedf6c40a8d95643",
+              "file": "dashboard.spec.ts",
+              "line": 65,
+              "column": 7
+            },
+            {
+              "title": "should open transfer modal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-11d7df0c8793c217ae8b",
+              "file": "dashboard.spec.ts",
+              "line": 70,
+              "column": 7
+            },
+            {
+              "title": "should complete a transfer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-601dcde2bec862b00b4f",
+              "file": "dashboard.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "should validate transfer form",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-e98a158ea8cd534a6282",
+              "file": "dashboard.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "should handle insufficient balance",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-10c61932a2853b638a58",
+              "file": "dashboard.spec.ts",
+              "line": 126,
+              "column": 7
+            },
+            {
+              "title": "should display recent transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-152c34c5034257b9df16",
+              "file": "dashboard.spec.ts",
+              "line": 138,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-3f42c3fcf2672fd146a9",
+              "file": "dashboard.spec.ts",
+              "line": 153,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "fx-analytics.spec.ts",
+      "file": "fx-analytics.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FX Analytics Page",
+          "file": "fx-analytics.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display FX analytics dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-696efd84ad0ec21c79f6",
+              "file": "fx-analytics.spec.ts",
+              "line": 58,
+              "column": 5
+            },
+            {
+              "title": "should display current exchange rate",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-423b50937664b029ece6",
+              "file": "fx-analytics.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "should change currency pair",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-fd5a0e9c3902448c336a",
+              "file": "fx-analytics.spec.ts",
+              "line": 69,
+              "column": 5
+            },
+            {
+              "title": "should change time range",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-7999590b7e9e8c1f7b5a",
+              "file": "fx-analytics.spec.ts",
+              "line": 76,
+              "column": 5
+            },
+            {
+              "title": "should handle API errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-8641baf7c61e6b6dd372",
+              "file": "fx-analytics.spec.ts",
+              "line": 82,
+              "column": 5
+            },
+            {
+              "title": "should display FX analytics dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-85b144dd50057f26d9ff",
+              "file": "fx-analytics.spec.ts",
+              "line": 58,
+              "column": 5
+            },
+            {
+              "title": "should display current exchange rate",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-b9273358009f8e408199",
+              "file": "fx-analytics.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "should change currency pair",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-a1c21321f21fd306a295",
+              "file": "fx-analytics.spec.ts",
+              "line": 69,
+              "column": 5
+            },
+            {
+              "title": "should change time range",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-c2dda3872b44eff473fd",
+              "file": "fx-analytics.spec.ts",
+              "line": 76,
+              "column": 5
+            },
+            {
+              "title": "should handle API errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-75f4df403119236ccef3",
+              "file": "fx-analytics.spec.ts",
+              "line": 82,
+              "column": 5
+            },
+            {
+              "title": "should display FX analytics dashboard",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-19c26ad977fce210b2d7",
+              "file": "fx-analytics.spec.ts",
+              "line": 58,
+              "column": 5
+            },
+            {
+              "title": "should display current exchange rate",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-7cb28cea6a5ee73b47f4",
+              "file": "fx-analytics.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "should change currency pair",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-0b824bef259266688b15",
+              "file": "fx-analytics.spec.ts",
+              "line": 69,
+              "column": 5
+            },
+            {
+              "title": "should change time range",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-7f7045893c478d1c8577",
+              "file": "fx-analytics.spec.ts",
+              "line": 76,
+              "column": 5
+            },
+            {
+              "title": "should handle API errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "0d47c7353098c5ef78e2-38e7ce96463bc7b6942d",
+              "file": "fx-analytics.spec.ts",
+              "line": 82,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "integration.spec.ts",
+      "file": "integration.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "End-to-End User Journey",
+          "file": "integration.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should complete full user journey from onboarding to transfer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-83f53ff8b7c981a66190",
+              "file": "integration.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should handle network failures gracefully throughout the journey",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-c71423d6d9e461f5cf4f",
+              "file": "integration.spec.ts",
+              "line": 93,
+              "column": 5
+            },
+            {
+              "title": "should work across different browsers and screen sizes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-884c44861d72cd56251f",
+              "file": "integration.spec.ts",
+              "line": 118,
+              "column": 5
+            },
+            {
+              "title": "should complete full user journey from onboarding to transfer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-c010d4e29faf44594ea8",
+              "file": "integration.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should handle network failures gracefully throughout the journey",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-2d3c21a5d1e35b44a954",
+              "file": "integration.spec.ts",
+              "line": 93,
+              "column": 5
+            },
+            {
+              "title": "should work across different browsers and screen sizes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-6bd4a0fc5765c031e1ec",
+              "file": "integration.spec.ts",
+              "line": 118,
+              "column": 5
+            },
+            {
+              "title": "should complete full user journey from onboarding to transfer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-615a45e125a81b7fcb6e",
+              "file": "integration.spec.ts",
+              "line": 11,
+              "column": 7
+            },
+            {
+              "title": "should handle network failures gracefully throughout the journey",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-3c7df39059587101a9b0",
+              "file": "integration.spec.ts",
+              "line": 93,
+              "column": 5
+            },
+            {
+              "title": "should work across different browsers and screen sizes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "4c8f7e420cc033ba00ea-b382c1a05cd8fe861e11",
+              "file": "integration.spec.ts",
+              "line": 118,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "onboarding.spec.ts",
+      "file": "onboarding.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Onboarding Flow",
+          "file": "onboarding.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display onboarding page correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-a1b2cd517e7dbc17d77b",
+              "file": "onboarding.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should complete successful onboarding flow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-d99d2de46dfabc5dca27",
+              "file": "onboarding.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "should validate required email field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-0ac3f6e529d520d8d155",
+              "file": "onboarding.spec.ts",
+              "line": 42,
+              "column": 7
+            },
+            {
+              "title": "should validate email format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-49083a14aa37cc9abd07",
+              "file": "onboarding.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "should handle empty email submission",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-e97a635654ca5474a297",
+              "file": "onboarding.spec.ts",
+              "line": 54,
+              "column": 7
+            },
+            {
+              "title": "should enable button when valid email is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-139aab56f949bd301707",
+              "file": "onboarding.spec.ts",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "should preserve email value on reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-bf284806dd179c8fb61e",
+              "file": "onboarding.spec.ts",
+              "line": 66,
+              "column": 7
+            },
+            {
+              "title": "should handle server errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-2f4f8a0acfc9be3943b8",
+              "file": "onboarding.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "should show loading state during wallet creation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-5cc2b75d958b15550ad6",
+              "file": "onboarding.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "should work with different email formats",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-5b8c5555a43a9a589cc4",
+              "file": "onboarding.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "should display onboarding page correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-9534798e1c8058408351",
+              "file": "onboarding.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should complete successful onboarding flow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-992cb031ad032227906c",
+              "file": "onboarding.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "should validate required email field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-6692219b7666ec9d3653",
+              "file": "onboarding.spec.ts",
+              "line": 42,
+              "column": 7
+            },
+            {
+              "title": "should validate email format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-4a6abb89341f4a095265",
+              "file": "onboarding.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "should handle empty email submission",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-7be4c9acfcb8cf4ca2bb",
+              "file": "onboarding.spec.ts",
+              "line": 54,
+              "column": 7
+            },
+            {
+              "title": "should enable button when valid email is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-4d35996bb03a5c5ef0fb",
+              "file": "onboarding.spec.ts",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "should preserve email value on reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-121d649e7d9fb60e93da",
+              "file": "onboarding.spec.ts",
+              "line": 66,
+              "column": 7
+            },
+            {
+              "title": "should handle server errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-b6086909dca3a3b41957",
+              "file": "onboarding.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "should show loading state during wallet creation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-8aa17c86110258fb1763",
+              "file": "onboarding.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "should work with different email formats",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-a15a6280bc5b77de581a",
+              "file": "onboarding.spec.ts",
+              "line": 112,
+              "column": 7
+            },
+            {
+              "title": "should display onboarding page correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-79bd6186bc5edd5344d1",
+              "file": "onboarding.spec.ts",
+              "line": 22,
+              "column": 7
+            },
+            {
+              "title": "should complete successful onboarding flow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-865f1a3e3dccf08efc33",
+              "file": "onboarding.spec.ts",
+              "line": 30,
+              "column": 7
+            },
+            {
+              "title": "should validate required email field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-fa4507422f466436d988",
+              "file": "onboarding.spec.ts",
+              "line": 42,
+              "column": 7
+            },
+            {
+              "title": "should validate email format",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-c864135cf829348078b2",
+              "file": "onboarding.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "should handle empty email submission",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-5dfbac63e5f2ab1cca9b",
+              "file": "onboarding.spec.ts",
+              "line": 54,
+              "column": 7
+            },
+            {
+              "title": "should enable button when valid email is entered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-3d45cf14c4b170da0c80",
+              "file": "onboarding.spec.ts",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "should preserve email value on reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-c7d2e032c785a165e723",
+              "file": "onboarding.spec.ts",
+              "line": 66,
+              "column": 7
+            },
+            {
+              "title": "should handle server errors gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-97b58711f4847986fa87",
+              "file": "onboarding.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "should show loading state during wallet creation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-a17ae34b309d30c0fffc",
+              "file": "onboarding.spec.ts",
+              "line": 90,
+              "column": 7
+            },
+            {
+              "title": "should work with different email formats",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "fe534f0825407f213faa-8a83e84bb7ec45cca011",
+              "file": "onboarding.spec.ts",
+              "line": 112,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "performance.spec.ts",
+      "file": "performance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Performance and Accessibility Tests",
+          "file": "performance.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should load pages within acceptable time limits",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-9bc9b73230384a38a8c9",
+              "file": "performance.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should have good Core Web Vitals performance",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-f5832b0e64184b4e2758",
+              "file": "performance.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "should handle concurrent user sessions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-e2566768292136fde664",
+              "file": "performance.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "should work with slow network conditions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-b98c41233f0f86ca4339",
+              "file": "performance.spec.ts",
+              "line": 67,
+              "column": 7
+            },
+            {
+              "title": "should handle page reload gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-fa1371bf5fe9f56deff2",
+              "file": "performance.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-652da1aa5668fbcaa4c4",
+              "file": "performance.spec.ts",
+              "line": 101,
+              "column": 7
+            },
+            {
+              "title": "should load pages within acceptable time limits",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-cee26c5b51164f7925c7",
+              "file": "performance.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should have good Core Web Vitals performance",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-2865eedb1022d05cfa6b",
+              "file": "performance.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "should handle concurrent user sessions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-aa8041403822c6b28e11",
+              "file": "performance.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "should work with slow network conditions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-2e45df88a9c39afddcc1",
+              "file": "performance.spec.ts",
+              "line": 67,
+              "column": 7
+            },
+            {
+              "title": "should handle page reload gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-b8fbd4fc8804f5dfec8f",
+              "file": "performance.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-ac89d30f870a49167c03",
+              "file": "performance.spec.ts",
+              "line": 101,
+              "column": 7
+            },
+            {
+              "title": "should load pages within acceptable time limits",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-c5eaf04049cfa052455f",
+              "file": "performance.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should have good Core Web Vitals performance",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-9573f74aa9c68c8455f2",
+              "file": "performance.spec.ts",
+              "line": 27,
+              "column": 7
+            },
+            {
+              "title": "should handle concurrent user sessions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-618dd9738f48719c7017",
+              "file": "performance.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "should work with slow network conditions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-033c94bf76947d5dad21",
+              "file": "performance.spec.ts",
+              "line": 67,
+              "column": 7
+            },
+            {
+              "title": "should handle page reload gracefully",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-5aa02d8fa09ed24e4131",
+              "file": "performance.spec.ts",
+              "line": 82,
+              "column": 7
+            },
+            {
+              "title": "should be accessible with keyboard navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b15d6361b2fc38288977-cf223c2efd9c78f0e6bc",
+              "file": "performance.spec.ts",
+              "line": 101,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "transactions.spec.ts",
+      "file": "transactions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Transactions Page",
+          "file": "transactions.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display transactions table",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-3ade4976a51938ef24fd",
+              "file": "transactions.spec.ts",
+              "line": 92,
+              "column": 7
+            },
+            {
+              "title": "should display transaction details correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-faf964ce5af1018241c3",
+              "file": "transactions.spec.ts",
+              "line": 100,
+              "column": 7
+            },
+            {
+              "title": "should filter transactions by type",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-01e7ef9ece1dc9bdf117",
+              "file": "transactions.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "should filter transactions by date range",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-8965102391dd8ce5f80b",
+              "file": "transactions.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "should search transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-ee32bd031729581b8a3c",
+              "file": "transactions.spec.ts",
+              "line": 168,
+              "column": 7
+            },
+            {
+              "title": "should handle pagination",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-945b3b825f5a3a0c477b",
+              "file": "transactions.spec.ts",
+              "line": 195,
+              "column": 7
+            },
+            {
+              "title": "should handle empty state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-f38520193dd1c0828b69",
+              "file": "transactions.spec.ts",
+              "line": 222,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-cef6411147b424c736b9",
+              "file": "transactions.spec.ts",
+              "line": 240,
+              "column": 7
+            },
+            {
+              "title": "should display transactions table",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-7b35106210bc3fbad224",
+              "file": "transactions.spec.ts",
+              "line": 92,
+              "column": 7
+            },
+            {
+              "title": "should display transaction details correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-0b621338bf0a1f9c2433",
+              "file": "transactions.spec.ts",
+              "line": 100,
+              "column": 7
+            },
+            {
+              "title": "should filter transactions by type",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-a9451d3b704df9182309",
+              "file": "transactions.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "should filter transactions by date range",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-812bd310229991dcbb6d",
+              "file": "transactions.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "should search transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-58edf4ddf80dd43794ab",
+              "file": "transactions.spec.ts",
+              "line": 168,
+              "column": 7
+            },
+            {
+              "title": "should handle pagination",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-ceaef21590b79e7cd11c",
+              "file": "transactions.spec.ts",
+              "line": 195,
+              "column": 7
+            },
+            {
+              "title": "should handle empty state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-54fba347fbb123747bca",
+              "file": "transactions.spec.ts",
+              "line": 222,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-08e1bbf0e946262600b1",
+              "file": "transactions.spec.ts",
+              "line": 240,
+              "column": 7
+            },
+            {
+              "title": "should display transactions table",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-1e5215ac13168634c6b8",
+              "file": "transactions.spec.ts",
+              "line": 92,
+              "column": 7
+            },
+            {
+              "title": "should display transaction details correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-955fa25e7213c0908a84",
+              "file": "transactions.spec.ts",
+              "line": 100,
+              "column": 7
+            },
+            {
+              "title": "should filter transactions by type",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-3df98ebc37d7ed0a8606",
+              "file": "transactions.spec.ts",
+              "line": 116,
+              "column": 7
+            },
+            {
+              "title": "should filter transactions by date range",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-6860dd1f4c2d55f8582e",
+              "file": "transactions.spec.ts",
+              "line": 141,
+              "column": 7
+            },
+            {
+              "title": "should search transactions",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-5353ac31f88eda051883",
+              "file": "transactions.spec.ts",
+              "line": 168,
+              "column": 7
+            },
+            {
+              "title": "should handle pagination",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-0878c62f625fb2994bf5",
+              "file": "transactions.spec.ts",
+              "line": 195,
+              "column": 7
+            },
+            {
+              "title": "should handle empty state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-b79374c2db61765456d4",
+              "file": "transactions.spec.ts",
+              "line": 222,
+              "column": 7
+            },
+            {
+              "title": "should handle API errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "78b059fa1bcc48924caf-57077146c802127ff96c",
+              "file": "transactions.spec.ts",
+              "line": 240,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-19T20:31:34.695Z",
+    "duration": 28892.98,
+    "expected": 0,
+    "skipped": 159,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

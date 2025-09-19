@@ -16,34 +16,56 @@ export class FxAnalyticsPage {
   }
 
   async expectAnalyticsVisible() {
-    await expect(this.page.locator('[data-testid="fx-analytics-container"]')).toBeVisible();
-  }
-
-  async expectExchangeRateChart() {
-    await expect(this.page.locator('[data-testid="exchange-rate-chart"]')).toBeVisible();
+    await expect(this.page.locator('h1')).toContainText('FX Analytics');
+    await expect(this.page.locator('app-data-table')).toBeVisible();
   }
 
   async selectCurrencyPair(from: string, to: string) {
-    await this.page.click('[data-testid="currency-from-select"]');
-    await this.page.click(`[data-testid="currency-option-${from}"]`);
+    const baseCurrencySelect = this.page.locator('app-select').first();
+    await baseCurrencySelect.click();
+    await this.page.locator(`[data-option="${from}"]`).click();
     
-    await this.page.click('[data-testid="currency-to-select"]');
-    await this.page.click(`[data-testid="currency-option-${to}"]`);
+    const targetCurrencySelect = this.page.locator('app-select').nth(2);
+    await targetCurrencySelect.click();
+    await this.page.locator(`[data-option="${to}"]`).click();
   }
-
+  
   async selectTimeRange(range: string) {
-    await this.page.click(`[data-testid="time-range-${range}"]`);
+    const periodMap: { [key: string]: string } = {
+      '7d': '1 Day', // Test uses '7d' but service has '1 Day'
+      '30d': '30 Days',
+      '6m': '6 Months', 
+      '1y': '1 Year'
+    };
+    const periodLabel = periodMap[range.toLowerCase()] || range;
+    await this.page.locator('button', { hasText: periodLabel }).click();
   }
-
-  async expectCurrentRate(rate: string) {
-    await expect(this.page.locator('[data-testid="current-exchange-rate"]')).toContainText(rate);
+  
+  async expectCurrentRate(content: string) {
+    await expect(this.page.locator('app-data-table')).toContainText(content);
   }
-
+  
+  async expectTimeRangeSelected(range: string) {
+    const periodMap: { [key: string]: string } = {
+      '7d': '1 Day',
+      '30d': '30 Days', 
+      '6m': '6 Months',
+      '1y': '1 Year'
+    };
+    const periodLabel = periodMap[range.toLowerCase()] || range;
+    const button = this.page.locator('button', { hasText: periodLabel });
+    await expect(button).toHaveClass(/bg-button-background/);
+  }
+  
+  async expectExchangeRateChart() {
+    await expect(this.page.locator('app-line-chart')).toBeVisible();
+  }
+  
   async expectRateChange(change: string) {
-    await expect(this.page.locator('[data-testid="rate-change"]')).toContainText(change);
+    await expect(this.page.locator('app-data-table')).toContainText(change);
   }
-
+  
   async expectHistoricalData() {
-    await expect(this.page.locator('[data-testid="historical-rates-table"]')).toBeVisible();
+    await expect(this.page.locator('app-data-table')).toBeVisible();
   }
 }
