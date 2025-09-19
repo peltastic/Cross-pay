@@ -6,9 +6,11 @@ import {
   FormBuilder,
   FormGroup,
   Validators,
+  AbstractControl,
+  ValidationErrors,
 } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { Observable, Subscription, Subject, combineLatest, of } from 'rxjs';
+import { Observable,  Subject, combineLatest, of } from 'rxjs';
 import { debounceTime, distinctUntilChanged, switchMap, filter, map, takeUntil, startWith, take } from 'rxjs/operators';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { heroArrowsRightLeft } from '@ng-icons/heroicons/outline';
@@ -76,6 +78,16 @@ export class SwapModalComponent implements OnInit, OnDestroy {
   swapSuccess = false;
   successMessage = '';
 
+  private balanceValidator = (control: AbstractControl): ValidationErrors | null => {
+    if (!control.value) return null;
+    
+    const amount = parseFloat(control.value);
+    if (isNaN(amount)) return null;
+
+    const availableBalance = this.getAvailableBalance();
+    return amount > availableBalance ? { insufficientBalance: { available: availableBalance, requested: amount } } : null;
+  };
+
   constructor(
     private fb: FormBuilder,
     private store: Store,
@@ -87,7 +99,7 @@ export class SwapModalComponent implements OnInit, OnDestroy {
       toCurrency: [this.currencyOptions[1].value, [Validators.required]],
       amount: [
         '',
-        [Validators.required, Validators.min(0.01), Validators.pattern(/^\d+(\.\d{1,2})?$/)],
+        [Validators.required, Validators.min(0.01), Validators.pattern(/^\d+(\.\d{1,2})?$/), this.balanceValidator],
       ],
     });
 
@@ -145,6 +157,20 @@ export class SwapModalComponent implements OnInit, OnDestroy {
           }, 2000);
         }
       });
+
+    // Re-validate amount when currency changes
+    this.swapForm.get('fromCurrency')?.valueChanges.pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(() => {
+      this.swapForm.get('amount')?.updateValueAndValidity();
+    });
+
+    // Re-validate amount when wallet balance changes
+    this.wallet$.pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(() => {
+      this.swapForm.get('amount')?.updateValueAndValidity();
+    });
   }
 
   ngOnDestroy() {
@@ -226,6 +252,11 @@ export class SwapModalComponent implements OnInit, OnDestroy {
       }
       if (field.errors['pattern']) {
         return 'Please enter a valid amount (e.g., 10.50)';
+      }
+      if (field.errors['insufficientBalance']) {
+        const available = field.errors['insufficientBalance'].available;
+        const fromCurrency = this.swapForm.get('fromCurrency')?.value;
+        return `Insufficient balance. Available: ${available.toFixed(2)} ${fromCurrency}`;
       }
     }
     return '';

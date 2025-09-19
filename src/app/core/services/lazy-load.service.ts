@@ -10,7 +10,6 @@ export class LazyLoadService {
     viewContainer: ViewContainerRef
   ): Promise<ComponentRef<T>> {
     try {
-      // Check if the ViewContainerRef is still valid
       if (!viewContainer || (viewContainer as any)._view?.destroyed) {
         throw new Error('ViewContainer is destroyed');
       }
@@ -22,7 +21,6 @@ export class LazyLoadService {
         throw new Error(`Component ${componentName} not found in module`);
       }
 
-      // Additional check before creating component
       try {
         return viewContainer.createComponent(component);
       } catch (createError) {

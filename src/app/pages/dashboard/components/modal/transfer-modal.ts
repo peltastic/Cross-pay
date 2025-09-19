@@ -6,6 +6,8 @@ import {
   FormBuilder,
   FormGroup,
   Validators,
+  AbstractControl,
+  ValidationErrors,
 } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { Observable, Subscription, Subject, combineLatest, of } from 'rxjs';
@@ -76,6 +78,17 @@ export class TransferModalComponent implements OnInit, OnDestroy {
   transferSuccess = false;
   successMessage = '';
 
+  // Custom validator for balance checking
+  private balanceValidator = (control: AbstractControl): ValidationErrors | null => {
+    if (!control.value) return null;
+    
+    const amount = parseFloat(control.value);
+    if (isNaN(amount)) return null;
+
+    const availableBalance = this.getAvailableBalance();
+    return amount > availableBalance ? { insufficientBalance: { available: availableBalance, requested: amount } } : null;
+  };
+
   constructor(
     private fb: FormBuilder,
     private store: Store,
@@ -87,7 +100,7 @@ export class TransferModalComponent implements OnInit, OnDestroy {
       toCurrency: [this.currencyOptions[1].value, [Validators.required]],
       amount: [
         '',
-        [Validators.required, Validators.min(0.01), Validators.pattern(/^\d+(\.\d{1,2})?$/)],
+        [Validators.required, Validators.min(0.01), Validators.pattern(/^\d+(\.\d{1,2})?$/), this.balanceValidator],
       ],
       walletAddress: ['', [Validators.required, Validators.minLength(10)]],
     });
@@ -146,6 +159,20 @@ export class TransferModalComponent implements OnInit, OnDestroy {
           }, 2000);
         }
       });
+
+    // Re-validate amount when currency changes
+    this.transferForm.get('fromCurrency')?.valueChanges.pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(() => {
+      this.transferForm.get('amount')?.updateValueAndValidity();
+    });
+
+    // Re-validate amount when wallet balance changes
+    this.wallet$.pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(() => {
+      this.transferForm.get('amount')?.updateValueAndValidity();
+    });
   }
 
   ngOnDestroy() {
@@ -234,6 +261,11 @@ export class TransferModalComponent implements OnInit, OnDestroy {
         const requiredLength = field.errors['minlength'].requiredLength;
         const actualLength = field.errors['minlength'].actualLength;
         return `Wallet address too short. Required: ${requiredLength} characters, current: ${actualLength}`;
+      }
+      if (field.errors['insufficientBalance']) {
+        const available = field.errors['insufficientBalance'].available;
+        const fromCurrency = this.transferForm.get('fromCurrency')?.value;
+        return `Insufficient balance. Available: ${available.toFixed(2)} ${fromCurrency}`;
       }
     }
     return '';
