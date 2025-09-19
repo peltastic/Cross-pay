@@ -58,12 +58,12 @@
     @if ((conversionResult$ | async) && swapForm.get('fromCurrency')?.value !==
     swapForm.get('toCurrency')?.value && !swapSuccess) {
     <div class="bg-gray-background-2 rounded-lg p-4">
-      <div class="flex items-center justify-between">
-        <span class="text-sm text-gray-text-2">
+      <div class="flex flex-wrap gap-4 items-center justify-between">
+        <span class="text-sm w-full xs:w-auto block text-gray-text-2">
           You will receive {{ (conversionResult$ | async)?.result | number : '1.2-2' }}
           {{ swapForm.get('toCurrency')?.value }}
         </span>
-        <span class="text-xs text-gray-text-2">
+        <span class="text-xs block text-gray-text-2">
           Rate: 1 {{ swapForm.get('fromCurrency')?.value }} =
           {{ (conversionResult$ | async)?.info?.rate | number : '1.4-4' }}
           {{ swapForm.get('toCurrency')?.value }}
@@ -88,20 +88,18 @@
     </div>
     }
 
-    <div class="flex gap-3 justify-between w-full">
+    <div class="flex items-center gap-3 justify-between w-full">
       <app-button [type]="'button'" [variant]="'secondary'" class="flex-1" (click)="closeModal()">
         Cancel
       </app-button>
       <app-button
         [type]="'submit'"
         [disabled]="!swapForm.valid || (isSwapping$ | async) || false"
-         class="px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-white"
+        class="px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 text-white"
       >
         @if (isSwapping$ | async) {
-              <div class="flex items-center justify-center">Swapping...</div>
-        } @else { Swap {{ swapForm.get('fromCurrency')?.value }} to
-        {{ swapForm.get('toCurrency')?.value }}
-        }
+        <div class="flex items-center justify-center">Swapping...</div>
+        } @else { Swap }
       </app-button>
     </div>
   </form>

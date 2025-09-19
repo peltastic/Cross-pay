@@ -59,8 +59,8 @@
 
     @if ((conversionResult$ | async) && transferForm.get('fromCurrency')?.value !== transferForm.get('toCurrency')?.value && !transferSuccess) {
     <div class="bg-gray-background-2 rounded-lg p-4">
-      <div class="flex items-center justify-between">
-        <span class="text-sm text-gray-text-2">
+      <div class="flex flex-wrap gap-4 items-center justify-between">
+        <span class="text-sm w-full xs:w-auto text-gray-text-2">
           You are sending {{ (conversionResult$ | async)?.result | number : '1.2-2' }}
           {{ transferForm.get('toCurrency')?.value }}
         </span>
