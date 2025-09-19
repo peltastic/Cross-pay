@@ -134,7 +134,7 @@ export class TransferModalComponent implements OnInit, OnDestroy {
     ).subscribe(([from, to, amount]) => {
       const numAmount = typeof amount === 'string' ? parseFloat(amount) : amount;
       
-      if (from && to && amount && from !== to && numAmount > 0 && !isNaN(numAmount)) {
+      if (from && to && amount && from !== to && numAmount > 0 && !isNaN(numAmount) && !this.transferSuccess) {
         this.store.dispatch(ExchangeRateActions.convertCurrency({
           from,
           to,
@@ -150,7 +150,7 @@ export class TransferModalComponent implements OnInit, OnDestroy {
     combineLatest([this.isTransferring$, this.transferError$])
       .pipe(takeUntil(this.destroy$))
       .subscribe(([isTransferring, error]) => {
-        if (!isTransferring && !error && this.transferForm.valid) {
+        if (!isTransferring && !error && this.transferForm.valid && !this.transferSuccess) {
           this.transferSuccess = true;
           this.successMessage = 'Transfer completed successfully';
           

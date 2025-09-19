@@ -57,7 +57,7 @@
       }
     </div>
 
-    @if ((conversionResult$ | async) && transferForm.get('fromCurrency')?.value !== transferForm.get('toCurrency')?.value) {
+    @if ((conversionResult$ | async) && transferForm.get('fromCurrency')?.value !== transferForm.get('toCurrency')?.value && !transferSuccess) {
     <div class="bg-gray-background-2 rounded-lg p-4">
       <div class="flex items-center justify-between">
         <span class="text-sm text-gray-text-2">
@@ -71,11 +71,11 @@
         </span>
       </div>
     </div>
-    } @if (isConverting$ | async) {
+    } @if ((isConverting$ | async) && !transferSuccess) {
     <div class="bg-gray-background-2 rounded-lg p-4">
       <span class="text-sm text-gray-text-2">Getting conversion rate...</span>
     </div>
-    } @if (conversionError$ | async) {
+    } @if ((conversionError$ | async) && !transferSuccess) {
     <app-error-message>
       <span class="">{{ conversionError$ | async }}</span>
     </app-error-message>

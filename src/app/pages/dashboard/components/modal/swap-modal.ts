@@ -132,7 +132,7 @@ export class SwapModalComponent implements OnInit, OnDestroy {
     ).subscribe(([from, to, amount]) => {
       const numAmount = typeof amount === 'string' ? parseFloat(amount) : amount;
       
-      if (from && to && amount && from !== to && numAmount > 0 && !isNaN(numAmount)) {
+      if (from && to && amount && from !== to && numAmount > 0 && !isNaN(numAmount) && !this.swapSuccess) {
         this.store.dispatch(ExchangeRateActions.convertCurrency({
           from,
           to,
@@ -148,7 +148,7 @@ export class SwapModalComponent implements OnInit, OnDestroy {
     combineLatest([this.isSwapping$, this.swapError$])
       .pipe(takeUntil(this.destroy$))
       .subscribe(([isSwapping, error]) => {
-        if (!isSwapping && !error && this.swapForm.valid) {
+        if (!isSwapping && !error && this.swapForm.valid && !this.swapSuccess) {
           this.swapSuccess = true;
           this.successMessage = 'Currency swap completed successfully';
           

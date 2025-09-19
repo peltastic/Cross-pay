@@ -10,7 +10,7 @@
     "build:vercel": "node scripts/inject-env.js && ng build --configuration=production --base-href=/",
     "watch": "node scripts/inject-env-dev.js && ng build --watch --configuration development",
     "test": "ng test",
-    "test:coverage": "ng test --watch --code-coverage",
+    "test:coverage": "ng test --no-watch --code-coverage",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:headed": "playwright test --headed",

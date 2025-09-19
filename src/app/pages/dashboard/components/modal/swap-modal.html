@@ -56,7 +56,7 @@
     </div>
 
     @if ((conversionResult$ | async) && swapForm.get('fromCurrency')?.value !==
-    swapForm.get('toCurrency')?.value) {
+    swapForm.get('toCurrency')?.value && !swapSuccess) {
     <div class="bg-gray-background-2 rounded-lg p-4">
       <div class="flex items-center justify-between">
         <span class="text-sm text-gray-text-2">
@@ -70,11 +70,11 @@
         </span>
       </div>
     </div>
-    } @if (isConverting$ | async) {
+    } @if ((isConverting$ | async) && !swapSuccess) {
     <div class="bg-gray-background-2 rounded-lg p-4">
       <span class="text-sm text-gray-text-2">Getting conversion rate...</span>
     </div>
-    } @if (conversionError$ | async) {
+    } @if ((conversionError$ | async) && !swapSuccess) {
     <app-error-message>
       <span class="">{{ conversionError$ | async }}</span>
     </app-error-message>
