@@ -1,0 +1,278 @@
+<testsuites id="" name="" tests="96" failures="0" skipped="0" errors="0" time="119.77327100000001">
+<testsuite name="basic-app.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="chromium" tests="6" failures="0" skipped="0" time="24.776" errors="0">
+<testcase name="Basic App Functionality › should load the application" classname="basic-app.spec.ts" time="4.293">
+</testcase>
+<testcase name="Basic App Functionality › should display onboarding page" classname="basic-app.spec.ts" time="4.844">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to dashboard (may redirect)" classname="basic-app.spec.ts" time="4.682">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to transactions" classname="basic-app.spec.ts" time="4.767">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to fx-analytics" classname="basic-app.spec.ts" time="3.215">
+</testcase>
+<testcase name="Basic App Functionality › should handle 404 pages gracefully" classname="basic-app.spec.ts" time="2.975">
+</testcase>
+</testsuite>
+<testsuite name="comprehensive.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="chromium" tests="6" failures="0" skipped="0" time="20.459" errors="0">
+<testcase name="Cross-Pay Application E2E Tests › should display the onboarding page with form elements" classname="comprehensive.spec.ts" time="2.405">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should have working navigation and routing" classname="comprehensive.spec.ts" time="4.859">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should be responsive and work on mobile viewport" classname="comprehensive.spec.ts" time="2.91">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should handle form interactions on onboarding page" classname="comprehensive.spec.ts" time="3.037">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should load without JavaScript errors" classname="comprehensive.spec.ts" time="3.62">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should have proper meta tags and title" classname="comprehensive.spec.ts" time="3.628">
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="chromium" tests="4" failures="0" skipped="0" time="17.177" errors="0">
+<testcase name="Dashboard Functionality › should display dashboard with user data" classname="dashboard.spec.ts" time="4.421">
+</testcase>
+<testcase name="Dashboard Functionality › should navigate to transactions page" classname="dashboard.spec.ts" time="4.236">
+</testcase>
+<testcase name="Dashboard Functionality › should navigate to fx analytics page" classname="dashboard.spec.ts" time="4.196">
+</testcase>
+<testcase name="Dashboard Functionality › should handle API errors gracefully" classname="dashboard.spec.ts" time="4.324">
+</testcase>
+</testsuite>
+<testsuite name="fx-analytics.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="chromium" tests="5" failures="0" skipped="0" time="22.832" errors="0">
+<testcase name="FX Analytics Page › should display FX analytics dashboard" classname="fx-analytics.spec.ts" time="4.636">
+</testcase>
+<testcase name="FX Analytics Page › should display current exchange rate" classname="fx-analytics.spec.ts" time="4.483">
+</testcase>
+<testcase name="FX Analytics Page › should change currency pair" classname="fx-analytics.spec.ts" time="5.203">
+</testcase>
+<testcase name="FX Analytics Page › should change time range" classname="fx-analytics.spec.ts" time="4.494">
+</testcase>
+<testcase name="FX Analytics Page › should handle API errors gracefully" classname="fx-analytics.spec.ts" time="4.016">
+</testcase>
+</testsuite>
+<testsuite name="integration.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.32" errors="0">
+<testcase name="End-to-End User Journey › should work across different browsers and screen sizes" classname="integration.spec.ts" time="3.32">
+</testcase>
+</testsuite>
+<testsuite name="onboarding.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="chromium" tests="3" failures="0" skipped="0" time="9.384" errors="0">
+<testcase name="Onboarding Flow › should display onboarding page correctly" classname="onboarding.spec.ts" time="2.203">
+</testcase>
+<testcase name="Onboarding Flow › should complete successful onboarding flow" classname="onboarding.spec.ts" time="3.828">
+</testcase>
+<testcase name="Onboarding Flow › should work with different email formats" classname="onboarding.spec.ts" time="3.353">
+</testcase>
+</testsuite>
+<testsuite name="performance.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="chromium" tests="6" failures="0" skipped="0" time="21.872" errors="0">
+<testcase name="Performance and Accessibility Tests › should load pages within acceptable time limits" classname="performance.spec.ts" time="5.14">
+<system-out>
+<![CDATA[Route / loaded in 1927ms
+Route /get-started loaded in 832ms
+Route /dashboard loaded in 714ms
+Route /dashboard/transactions loaded in 609ms
+Route /dashboard/fx-analytics loaded in 724ms
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance and Accessibility Tests › should have good Core Web Vitals performance" classname="performance.spec.ts" time="2.55">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should handle concurrent user sessions" classname="performance.spec.ts" time="2.157">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should work with slow network conditions" classname="performance.spec.ts" time="4.45">
+<system-out>
+<![CDATA[Slow network load time: 2787ms
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance and Accessibility Tests › should handle page reload gracefully" classname="performance.spec.ts" time="4.248">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should be accessible with keyboard navigation" classname="performance.spec.ts" time="3.327">
+</testcase>
+</testsuite>
+<testsuite name="transactions.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.647" errors="0">
+<testcase name="Transactions Page › should display transactions table" classname="transactions.spec.ts" time="3.647">
+</testcase>
+</testsuite>
+<testsuite name="basic-app.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="firefox" tests="6" failures="0" skipped="0" time="30.796" errors="0">
+<testcase name="Basic App Functionality › should load the application" classname="basic-app.spec.ts" time="4.818">
+</testcase>
+<testcase name="Basic App Functionality › should display onboarding page" classname="basic-app.spec.ts" time="6.151">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to dashboard (may redirect)" classname="basic-app.spec.ts" time="5.839">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to transactions" classname="basic-app.spec.ts" time="6.331">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to fx-analytics" classname="basic-app.spec.ts" time="3.793">
+</testcase>
+<testcase name="Basic App Functionality › should handle 404 pages gracefully" classname="basic-app.spec.ts" time="3.864">
+</testcase>
+</testsuite>
+<testsuite name="comprehensive.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="firefox" tests="6" failures="0" skipped="0" time="28.018" errors="0">
+<testcase name="Cross-Pay Application E2E Tests › should display the onboarding page with form elements" classname="comprehensive.spec.ts" time="2.499">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should have working navigation and routing" classname="comprehensive.spec.ts" time="6.738">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should be responsive and work on mobile viewport" classname="comprehensive.spec.ts" time="4.174">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should handle form interactions on onboarding page" classname="comprehensive.spec.ts" time="4.899">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should load without JavaScript errors" classname="comprehensive.spec.ts" time="5.655">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should have proper meta tags and title" classname="comprehensive.spec.ts" time="4.053">
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="firefox" tests="4" failures="0" skipped="0" time="20.75" errors="0">
+<testcase name="Dashboard Functionality › should display dashboard with user data" classname="dashboard.spec.ts" time="5.272">
+</testcase>
+<testcase name="Dashboard Functionality › should navigate to transactions page" classname="dashboard.spec.ts" time="5.443">
+</testcase>
+<testcase name="Dashboard Functionality › should navigate to fx analytics page" classname="dashboard.spec.ts" time="5.235">
+</testcase>
+<testcase name="Dashboard Functionality › should handle API errors gracefully" classname="dashboard.spec.ts" time="4.8">
+</testcase>
+</testsuite>
+<testsuite name="fx-analytics.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="firefox" tests="5" failures="0" skipped="0" time="70.76" errors="0">
+<testcase name="FX Analytics Page › should display FX analytics dashboard" classname="fx-analytics.spec.ts" time="19.503">
+</testcase>
+<testcase name="FX Analytics Page › should display current exchange rate" classname="fx-analytics.spec.ts" time="33.923">
+</testcase>
+<testcase name="FX Analytics Page › should change currency pair" classname="fx-analytics.spec.ts" time="5.005">
+</testcase>
+<testcase name="FX Analytics Page › should change time range" classname="fx-analytics.spec.ts" time="4.659">
+</testcase>
+<testcase name="FX Analytics Page › should handle API errors gracefully" classname="fx-analytics.spec.ts" time="7.67">
+</testcase>
+</testsuite>
+<testsuite name="integration.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="firefox" tests="1" failures="0" skipped="0" time="3.557" errors="0">
+<testcase name="End-to-End User Journey › should work across different browsers and screen sizes" classname="integration.spec.ts" time="3.557">
+</testcase>
+</testsuite>
+<testsuite name="onboarding.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="firefox" tests="3" failures="0" skipped="0" time="7.393" errors="0">
+<testcase name="Onboarding Flow › should display onboarding page correctly" classname="onboarding.spec.ts" time="2.288">
+</testcase>
+<testcase name="Onboarding Flow › should complete successful onboarding flow" classname="onboarding.spec.ts" time="2.838">
+</testcase>
+<testcase name="Onboarding Flow › should work with different email formats" classname="onboarding.spec.ts" time="2.267">
+</testcase>
+</testsuite>
+<testsuite name="performance.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="firefox" tests="6" failures="0" skipped="0" time="21.746" errors="0">
+<testcase name="Performance and Accessibility Tests › should load pages within acceptable time limits" classname="performance.spec.ts" time="6.403">
+<system-out>
+<![CDATA[Route / loaded in 1839ms
+Route /get-started loaded in 741ms
+Route /dashboard loaded in 797ms
+Route /dashboard/transactions loaded in 1189ms
+Route /dashboard/fx-analytics loaded in 1239ms
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance and Accessibility Tests › should have good Core Web Vitals performance" classname="performance.spec.ts" time="2.125">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should handle concurrent user sessions" classname="performance.spec.ts" time="3.224">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should work with slow network conditions" classname="performance.spec.ts" time="3.313">
+<system-out>
+<![CDATA[Slow network load time: 2485ms
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance and Accessibility Tests › should handle page reload gracefully" classname="performance.spec.ts" time="3.515">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should be accessible with keyboard navigation" classname="performance.spec.ts" time="3.166">
+</testcase>
+</testsuite>
+<testsuite name="transactions.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="firefox" tests="1" failures="0" skipped="0" time="3.692" errors="0">
+<testcase name="Transactions Page › should display transactions table" classname="transactions.spec.ts" time="3.692">
+</testcase>
+</testsuite>
+<testsuite name="basic-app.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="Mobile Chrome" tests="6" failures="0" skipped="0" time="16.824" errors="0">
+<testcase name="Basic App Functionality › should load the application" classname="basic-app.spec.ts" time="2.178">
+</testcase>
+<testcase name="Basic App Functionality › should display onboarding page" classname="basic-app.spec.ts" time="2.814">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to dashboard (may redirect)" classname="basic-app.spec.ts" time="3.367">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to transactions" classname="basic-app.spec.ts" time="2.918">
+</testcase>
+<testcase name="Basic App Functionality › should handle navigation to fx-analytics" classname="basic-app.spec.ts" time="2.863">
+</testcase>
+<testcase name="Basic App Functionality › should handle 404 pages gracefully" classname="basic-app.spec.ts" time="2.684">
+</testcase>
+</testsuite>
+<testsuite name="comprehensive.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="Mobile Chrome" tests="6" failures="0" skipped="0" time="17.544" errors="0">
+<testcase name="Cross-Pay Application E2E Tests › should display the onboarding page with form elements" classname="comprehensive.spec.ts" time="2.106">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should have working navigation and routing" classname="comprehensive.spec.ts" time="3.981">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should be responsive and work on mobile viewport" classname="comprehensive.spec.ts" time="2.638">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should handle form interactions on onboarding page" classname="comprehensive.spec.ts" time="2.647">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should load without JavaScript errors" classname="comprehensive.spec.ts" time="3.456">
+</testcase>
+<testcase name="Cross-Pay Application E2E Tests › should have proper meta tags and title" classname="comprehensive.spec.ts" time="2.716">
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="Mobile Chrome" tests="4" failures="0" skipped="0" time="14.144" errors="0">
+<testcase name="Dashboard Functionality › should display dashboard with user data" classname="dashboard.spec.ts" time="3.332">
+</testcase>
+<testcase name="Dashboard Functionality › should navigate to transactions page" classname="dashboard.spec.ts" time="3.735">
+</testcase>
+<testcase name="Dashboard Functionality › should navigate to fx analytics page" classname="dashboard.spec.ts" time="3.912">
+</testcase>
+<testcase name="Dashboard Functionality › should handle API errors gracefully" classname="dashboard.spec.ts" time="3.165">
+</testcase>
+</testsuite>
+<testsuite name="fx-analytics.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="Mobile Chrome" tests="5" failures="0" skipped="0" time="20.271" errors="0">
+<testcase name="FX Analytics Page › should display FX analytics dashboard" classname="fx-analytics.spec.ts" time="4.054">
+</testcase>
+<testcase name="FX Analytics Page › should display current exchange rate" classname="fx-analytics.spec.ts" time="3.988">
+</testcase>
+<testcase name="FX Analytics Page › should change currency pair" classname="fx-analytics.spec.ts" time="4.235">
+</testcase>
+<testcase name="FX Analytics Page › should change time range" classname="fx-analytics.spec.ts" time="4.111">
+</testcase>
+<testcase name="FX Analytics Page › should handle API errors gracefully" classname="fx-analytics.spec.ts" time="3.883">
+</testcase>
+</testsuite>
+<testsuite name="integration.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="Mobile Chrome" tests="1" failures="0" skipped="0" time="3.474" errors="0">
+<testcase name="End-to-End User Journey › should work across different browsers and screen sizes" classname="integration.spec.ts" time="3.474">
+</testcase>
+</testsuite>
+<testsuite name="onboarding.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="Mobile Chrome" tests="3" failures="0" skipped="0" time="6.817" errors="0">
+<testcase name="Onboarding Flow › should display onboarding page correctly" classname="onboarding.spec.ts" time="1.999">
+</testcase>
+<testcase name="Onboarding Flow › should complete successful onboarding flow" classname="onboarding.spec.ts" time="2.725">
+</testcase>
+<testcase name="Onboarding Flow › should work with different email formats" classname="onboarding.spec.ts" time="2.093">
+</testcase>
+</testsuite>
+<testsuite name="performance.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="Mobile Chrome" tests="6" failures="0" skipped="0" time="16.439" errors="0">
+<testcase name="Performance and Accessibility Tests › should load pages within acceptable time limits" classname="performance.spec.ts" time="4.428">
+<system-out>
+<![CDATA[Route / loaded in 1773ms
+Route /get-started loaded in 660ms
+Route /dashboard loaded in 608ms
+Route /dashboard/transactions loaded in 592ms
+Route /dashboard/fx-analytics loaded in 584ms
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance and Accessibility Tests › should have good Core Web Vitals performance" classname="performance.spec.ts" time="2.013">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should handle concurrent user sessions" classname="performance.spec.ts" time="1.838">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should work with slow network conditions" classname="performance.spec.ts" time="2.487">
+<system-out>
+<![CDATA[Slow network load time: 2236ms
+]]>
+</system-out>
+</testcase>
+<testcase name="Performance and Accessibility Tests › should handle page reload gracefully" classname="performance.spec.ts" time="2.652">
+</testcase>
+<testcase name="Performance and Accessibility Tests › should be accessible with keyboard navigation" classname="performance.spec.ts" time="3.021">
+</testcase>
+</testsuite>
+<testsuite name="transactions.spec.ts" timestamp="2025-09-20T12:22:19.042Z" hostname="Mobile Chrome" tests="1" failures="0" skipped="0" time="3.196" errors="0">
+<testcase name="Transactions Page › should display transactions table" classname="transactions.spec.ts" time="3.196">
+</testcase>
+</testsuite>
+</testsuites>
