@@ -13,7 +13,9 @@
 
 -  **Multi-currency Wallet Management** - Create and manage digital wallets
 -  **Real-time Currency Exchange** - Live FX rates with seamless conversion
--  **Cross-border Transfers** - Send funds globally with real-time tracking
+-  **Cross-border Transfers** - Send funds globally to any currency account 
+-  **Deposit into Accounts** - Deposit funds into accounts
+-  **Swap funds** - Swap funds from one currency to another in wallet account 
 -  **Advanced Analytics** - Interactive charts and transaction insights
 -  **Modern UI/UX** - Responsive design with dark/light mode support
 -  **Secure Architecture** - Type-safe with comprehensive error handling
